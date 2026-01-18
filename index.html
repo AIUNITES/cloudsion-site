@@ -47,6 +47,24 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☁️</text></svg>">
 </head>
 <body>
+  <!-- AIUNITES Webring -->
+  <div class="aiunites-bar">
+    <div class="aiunites-bar-content">
+      <a href="https://aiunites.com" class="aiunites-bar-brand">◆ AIUNITES</a>
+      <span class="aiunites-bar-divider">|</span>
+      <a href="https://aizines.com">AIZines</a>
+      <a href="https://aibyjob.com">AIByJob</a>
+      <a href="https://redomy.com">Redomy</a>
+      <a href="https://videobate.com">VideoBate</a>
+      <a href="https://furnishthings.com">FurnishThings</a>
+      <a href="https://bizstry.com">BizStry</a>
+      <a href="https://aiyhwh.com">AI YHWH</a>
+      <a href="https://gameatica.com">Gameatica</a>
+      <a href="https://uptownit.com">UptownIT</a>
+      <a href="https://inthisworld.com">InThisWorld</a>
+    </div>
+  </div>
+
   <nav class="nav">
     <div class="nav-container">
       <a href="#" class="nav-logo">
@@ -225,15 +243,35 @@
           <p>Enterprise Cloud Solutions</p>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2026 Cloudsion. All rights reserved.</p>
+          <p>&copy; 2026 Cloudsion. All rights reserved. | <a href="https://github.com/AIUNITES/cloudsion-site/issues" target="_blank">Developer Feedback</a></p>
         </div>
       </div>
     </div>
   </footer>
 
-  <a href="https://github.com/AIUNITES/cloudsion-site/issues/new?title=Feedback:" target="_blank" class="feature-request-btn">
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSeQUi49AdTBRjetz5MDFQgMIkm9-vOMb_ARKwYEz41j_Nfiwg/viewform?usp=pp_url&entry.2053726945=Cloudsion" target="_blank" class="feature-request-btn">
     <span class="feature-btn-icon">💬</span>
     <span class="feature-btn-text">Feedback</span>
   </a>
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      const btn = this.querySelector('button');
+      
+      // Submit to Google Forms
+      fetch('https://docs.google.com/forms/d/e/1FAIpQLSeQUi49AdTBRjetz5MDFQgMIkm9-vOMb_ARKwYEz41j_Nfiwg/formResponse?entry.904300305=' + encodeURIComponent(email) + '&entry.2053726945=' + encodeURIComponent('Cloudsion: ' + message), {
+        method: 'POST',
+        mode: 'no-cors'
+      });
+      
+      btn.textContent = '✓ Message sent!';
+      btn.style.background = '#10b981';
+      this.reset();
+      setTimeout(() => { btn.textContent = 'Send Message'; btn.style.background = ''; }, 3000);
+    });
+  </script>
 </body>
 </html>
