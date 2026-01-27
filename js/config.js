@@ -8,7 +8,7 @@ const APP_CONFIG = {
   description: 'Deploy your website to the cloud in seconds.',
   icon: '☁️',
   
-  version: '2.2.0',
+  version: '2.4.0',
   lastUpdated: '2026-01-26',
   
   logoHtml: 'Cloud<span class="logo-accent">sion</span>',
@@ -37,6 +37,28 @@ const APP_CONFIG = {
   demoItems: [],
 
   changelog: [
+    {
+      version: 'v2.4.0',
+      date: 'January 26, 2026',
+      changes: [
+        'Deploy button always visible - no login required!',
+        'Step-by-step instructions in deploy modal',
+        'FAQ accordion with common questions',
+        'Improved token setup guide with checklist',
+        'Two-column layout: Instructions + Form'
+      ]
+    },
+    {
+      version: 'v2.3.0',
+      date: 'January 26, 2026',
+      changes: [
+        'GitHub Pages deployment! Connect GitHub PAT, drag & drop files, deploy',
+        'My Sites dashboard - view all deployed sites',
+        'Deploy modal with step-by-step wizard',
+        'File drop zone with folder support',
+        'Real-time deploy progress tracking'
+      ]
+    },
     {
       version: 'v2.2.0',
       date: 'January 26, 2026',

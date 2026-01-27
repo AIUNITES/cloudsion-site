@@ -1,128 +1,73 @@
 /**
  * Cloudsion GitHub Deploy Module
- * Deploys static sites to GitHub Pages
+ * Deploys static sites to GitHub Pages using the GitHub API
  */
 
 const GitHubDeploy = {
-  // GitHub API base
-  API_BASE: 'https://api.github.com',
-  
-  // Stored credentials
+  baseUrl: 'https://api.github.com',
   token: null,
   username: null,
 
   /**
-   * Initialize with Personal Access Token
+   * Initialize with GitHub credentials
    */
-  async init(token) {
+  init(token) {
     this.token = token;
-    
-    // Validate token and get username
-    const user = await this.request('GET', '/user');
-    if (!user || !user.login) {
-      throw new Error('Invalid GitHub token');
-    }
-    
-    this.username = user.login;
-    
-    // Save to localStorage
-    localStorage.setItem('cloudsion_github_token', token);
-    localStorage.setItem('cloudsion_github_user', user.login);
-    
-    return user;
+    return this.validateToken();
   },
 
   /**
-   * Load saved credentials
+   * Make authenticated API request
    */
-  loadSaved() {
-    const token = localStorage.getItem('cloudsion_github_token');
-    const username = localStorage.getItem('cloudsion_github_user');
+  async request(endpoint, options = {}) {
+    const url = endpoint.startsWith('http') ? endpoint : `${this.baseUrl}${endpoint}`;
     
-    if (token && username) {
-      this.token = token;
-      this.username = username;
-      return { token, username };
-    }
-    return null;
-  },
-
-  /**
-   * Clear saved credentials
-   */
-  logout() {
-    this.token = null;
-    this.username = null;
-    localStorage.removeItem('cloudsion_github_token');
-    localStorage.removeItem('cloudsion_github_user');
-  },
-
-  /**
-   * Make authenticated request to GitHub API
-   */
-  async request(method, endpoint, data = null) {
-    const options = {
-      method,
+    const response = await fetch(url, {
+      ...options,
       headers: {
+        'Authorization': `Bearer ${this.token}`,
         'Accept': 'application/vnd.github.v3+json',
-        'User-Agent': 'Cloudsion-Deploy'
+        'Content-Type': 'application/json',
+        ...options.headers
       }
-    };
+    });
 
-    if (this.token) {
-      options.headers['Authorization'] = `token ${this.token}`;
-    }
-
-    if (data) {
-      options.headers['Content-Type'] = 'application/json';
-      options.body = JSON.stringify(data);
-    }
-
-    const response = await fetch(`${this.API_BASE}${endpoint}`, options);
-    
     if (!response.ok) {
       const error = await response.json().catch(() => ({}));
       throw new Error(error.message || `GitHub API error: ${response.status}`);
     }
 
-    // Handle 204 No Content
-    if (response.status === 204) {
-      return null;
-    }
-
+    // Handle empty responses (204 No Content)
+    if (response.status === 204) return null;
+    
     return response.json();
   },
 
   /**
-   * Create a new repository
+   * Validate token and get user info
    */
-  async createRepo(name, options = {}) {
-    const data = {
-      name,
-      description: options.description || `Deployed via Cloudsion`,
-      private: options.private || false,
-      auto_init: false,
-      has_issues: false,
-      has_projects: false,
-      has_wiki: false
-    };
-
+  async validateToken() {
     try {
-      return await this.request('POST', '/user/repos', data);
+      const user = await this.request('/user');
+      this.username = user.login;
+      return {
+        valid: true,
+        username: user.login,
+        name: user.name,
+        avatar: user.avatar_url,
+        publicRepos: user.public_repos
+      };
     } catch (err) {
-      if (err.message.includes('name already exists')) {
-        throw new Error(`Repository "${name}" already exists. Choose a different name.`);
-      }
-      throw err;
+      return { valid: false, error: err.message };
     }
   },
 
   /**
    * Check if repo exists
    */
-  async repoExists(name) {
+  async repoExists(repoName) {
     try {
-      await this.request('GET', `/repos/${this.username}/${name}`);
+      await this.request(`/repos/${this.username}/${repoName}`);
       return true;
     } catch {
       return false;
@@ -130,30 +75,49 @@ const GitHubDeploy = {
   },
 
   /**
+   * Create a new repository
+   */
+  async createRepo(name, description = 'Deployed with Cloudsion', isPrivate = false) {
+    return this.request('/user/repos', {
+      method: 'POST',
+      body: JSON.stringify({
+        name,
+        description,
+        private: isPrivate,
+        auto_init: false,
+        has_issues: false,
+        has_projects: false,
+        has_wiki: false
+      })
+    });
+  },
+
+  /**
    * Upload a single file to repo
    */
-  async uploadFile(repo, path, content, message = 'Deploy via Cloudsion') {
+  async uploadFile(repoName, path, content, message = 'Deploy via Cloudsion') {
     // Convert content to base64
     const base64Content = typeof content === 'string' 
       ? btoa(unescape(encodeURIComponent(content)))
       : await this.fileToBase64(content);
 
-    const data = {
-      message,
-      content: base64Content
-    };
-
-    // Check if file exists (need SHA for update)
+    // Check if file exists (for updates)
+    let sha = null;
     try {
-      const existing = await this.request('GET', `/repos/${this.username}/${repo}/contents/${path}`);
-      if (existing && existing.sha) {
-        data.sha = existing.sha;
-      }
+      const existing = await this.request(`/repos/${this.username}/${repoName}/contents/${path}`);
+      sha = existing.sha;
     } catch {
       // File doesn't exist, that's fine
     }
 
-    return await this.request('PUT', `/repos/${this.username}/${repo}/contents/${path}`, data);
+    return this.request(`/repos/${this.username}/${repoName}/contents/${path}`, {
+      method: 'PUT',
+      body: JSON.stringify({
+        message,
+        content: base64Content,
+        sha
+      })
+    });
   },
 
   /**
@@ -174,239 +138,199 @@ const GitHubDeploy = {
   /**
    * Upload multiple files
    */
-  async uploadFiles(repo, files, onProgress = null) {
-    const total = files.length;
+  async uploadFiles(repoName, files, onProgress) {
+    const results = [];
     let completed = 0;
 
     for (const file of files) {
-      await this.uploadFile(repo, file.path, file.content);
+      try {
+        const result = await this.uploadFile(
+          repoName,
+          file.path,
+          file.content,
+          `Add ${file.path}`
+        );
+        results.push({ path: file.path, success: true, result });
+      } catch (err) {
+        results.push({ path: file.path, success: false, error: err.message });
+      }
+
       completed++;
       if (onProgress) {
-        onProgress(completed, total, file.path);
+        onProgress(completed, files.length, file.path);
+      }
+
+      // Small delay to avoid rate limiting
+      if (completed < files.length) {
+        await new Promise(r => setTimeout(r, 100));
       }
     }
 
-    return { uploaded: completed };
+    return results;
   },
 
   /**
    * Enable GitHub Pages for repo
    */
-  async enablePages(repo, branch = 'main') {
+  async enablePages(repoName, branch = 'main') {
     try {
-      // First, try to enable Pages
-      await this.request('POST', `/repos/${this.username}/${repo}/pages`, {
-        source: {
-          branch,
-          path: '/'
-        }
-      });
-    } catch (err) {
-      // Pages might already be enabled, try to update
-      if (err.message.includes('already enabled') || err.message.includes('409')) {
-        return await this.getPagesStatus(repo);
-      }
-      throw err;
-    }
-
-    // Wait a bit for Pages to initialize
-    await this.sleep(2000);
-    
-    return await this.getPagesStatus(repo);
-  },
-
-  /**
-   * Get Pages status
-   */
-  async getPagesStatus(repo) {
-    try {
-      return await this.request('GET', `/repos/${this.username}/${repo}/pages`);
+      // First check if pages already enabled
+      const pages = await this.request(`/repos/${this.username}/${repoName}/pages`);
+      return { enabled: true, url: pages.html_url, alreadyEnabled: true };
     } catch {
-      return null;
+      // Pages not enabled, enable it
     }
-  },
 
-  /**
-   * Get the GitHub Pages URL
-   */
-  getPagesUrl(repo) {
-    return `https://${this.username}.github.io/${repo}/`;
-  },
-
-  /**
-   * Full deploy workflow
-   */
-  async deploy(siteName, files, onProgress = null) {
-    const steps = [
-      'Checking repository...',
-      'Creating repository...',
-      'Uploading files...',
-      'Enabling GitHub Pages...',
-      'Finalizing...'
-    ];
-
-    const updateStatus = (step, detail = '') => {
-      if (onProgress) {
-        onProgress({ step: steps.indexOf(step), total: steps.length, message: step, detail });
+    try {
+      const result = await this.request(`/repos/${this.username}/${repoName}/pages`, {
+        method: 'POST',
+        body: JSON.stringify({
+          source: {
+            branch,
+            path: '/'
+          }
+        })
+      });
+      return { enabled: true, url: result.html_url };
+    } catch (err) {
+      // Sometimes the API returns error but pages is enabled
+      // Wait and check again
+      await new Promise(r => setTimeout(r, 2000));
+      try {
+        const pages = await this.request(`/repos/${this.username}/${repoName}/pages`);
+        return { enabled: true, url: pages.html_url };
+      } catch {
+        return { enabled: false, error: err.message };
       }
-    };
+    }
+  },
 
-    // Step 1: Check if repo exists
-    updateStatus(steps[0]);
-    const exists = await this.repoExists(siteName);
+  /**
+   * Get GitHub Pages status
+   */
+  async getPagesStatus(repoName) {
+    try {
+      const pages = await this.request(`/repos/${this.username}/${repoName}/pages`);
+      return {
+        enabled: true,
+        url: pages.html_url,
+        status: pages.status,
+        cname: pages.cname
+      };
+    } catch {
+      return { enabled: false };
+    }
+  },
 
-    // Step 2: Create repo if needed
+  /**
+   * Full deploy flow
+   */
+  async deploy(repoName, files, options = {}) {
+    const {
+      description = 'Deployed with Cloudsion',
+      isPrivate = false,
+      onProgress = null
+    } = options;
+
+    const steps = [];
+    let siteUrl = null;
+
+    // Step 1: Check/Create repo
+    if (onProgress) onProgress('checking', 'Checking repository...');
+    
+    const exists = await this.repoExists(repoName);
     if (!exists) {
-      updateStatus(steps[1]);
-      await this.createRepo(siteName);
-      await this.sleep(1000); // Wait for repo to be ready
+      if (onProgress) onProgress('creating', 'Creating repository...');
+      await this.createRepo(repoName, description, isPrivate);
+      steps.push({ step: 'create_repo', success: true });
+      
+      // Wait for repo to be ready
+      await new Promise(r => setTimeout(r, 1000));
+    } else {
+      steps.push({ step: 'repo_exists', success: true });
     }
 
-    // Step 3: Upload files
-    updateStatus(steps[2]);
-    await this.uploadFiles(siteName, files, (completed, total, path) => {
-      updateStatus(steps[2], `${completed}/${total} files - ${path}`);
+    // Step 2: Upload files
+    if (onProgress) onProgress('uploading', 'Uploading files...');
+    
+    const uploadResults = await this.uploadFiles(repoName, files, (done, total, file) => {
+      if (onProgress) onProgress('uploading', `Uploading ${file}... (${done}/${total})`);
+    });
+    
+    const failedUploads = uploadResults.filter(r => !r.success);
+    steps.push({ 
+      step: 'upload_files', 
+      success: failedUploads.length === 0,
+      uploaded: uploadResults.filter(r => r.success).length,
+      failed: failedUploads.length
     });
 
-    // Step 4: Enable Pages
-    updateStatus(steps[3]);
-    await this.enablePages(siteName);
+    // Step 3: Enable GitHub Pages
+    if (onProgress) onProgress('enabling', 'Enabling GitHub Pages...');
+    
+    const pagesResult = await this.enablePages(repoName);
+    steps.push({ step: 'enable_pages', ...pagesResult });
 
-    // Step 5: Done
-    updateStatus(steps[4]);
-    await this.sleep(1000);
+    if (pagesResult.enabled) {
+      siteUrl = `https://${this.username}.github.io/${repoName}/`;
+    }
 
-    const url = this.getPagesUrl(siteName);
-
-    // Save to deployed sites list
-    this.saveSite(siteName, url, files.length);
+    // Step 4: Wait for deployment
+    if (siteUrl) {
+      if (onProgress) onProgress('deploying', 'Waiting for site to go live...');
+      
+      // GitHub Pages can take a minute to deploy
+      await new Promise(r => setTimeout(r, 3000));
+    }
 
     return {
-      success: true,
-      url,
-      repo: `${this.username}/${siteName}`,
-      repoUrl: `https://github.com/${this.username}/${siteName}`,
-      filesUploaded: files.length
+      success: pagesResult.enabled && failedUploads.length === 0,
+      repoUrl: `https://github.com/${this.username}/${repoName}`,
+      siteUrl,
+      steps
     };
   },
 
   /**
-   * Save deployed site to list
+   * List user's repos that have GitHub Pages enabled
    */
-  saveSite(name, url, fileCount) {
-    const sites = this.getSites();
-    const existing = sites.findIndex(s => s.name === name);
-    
-    const siteData = {
-      name,
-      url,
-      repoUrl: `https://github.com/${this.username}/${name}`,
-      fileCount,
-      lastDeploy: new Date().toISOString()
-    };
+  async listDeployedSites() {
+    const repos = await this.request('/user/repos?per_page=100&sort=updated');
+    const sites = [];
 
-    if (existing >= 0) {
-      sites[existing] = siteData;
-    } else {
-      sites.unshift(siteData);
-    }
-
-    localStorage.setItem('cloudsion_sites', JSON.stringify(sites));
-  },
-
-  /**
-   * Get list of deployed sites
-   */
-  getSites() {
-    try {
-      return JSON.parse(localStorage.getItem('cloudsion_sites') || '[]');
-    } catch {
-      return [];
-    }
-  },
-
-  /**
-   * Delete a site (repo)
-   */
-  async deleteSite(name) {
-    await this.request('DELETE', `/repos/${this.username}/${name}`);
-    
-    // Remove from local list
-    const sites = this.getSites().filter(s => s.name !== name);
-    localStorage.setItem('cloudsion_sites', JSON.stringify(sites));
-  },
-
-  /**
-   * Helper: sleep
-   */
-  sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  },
-
-  /**
-   * Process dropped files/folders
-   */
-  async processFiles(items) {
-    const files = [];
-
-    const processEntry = async (entry, path = '') => {
-      if (entry.isFile) {
-        const file = await new Promise(resolve => entry.file(resolve));
-        const filePath = path + entry.name;
-        
-        // Skip hidden files and common ignores
-        if (entry.name.startsWith('.') || entry.name === 'node_modules') {
-          return;
-        }
-
-        files.push({
-          path: filePath,
-          content: file,
-          size: file.size
+    for (const repo of repos) {
+      if (repo.has_pages) {
+        sites.push({
+          name: repo.name,
+          url: `https://${this.username}.github.io/${repo.name}/`,
+          repoUrl: repo.html_url,
+          updatedAt: repo.updated_at,
+          private: repo.private
         });
-      } else if (entry.isDirectory) {
-        const reader = entry.createReader();
-        const entries = await new Promise(resolve => reader.readEntries(resolve));
-        
-        for (const childEntry of entries) {
-          await processEntry(childEntry, path + entry.name + '/');
-        }
-      }
-    };
-
-    for (const item of items) {
-      const entry = item.webkitGetAsEntry ? item.webkitGetAsEntry() : item;
-      if (entry) {
-        await processEntry(entry);
       }
     }
 
-    return files;
+    return sites;
   },
 
   /**
-   * Process file input
+   * Delete a repo (use with caution!)
    */
-  async processFileInput(fileList) {
-    const files = [];
-    
-    for (const file of fileList) {
-      // Skip hidden files
-      if (file.name.startsWith('.')) continue;
-      
-      // Get relative path if available
-      const path = file.webkitRelativePath || file.name;
-      
-      files.push({
-        path: path.replace(/^[^/]+\//, ''), // Remove top folder
-        content: file,
-        size: file.size
-      });
-    }
+  async deleteRepo(repoName) {
+    return this.request(`/repos/${this.username}/${repoName}`, {
+      method: 'DELETE'
+    });
+  },
 
-    return files;
+  /**
+   * Get repo details
+   */
+  async getRepo(repoName) {
+    return this.request(`/repos/${this.username}/${repoName}`);
   }
 };
 
-// Export for use
-window.GitHubDeploy = GitHubDeploy;
+// Export for module use
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = GitHubDeploy;
+}

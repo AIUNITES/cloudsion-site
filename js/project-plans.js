@@ -26,16 +26,16 @@ const ProjectPlans = {
       },
       {
         title: 'GitHub Pages Integration',
-        status: 'Planned',
+        status: 'Done',
         effort: '3-5 days',
         description: 'Build the free tier wrapper around GitHub Pages.',
         details: [
-          'OAuth flow for GitHub authentication',
-          'Auto-create repo on user signup',
+          'Personal Access Token authentication',
+          'Auto-create repo on deploy',
           'Drag & drop file upload via GitHub API',
-          'yourname.cloudsion.io subdomain via CNAME'
+          'Enable GitHub Pages automatically'
         ],
-        files: ['backend/github-integration.js', 'api/deploy.js']
+        files: ['js/github-deploy.js', 'js/app.js']
       }
     ],
     medium: [
@@ -81,7 +81,10 @@ const ProjectPlans = {
       { title: 'Hybrid pricing model design', date: 'Jan 26', version: 'v2.1.0' },
       { title: 'Infrastructure comparison table', date: 'Jan 26', version: 'v2.1.0' },
       { title: 'Auth system + Admin panel', date: 'Jan 26', version: 'v2.2.0' },
-      { title: 'Project plans tracking', date: 'Jan 26', version: 'v2.2.0' }
+      { title: 'Project plans tracking', date: 'Jan 26', version: 'v2.2.0' },
+      { title: 'GitHub Pages deployment MVP', date: 'Jan 26', version: 'v2.3.0' },
+      { title: 'My Sites dashboard', date: 'Jan 26', version: 'v2.3.0' },
+      { title: 'File drag & drop upload', date: 'Jan 26', version: 'v2.3.0' }
     ]
   },
 
