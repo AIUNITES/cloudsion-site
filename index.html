@@ -582,7 +582,7 @@
           </div>
 
           <div id="github-connect-form">
-            <p class="deploy-info">You need a GitHub Personal Access Token to deploy. <a href="help.html#github-token" target="_blank">Learn how to create one →</a></p>
+            <p class="deploy-info">You need a GitHub Personal Access Token to deploy.</p>
             
             <div class="token-quick-steps">
               <a href="https://github.com/settings/tokens/new?scopes=repo&description=Cloudsion%20Deploy" target="_blank" class="btn btn-secondary btn-full">
@@ -599,8 +599,28 @@
             <button class="btn btn-primary btn-full" id="github-connect-btn">
               <span>✅</span> Connect & Continue
             </button>
-            
-            <p class="help-link">Need help? <a href="help.html" target="_blank">Visit our Help page</a></p>
+          </div>
+
+          <!-- Compact FAQ -->
+          <div class="deploy-faq">
+            <h4>❓ Quick Help</h4>
+            <details>
+              <summary>What's a Personal Access Token?</summary>
+              <p>A PAT lets apps access your GitHub safely. Create one with "repo" scope to deploy sites.</p>
+            </details>
+            <details>
+              <summary>Is this free?</summary>
+              <p>Yes! GitHub Pages hosting is 100% free. Unlimited sites, no monthly fees.</p>
+            </details>
+            <details>
+              <summary>Is my token safe?</summary>
+              <p>Yes - stored only in your browser, never sent to our servers. Revoke anytime on GitHub.</p>
+            </details>
+            <details>
+              <summary>What files do I need?</summary>
+              <p>At minimum an index.html. You can also include CSS, JS, and images.</p>
+            </details>
+            <p class="faq-more"><a href="help.html" target="_blank">More help →</a></p>
           </div>
         </div>
 
@@ -699,10 +719,35 @@
   <!-- Toast Container -->
   <div id="toast-container" class="toast-container"></div>
 
+  <!-- AI Chat Widget -->
+  <div id="ai-chat-container" class="ai-chat-container">
+    <button id="ai-chat-toggle" class="ai-chat-toggle">
+      <span class="ai-chat-icon">🤖</span>
+      <span class="ai-chat-label">AI Help</span>
+    </button>
+    <div class="ai-chat-window">
+      <div class="ai-chat-header">
+        <span>🤖 Cloudsion AI</span>
+        <button id="ai-chat-close">×</button>
+      </div>
+      <div class="ai-chat-messages" id="ai-chat-messages"></div>
+      <div class="ai-chat-quick">
+        <button class="ai-quick-btn" data-question="How do I create a GitHub token?">Token help</button>
+        <button class="ai-quick-btn" data-question="Is this free?">Is it free?</button>
+        <button class="ai-quick-btn" data-question="My site is not loading">Not working</button>
+      </div>
+      <div class="ai-chat-input-area">
+        <input type="text" id="ai-chat-input" placeholder="Ask a question...">
+        <button id="ai-chat-send">➤</button>
+      </div>
+    </div>
+  </div>
+
   <script src="js/config.js"></script>
   <script src="js/storage.js"></script>
   <script src="js/auth.js"></script>
   <script src="js/github-deploy.js"></script>
+  <script src="js/ai-chat.js"></script>
   <script src="js/project-plans.js"></script>
   <script src="js/app.js"></script>
 

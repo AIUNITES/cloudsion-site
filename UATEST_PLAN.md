@@ -7,8 +7,8 @@
 | **Repository** | cloudsion-site |
 | **Live URL** | https://aiunites.github.io/cloudsion-site/ |
 | **Local Path** | C:/Users/Tom/Documents/GitHub/cloudsion-site |
-| **Last Updated** | January 26, 2026 |
-| **Version** | 2.5.0 |
+| **Last Updated** | January 27, 2026 |
+| **Version** | 2.6.0 |
 | **Type** | Landing Page |
 | **Tagline** | Publish Your Website Instantly |
 
@@ -116,6 +116,17 @@
 | Ask a Question Box | ✅ | Form to submit support questions |
 | Quick Links Sidebar | ✅ | Links to GitHub, pricing, etc. |
 
+### 🤖 AI Chat Widget
+| Feature | Status | Notes |
+|---------|--------|-------|
+| Floating Chat Button | ✅ | "AI Help" button in bottom-right |
+| Chat Window | ✅ | Opens on click, closes with X |
+| Knowledge Base | ✅ | Answers about tokens, deployment, etc. |
+| Quick Question Buttons | ✅ | "Token help", "Is it free?", "Not working" |
+| Typing Indicator | ✅ | Animated dots while "thinking" |
+| Markdown Formatting | ✅ | Bold, code, links in responses |
+| Mobile Responsive | ✅ | Full-width on small screens |
+
 ### ☁️ Cloud Integration
 | Feature | Status | Notes |
 |---------|--------|-------|
@@ -157,6 +168,7 @@
 | js/storage.js | localStorage management |
 | js/auth.js | Authentication (login/signup/logout) |
 | js/github-deploy.js | GitHub API wrapper for deployments |
+| js/ai-chat.js | AI chat assistant widget |
 | js/project-plans.js | Business model & roadmap data |
 | js/app.js | Main app initialization & UI |
 
@@ -187,7 +199,8 @@
 | 2.3.0 | Jan 26, 2026 | GitHub Pages deployment MVP - connect, upload, deploy! |
 | 2.4.0 | Jan 26, 2026 | No login required, instructions panel, FAQ |
 | 2.5.0 | Jan 26, 2026 | Login required, Help page with question box |
+| 2.6.0 | Jan 27, 2026 | AI Chat widget, compact FAQ in deploy modal |
 
 ---
 
-*Last tested: January 26, 2026*
+*Last tested: January 27, 2026*

@@ -8,8 +8,8 @@ const APP_CONFIG = {
   description: 'Deploy your website to the cloud in seconds.',
   icon: '☁️',
   
-  version: '2.5.0',
-  lastUpdated: '2026-01-26',
+  version: '2.6.0',
+  lastUpdated: '2026-01-27',
   
   logoHtml: 'Cloud<span class="logo-accent">sion</span>',
   
@@ -37,6 +37,17 @@ const APP_CONFIG = {
   demoItems: [],
 
   changelog: [
+    {
+      version: 'v2.6.0',
+      date: 'January 27, 2026',
+      changes: [
+        'AI Chat widget - floating help assistant',
+        'Quick question buttons for common topics',
+        'Compact FAQ in deploy modal',
+        'Knowledge base for deployment help',
+        'Typing indicator animation'
+      ]
+    },
     {
       version: 'v2.5.0',
       date: 'January 26, 2026',
