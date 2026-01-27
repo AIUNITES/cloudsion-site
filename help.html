@@ -140,46 +140,28 @@
           </section>
         </div>
 
-        <!-- Right: Ask a Question Box -->
+        <!-- Right: AI Assistant Box -->
         <div class="help-sidebar">
-          <div class="ask-box">
-            <h3>✉️ Ask a Question</h3>
-            <p>Can't find what you're looking for? Send us your question!</p>
+          <div class="ai-chat-box">
+            <div class="ai-chat-header">
+              <span>🤖</span>
+              <div>
+                <h3>AI Assistant</h3>
+                <p>Get instant answers about Cloudsion</p>
+              </div>
+            </div>
             
-            <form id="question-form" class="question-form">
-              <div class="form-group">
-                <label for="question-email">Your Email</label>
-                <input type="email" id="question-email" placeholder="you@example.com" required>
-              </div>
-              <div class="form-group">
-                <label for="question-topic">Topic</label>
-                <select id="question-topic" required>
-                  <option value="">Select a topic...</option>
-                  <option value="getting-started">Getting Started</option>
-                  <option value="github-token">GitHub Token Issues</option>
-                  <option value="deployment">Deployment Problems</option>
-                  <option value="custom-domain">Custom Domains</option>
-                  <option value="billing">Billing & Pricing</option>
-                  <option value="feature-request">Feature Request</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="question-text">Your Question</label>
-                <textarea id="question-text" rows="4" placeholder="Describe your question..." required></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary btn-full">
-                📨 Send Question
-              </button>
-            </form>
-            
-            <div id="question-success" class="question-success" style="display: none;">
-              <div class="success-icon">✅</div>
-              <h4>Question Sent!</h4>
-              <p>We'll get back to you soon.</p>
-              <button class="btn btn-secondary btn-full" onclick="resetQuestionForm()">
-                Ask Another
-              </button>
+            <div class="ai-chat-messages" id="ai-chat-messages">
+              <div class="ai-message ai-message-ai">Hi! I'm the Cloudsion assistant. Ask me about deploying websites, GitHub tokens, or pricing!</div>
+            </div>
+            <div class="ai-chat-quick">
+              <button class="ai-quick-btn" data-question="How do I deploy?">How to deploy?</button>
+              <button class="ai-quick-btn" data-question="How do I create a GitHub token?">GitHub token</button>
+              <button class="ai-quick-btn" data-question="Is Cloudsion free?">Pricing?</button>
+            </div>
+            <div class="ai-chat-input">
+              <input type="text" id="ai-chat-input" placeholder="Ask a question...">
+              <button id="ai-chat-send">➤</button>
             </div>
           </div>
 
@@ -203,29 +185,248 @@
   </footer>
 
   <script>
-    // Question form submission
-    document.getElementById('question-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      const email = document.getElementById('question-email').value;
-      const topic = document.getElementById('question-topic').value;
-      const question = document.getElementById('question-text').value;
-      
-      // Log for now (would send to backend/Google Forms in production)
-      console.log('Question submitted:', { email, topic, question });
-      
-      // Show success
-      document.getElementById('question-form').style.display = 'none';
-      document.getElementById('question-success').style.display = 'block';
-      
-      // Reset form values
-      this.reset();
-    });
-    
-    function resetQuestionForm() {
-      document.getElementById('question-form').style.display = 'block';
-      document.getElementById('question-success').style.display = 'none';
-    }
+    // Cloudsion AI Chat Assistant
+    const AIChat = {
+      knowledge: {
+        greeting: "Hi! I'm the Cloudsion assistant. Ask me about deploying websites, GitHub tokens, or pricing!",
+        topics: {
+          'deploy': {
+            keywords: ['deploy', 'publish', 'upload', 'how to', 'get started'],
+            response: `<strong>How to Deploy:</strong><br><br>1. Sign up or log in to Cloudsion<br>2. Connect your GitHub token<br>3. Drag & drop your website folder<br>4. Enter a site name<br>5. Click Deploy!<br><br>Your site will be live at <code>username.github.io/site-name</code>`
+          },
+          'token': {
+            keywords: ['token', 'pat', 'personal access', 'ghp_', 'github token', 'connect'],
+            response: `<strong>Creating a GitHub Token:</strong><br><br>1. Go to <a href="https://github.com/settings/tokens/new?scopes=repo" target="_blank">GitHub Token Settings</a><br>2. Set expiration (90 days recommended)<br>3. Check the <strong>"repo"</strong> checkbox<br>4. Click "Generate token"<br>5. Copy the token (starts with <code>ghp_</code>)<br><br>🔒 Your token is stored only in your browser!`
+          },
+          'free': {
+            keywords: ['free', 'cost', 'price', 'pay', 'pricing', 'pro', 'team'],
+            response: `<strong>Cloudsion Pricing:</strong><br><br>• <strong>Free</strong> - GitHub Pages hosting, unlimited sites<br>• <strong>Pro ($9/mo)</strong> - Custom domains, analytics, faster CDN<br>• <strong>Team ($29/mo)</strong> - Collaboration, shared projects<br><br>Free tier is completely free forever!`
+          },
+          'domain': {
+            keywords: ['domain', 'custom domain', 'url', 'own domain'],
+            response: `<strong>Custom Domains:</strong><br><br>• <strong>Free tier:</strong> Configure in GitHub repo settings<br>• <strong>Pro tier:</strong> We handle it automatically<br><br>Your free URL: <code>username.github.io/site-name</code>`
+          },
+          'update': {
+            keywords: ['update', 'change', 'edit', 'modify', 'redeploy'],
+            response: `<strong>Updating Your Site:</strong><br><br>Just deploy again with the same site name! We'll update the existing repository with your new files.`
+          },
+          'error': {
+            keywords: ['error', 'not working', 'problem', 'issue', 'broken', 'fail'],
+            response: `<strong>Troubleshooting:</strong><br><br>• Wait 1-2 minutes after deploy for GitHub Pages to build<br>• Make sure you have an <code>index.html</code> file<br>• Check your GitHub token has "repo" scope<br>• Try revoking and creating a new token`
+          },
+          'safe': {
+            keywords: ['safe', 'secure', 'security', 'token safe', 'data'],
+            response: `<strong>Security:</strong><br><br>• Your GitHub token is stored only in your browser<br>• We never see or store your token on our servers<br>• You can revoke it anytime from GitHub settings<br>• All deployments go directly to your GitHub account`
+          }
+        },
+        fallback: "I'm not sure about that. Try asking about:<br>• How to deploy<br>• GitHub tokens<br>• Pricing (free vs pro)<br>• Custom domains<br>• Troubleshooting"
+      },
+
+      getResponse(message) {
+        const lower = message.toLowerCase();
+        if (/^(hi|hello|hey|help|start)/.test(lower)) {
+          return this.knowledge.greeting;
+        }
+        let bestMatch = null;
+        let bestScore = 0;
+        for (const [topic, data] of Object.entries(this.knowledge.topics)) {
+          let score = 0;
+          for (const keyword of data.keywords) {
+            if (lower.includes(keyword)) score += keyword.length;
+          }
+          if (score > bestScore) {
+            bestScore = score;
+            bestMatch = data.response;
+          }
+        }
+        return bestMatch || this.knowledge.fallback;
+      },
+
+      init() {
+        this.messages = document.getElementById('ai-chat-messages');
+        this.input = document.getElementById('ai-chat-input');
+        this.sendBtn = document.getElementById('ai-chat-send');
+        
+        if (!this.messages) return;
+        
+        this.sendBtn?.addEventListener('click', () => this.send());
+        this.input?.addEventListener('keypress', (e) => {
+          if (e.key === 'Enter') this.send();
+        });
+        
+        document.querySelectorAll('.ai-quick-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            this.input.value = btn.dataset.question;
+            this.send();
+          });
+        });
+      },
+
+      send() {
+        const text = this.input?.value.trim();
+        if (!text) return;
+        
+        this.addMessage(text, 'user');
+        this.input.value = '';
+        this.showTyping();
+        
+        setTimeout(() => {
+          this.hideTyping();
+          this.addMessage(this.getResponse(text), 'ai');
+        }, 400 + Math.random() * 400);
+      },
+
+      addMessage(text, type) {
+        const div = document.createElement('div');
+        div.className = `ai-message ai-message-${type}`;
+        div.innerHTML = text;
+        this.messages.appendChild(div);
+        this.messages.scrollTop = this.messages.scrollHeight;
+      },
+
+      showTyping() {
+        const div = document.createElement('div');
+        div.className = 'ai-message ai-message-ai ai-typing';
+        div.id = 'ai-typing';
+        div.innerHTML = '<span></span><span></span><span></span>';
+        this.messages.appendChild(div);
+        this.messages.scrollTop = this.messages.scrollHeight;
+      },
+
+      hideTyping() {
+        document.getElementById('ai-typing')?.remove();
+      }
+    };
+
+    document.addEventListener('DOMContentLoaded', () => AIChat.init());
   </script>
+
+  <style>
+    /* AI Chat Box */
+    .ai-chat-box {
+      background: rgba(59,130,246,0.05);
+      border: 1px solid rgba(59,130,246,0.2);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .ai-chat-header {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    .ai-chat-header > span { font-size: 2rem; }
+    .ai-chat-header h3 { margin: 0 0 4px 0; }
+    .ai-chat-header p { margin: 0; color: #9ca3af; font-size: 0.9rem; }
+    
+    .ai-chat-messages {
+      min-height: 180px;
+      max-height: 280px;
+      overflow-y: auto;
+      margin-bottom: 12px;
+      padding: 12px;
+      background: rgba(0,0,0,0.2);
+      border-radius: 8px;
+    }
+    .ai-message {
+      margin-bottom: 10px;
+      padding: 10px 12px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+    .ai-message-user {
+      background: var(--primary);
+      color: #fff;
+      margin-left: 20%;
+      border-bottom-right-radius: 4px;
+    }
+    .ai-message-ai {
+      background: rgba(255,255,255,0.08);
+      color: #d1d5db;
+      margin-right: 10%;
+      border-bottom-left-radius: 4px;
+    }
+    .ai-message-ai strong { color: #fff; display: block; margin-bottom: 4px; }
+    .ai-message-ai code {
+      background: rgba(59,130,246,0.2);
+      padding: 1px 4px;
+      border-radius: 3px;
+      font-size: 0.8rem;
+      color: var(--primary);
+    }
+    .ai-message-ai a { color: var(--primary); }
+    
+    .ai-chat-quick {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+    .ai-quick-btn {
+      padding: 6px 10px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      color: #9ca3af;
+      font-size: 0.75rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .ai-quick-btn:hover {
+      background: rgba(59,130,246,0.1);
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+    
+    .ai-chat-input {
+      display: flex;
+      gap: 8px;
+    }
+    .ai-chat-input input {
+      flex: 1;
+      padding: 10px 12px;
+      background: rgba(0,0,0,0.3);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+    .ai-chat-input input:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+    .ai-chat-input button {
+      padding: 10px 16px;
+      background: var(--primary);
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .ai-chat-input button:hover { transform: scale(1.05); }
+    
+    /* Typing indicator */
+    .ai-typing {
+      display: flex;
+      gap: 4px;
+      padding: 10px;
+    }
+    .ai-typing span {
+      width: 6px;
+      height: 6px;
+      background: #6b7280;
+      border-radius: 50%;
+      animation: typing 1.4s infinite;
+    }
+    .ai-typing span:nth-child(2) { animation-delay: 0.2s; }
+    .ai-typing span:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes typing {
+      0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+      30% { transform: translateY(-3px); opacity: 1; }
+    }
+  </style>
 </body>
 </html>
