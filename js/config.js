@@ -8,7 +8,7 @@ const APP_CONFIG = {
   description: 'Deploy your website to the cloud in seconds.',
   icon: '☁️',
   
-  version: '2.1.0',
+  version: '2.2.0',
   lastUpdated: '2026-01-26',
   
   logoHtml: 'Cloud<span class="logo-accent">sion</span>',
@@ -38,12 +38,22 @@ const APP_CONFIG = {
 
   changelog: [
     {
+      version: 'v2.2.0',
+      date: 'January 26, 2026',
+      changes: [
+        'Added user authentication (login/signup)',
+        'Admin panel with Project Plans tab',
+        'Business model documentation in admin',
+        'User dropdown menu',
+        'Toast notifications'
+      ]
+    },
+    {
       version: 'v2.1.0',
       date: 'January 26, 2026',
       changes: [
         'Hybrid pricing model: Free (GitHub Pages) + Premium hosting',
-        'Infrastructure comparison table',
-        'Added auth system and admin panel'
+        'Infrastructure comparison table'
       ]
     },
     {

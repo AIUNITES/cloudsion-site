@@ -82,7 +82,18 @@
         <a href="#features">Features</a>
         <a href="#how-it-works">How It Works</a>
         <a href="#pricing">Pricing</a>
-        <a href="#waitlist" class="nav-cta">Get Started Free</a>
+        <button class="nav-cta" id="nav-login-btn">Log In</button>
+        <!-- User Menu (shown when logged in) -->
+        <div class="user-menu" id="user-menu" style="display: none;">
+          <button class="nav-cta" id="nav-deploy-btn">🚀 Deploy</button>
+          <span class="user-name" id="user-display-name">User</span>
+          <div class="user-avatar" id="user-avatar">U</div>
+          <div class="user-dropdown" id="user-dropdown">
+            <a href="#" id="dashboard-btn">🏠 My Sites</a>
+            <a href="#" id="admin-panel-btn" style="display: none;">🛡️ Admin Panel</a>
+            <a href="#" id="logout-btn">🚪 Log Out</a>
+          </div>
+        </div>
       </div>
     </div>
   </nav>
@@ -457,6 +468,233 @@
       line.style.animation = `fadeInLine 0.3s ease forwards ${i * 0.4}s`;
     });
   </script>
+
+  <!-- Auth Modal -->
+  <div id="auth-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>☁️ Cloudsion</h2>
+        <button class="modal-close">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="auth-tabs">
+          <button class="auth-tab active" data-tab="login">Log In</button>
+          <button class="auth-tab" data-tab="signup">Sign Up</button>
+        </div>
+        <form id="login-form" class="auth-form active">
+          <div class="form-group">
+            <label for="login-username">Username</label>
+            <input type="text" id="login-username" placeholder="Enter username" required>
+          </div>
+          <div class="form-group">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" placeholder="Enter password" required>
+          </div>
+          <div class="form-error" id="login-error"></div>
+          <button type="submit" class="btn btn-primary btn-full">Log In</button>
+        </form>
+        <form id="signup-form" class="auth-form">
+          <div class="form-group">
+            <label for="signup-name">Display Name</label>
+            <input type="text" id="signup-name" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <label for="signup-username">Username</label>
+            <input type="text" id="signup-username" placeholder="Choose username" required>
+          </div>
+          <div class="form-group">
+            <label for="signup-email">Email (optional)</label>
+            <input type="email" id="signup-email" placeholder="your@email.com">
+          </div>
+          <div class="form-group">
+            <label for="signup-password">Password</label>
+            <input type="password" id="signup-password" placeholder="Min 6 characters" required>
+          </div>
+          <div class="form-group">
+            <label for="signup-confirm">Confirm Password</label>
+            <input type="password" id="signup-confirm" placeholder="Confirm password" required>
+          </div>
+          <div class="form-error" id="signup-error"></div>
+          <button type="submit" class="btn btn-primary btn-full">Create Account</button>
+        </form>
+        <div class="auth-divider"><span>or</span></div>
+        <button class="btn btn-secondary btn-full" id="demo-login-btn">👁️ Try Demo Account</button>
+        <p class="auth-hint">Demo: admin/admin123 or demo/demo123</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Admin Panel Modal -->
+  <div id="admin-modal" class="modal">
+    <div class="modal-content modal-large">
+      <div class="modal-header">
+        <h2>🛡️ Admin Panel</h2>
+        <button class="modal-close">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="admin-tabs">
+          <button class="admin-tab active" data-admin-tab="plans">📋 Project Plans</button>
+          <button class="admin-tab" data-admin-tab="stats">📊 Statistics</button>
+          <button class="admin-tab" data-admin-tab="changelog">📄 Changelog</button>
+        </div>
+        <div id="admin-plans-tab" class="admin-tab-content active">
+          <div id="admin-plans-content"></div>
+        </div>
+        <div id="admin-stats-tab" class="admin-tab-content">
+          <div class="admin-stats-grid">
+            <div class="admin-stat-card">
+              <div class="admin-stat-value" id="admin-stat-users">0</div>
+              <div class="admin-stat-label">Total Users</div>
+            </div>
+          </div>
+          <div class="admin-version">
+            <span>App Version: <span id="admin-version">v2.2.0</span></span>
+          </div>
+        </div>
+        <div id="admin-changelog-tab" class="admin-tab-content">
+          <div class="changelog-content" id="changelog-content"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Deploy Modal -->
+  <div id="deploy-modal" class="modal">
+    <div class="modal-content modal-large">
+      <div class="modal-header">
+        <h2>🚀 Deploy Your Site</h2>
+        <button class="modal-close">×</button>
+      </div>
+      <div class="modal-body">
+        <!-- GitHub Connection Step -->
+        <div id="deploy-step-connect" class="deploy-step active">
+          <div class="deploy-step-header">
+            <span class="step-number">1</span>
+            <h3>Connect to GitHub</h3>
+          </div>
+          <p class="deploy-info">We'll deploy your site to GitHub Pages. You need a Personal Access Token.</p>
+          
+          <div class="github-status" id="github-status" style="display: none;">
+            <span class="github-avatar">🐙</span>
+            <span class="github-username" id="github-username"></span>
+            <button class="btn-small btn-secondary" id="github-disconnect">Disconnect</button>
+          </div>
+
+          <div id="github-connect-form">
+            <div class="form-group">
+              <label>GitHub Personal Access Token</label>
+              <input type="password" id="github-token" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx">
+              <span class="form-hint">
+                <a href="https://github.com/settings/tokens/new?scopes=repo,delete_repo&description=Cloudsion%20Deploy" target="_blank">Create token</a> with 'repo' scope
+              </span>
+            </div>
+            <button class="btn btn-primary" id="github-connect-btn">
+              <span>🔗</span> Connect GitHub
+            </button>
+          </div>
+        </div>
+
+        <!-- Upload Files Step -->
+        <div id="deploy-step-upload" class="deploy-step">
+          <div class="deploy-step-header">
+            <span class="step-number">2</span>
+            <h3>Upload Your Files</h3>
+          </div>
+
+          <div class="form-group">
+            <label>Site Name</label>
+            <input type="text" id="deploy-site-name" placeholder="my-awesome-site">
+            <span class="form-hint">URL will be: <span id="deploy-url-preview">username.github.io/my-awesome-site</span></span>
+          </div>
+
+          <div class="file-drop-zone" id="file-drop-zone">
+            <div class="drop-icon">📂</div>
+            <p>Drag & drop your website folder here</p>
+            <span>or</span>
+            <label class="btn btn-secondary">
+              Select Folder
+              <input type="file" id="file-input" webkitdirectory multiple hidden>
+            </label>
+          </div>
+
+          <div class="files-preview" id="files-preview" style="display: none;">
+            <div class="files-summary">
+              <span id="files-count">0 files</span>
+              <span id="files-size">0 KB</span>
+              <button class="btn-small btn-secondary" id="clear-files">Clear</button>
+            </div>
+            <div class="files-list" id="files-list"></div>
+          </div>
+
+          <button class="btn btn-primary btn-large" id="deploy-btn" disabled>
+            <span>🚀</span> Deploy to GitHub Pages
+          </button>
+        </div>
+
+        <!-- Deploy Progress -->
+        <div id="deploy-step-progress" class="deploy-step">
+          <div class="deploy-progress">
+            <div class="progress-spinner"></div>
+            <h3 id="deploy-status">Deploying...</h3>
+            <p id="deploy-detail"></p>
+            <div class="progress-bar">
+              <div class="progress-fill" id="deploy-progress-bar"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Deploy Success -->
+        <div id="deploy-step-success" class="deploy-step">
+          <div class="deploy-success">
+            <div class="success-icon">✅</div>
+            <h3>Site Deployed!</h3>
+            <p>Your site is now live at:</p>
+            <a href="#" id="deployed-url" class="deployed-url" target="_blank"></a>
+            <div class="success-actions">
+              <a href="#" id="deployed-repo-link" class="btn btn-secondary" target="_blank">🐙 View Repository</a>
+              <button class="btn btn-primary" id="deploy-another-btn">🚀 Deploy Another</button>
+            </div>
+            <p class="deploy-note">⏳ Note: GitHub Pages may take 1-2 minutes to update</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dashboard Modal -->
+  <div id="dashboard-modal" class="modal">
+    <div class="modal-content modal-large">
+      <div class="modal-header">
+        <h2>🏠 My Sites</h2>
+        <button class="modal-close">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="dashboard-header">
+          <p id="dashboard-github-user"></p>
+          <button class="btn btn-primary" id="dashboard-deploy-btn">
+            <span>🚀</span> Deploy New Site
+          </button>
+        </div>
+        <div class="sites-grid" id="sites-grid">
+          <div class="empty-sites" id="empty-sites">
+            <span>🌐</span>
+            <p>No sites deployed yet</p>
+            <button class="btn btn-primary" id="empty-deploy-btn">Deploy Your First Site</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/github-deploy.js"></script>
+  <script src="js/project-plans.js"></script>
+  <script src="js/app.js"></script>
 
   <style>
     @keyframes fadeInLine {
