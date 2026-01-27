@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help & Support - Cloudsion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☁️</text></svg>">
+</head>
+<body>
+  <!-- AIUNITES Webring -->
+  <style>.aiunites-bar{position:fixed;top:0;left:0;right:0;z-index:10000;background:linear-gradient(90deg,#0a0a0f,#1a1a2e);border-bottom:1px solid rgba(99,102,241,.3);padding:8px 0;font-size:12px}.aiunites-bar-content{max-width:1400px;margin:0 auto;padding:0 20px;display:flex;align-items:center;gap:12px;overflow-x:auto;scrollbar-width:none}.aiunites-bar-content::-webkit-scrollbar{display:none}.aiunites-bar a{color:rgba(255,255,255,.7);text-decoration:none;white-space:nowrap;transition:color .2s}.aiunites-bar a:hover{color:#fff}.aiunites-bar-brand{color:#6366f1!important;font-weight:600}.aiunites-bar-brand:hover{color:#818cf8!important}.aiunites-bar-divider{color:rgba(255,255,255,.2)}body{padding-top:36px!important}.nav{top:36px!important}</style>
+  <div class="aiunites-bar">
+    <div class="aiunites-bar-content">
+      <a href="https://aiunites.github.io/aiunites-site/" class="aiunites-bar-brand">◆ AIUNITES</a>
+      <span class="aiunites-bar-divider">|</span>
+      <a href="https://aiunites.github.io/aibyjob-demo/">AIByJob</a>
+      <a href="https://aiunites.github.io/gameatica-site/">Gameatica</a>
+      <a href="https://aiunites.github.io/videobate-site/">VideoBate</a>
+    </div>
+  </div>
+
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">☁️</span>
+        <span class="logo-text">Cloud<span class="logo-accent">sion</span></span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html#features">Features</a>
+        <a href="index.html#pricing">Pricing</a>
+        <a href="help.html" class="active">Help</a>
+        <a href="index.html" class="nav-cta">← Back</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="help-page">
+    <div class="help-container">
+      <!-- Header -->
+      <div class="help-header">
+        <h1>❓ Help & Support</h1>
+        <p>Everything you need to know about deploying with Cloudsion</p>
+      </div>
+
+      <!-- Two Column Layout -->
+      <div class="help-layout">
+        <!-- Left: FAQ -->
+        <div class="help-main">
+          <!-- Getting Started -->
+          <section class="help-section">
+            <h2>🚀 Getting Started</h2>
+            <div class="steps-list">
+              <div class="step-item">
+                <span class="step-num">1</span>
+                <div>
+                  <strong>Create an Account</strong>
+                  <p>Sign up for a free Cloudsion account to track your deployments.</p>
+                </div>
+              </div>
+              <div class="step-item">
+                <span class="step-num">2</span>
+                <div>
+                  <strong>Connect GitHub</strong>
+                  <p>Create a Personal Access Token and connect it to deploy to your GitHub.</p>
+                </div>
+              </div>
+              <div class="step-item">
+                <span class="step-num">3</span>
+                <div>
+                  <strong>Upload & Deploy</strong>
+                  <p>Drag & drop your website folder and click deploy. Your site goes live!</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- GitHub Token Guide -->
+          <section id="github-token" class="help-section">
+            <h2>🔑 Creating a GitHub Token</h2>
+            <p>A Personal Access Token lets Cloudsion deploy to your GitHub account safely.</p>
+            
+            <div class="token-guide-box">
+              <a href="https://github.com/settings/tokens/new?scopes=repo&description=Cloudsion%20Deploy" target="_blank" class="btn btn-secondary">
+                🔗 Open GitHub Token Page
+              </a>
+              <ol class="token-steps-list">
+                <li>Set <strong>Expiration</strong> to 90 days (or your preference)</li>
+                <li>Check the <strong>"repo"</strong> box under scopes</li>
+                <li>Click <strong>"Generate token"</strong> at the bottom</li>
+                <li>Copy the token (starts with <code>ghp_</code>)</li>
+              </ol>
+              <p class="security-note">🔒 Your token is stored only in your browser. We never see it.</p>
+            </div>
+          </section>
+
+          <!-- FAQ -->
+          <section id="faq" class="help-section">
+            <h2>💬 Frequently Asked Questions</h2>
+            <div class="faq-list">
+              <details class="faq-item">
+                <summary>Is Cloudsion really free?</summary>
+                <p>Yes! The free tier uses GitHub Pages hosting, which is completely free. You can deploy unlimited sites.</p>
+              </details>
+
+              <details class="faq-item">
+                <summary>What's the difference between Free and Pro?</summary>
+                <p><strong>Free:</strong> Uses GitHub Pages (username.github.io/site-name)<br>
+                <strong>Pro ($9/mo):</strong> Custom domains, analytics, faster CDN, no badge</p>
+              </details>
+
+              <details class="faq-item">
+                <summary>Can I use my own domain?</summary>
+                <p>Yes! On the free tier, configure it in GitHub repo settings. Pro tier handles it automatically.</p>
+              </details>
+
+              <details class="faq-item">
+                <summary>What kind of websites can I deploy?</summary>
+                <p>Static websites only: HTML, CSS, JavaScript, images. No server-side code (PHP, Python backends).</p>
+              </details>
+
+              <details class="faq-item">
+                <summary>Is my GitHub token safe?</summary>
+                <p>Yes! It's stored only in your browser's localStorage, never sent to our servers. You can revoke it anytime from GitHub settings.</p>
+              </details>
+
+              <details class="faq-item">
+                <summary>How do I update my deployed site?</summary>
+                <p>Just deploy again with the same site name. We'll update the existing repo.</p>
+              </details>
+
+              <details class="faq-item">
+                <summary>My site isn't loading after deploy?</summary>
+                <p>Wait 1-2 minutes for GitHub Pages to build. Make sure you have an index.html file in your folder.</p>
+              </details>
+            </div>
+          </section>
+        </div>
+
+        <!-- Right: Ask a Question Box -->
+        <div class="help-sidebar">
+          <div class="ask-box">
+            <h3>✉️ Ask a Question</h3>
+            <p>Can't find what you're looking for? Send us your question!</p>
+            
+            <form id="question-form" class="question-form">
+              <div class="form-group">
+                <label for="question-email">Your Email</label>
+                <input type="email" id="question-email" placeholder="you@example.com" required>
+              </div>
+              <div class="form-group">
+                <label for="question-topic">Topic</label>
+                <select id="question-topic" required>
+                  <option value="">Select a topic...</option>
+                  <option value="getting-started">Getting Started</option>
+                  <option value="github-token">GitHub Token Issues</option>
+                  <option value="deployment">Deployment Problems</option>
+                  <option value="custom-domain">Custom Domains</option>
+                  <option value="billing">Billing & Pricing</option>
+                  <option value="feature-request">Feature Request</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="question-text">Your Question</label>
+                <textarea id="question-text" rows="4" placeholder="Describe your question..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full">
+                📨 Send Question
+              </button>
+            </form>
+            
+            <div id="question-success" class="question-success" style="display: none;">
+              <div class="success-icon">✅</div>
+              <h4>Question Sent!</h4>
+              <p>We'll get back to you soon.</p>
+              <button class="btn btn-secondary btn-full" onclick="resetQuestionForm()">
+                Ask Another
+              </button>
+            </div>
+          </div>
+
+          <div class="quick-links-box">
+            <h4>Quick Links</h4>
+            <a href="https://github.com/settings/tokens" target="_blank">🔑 Manage GitHub Tokens</a>
+            <a href="https://github.com/AIUNITES" target="_blank">🐙 Our GitHub</a>
+            <a href="index.html#pricing">💰 Pricing</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 Cloudsion. Part of <a href="https://aiunites.github.io/aiunites-site">AIUNITES</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Question form submission
+    document.getElementById('question-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const email = document.getElementById('question-email').value;
+      const topic = document.getElementById('question-topic').value;
+      const question = document.getElementById('question-text').value;
+      
+      // Log for now (would send to backend/Google Forms in production)
+      console.log('Question submitted:', { email, topic, question });
+      
+      // Show success
+      document.getElementById('question-form').style.display = 'none';
+      document.getElementById('question-success').style.display = 'block';
+      
+      // Reset form values
+      this.reset();
+    });
+    
+    function resetQuestionForm() {
+      document.getElementById('question-form').style.display = 'block';
+      document.getElementById('question-success').style.display = 'none';
+    }
+  </script>
+</body>
+</html>

@@ -8,7 +8,7 @@
 | **Live URL** | https://aiunites.github.io/cloudsion-site/ |
 | **Local Path** | C:/Users/Tom/Documents/GitHub/cloudsion-site |
 | **Last Updated** | January 26, 2026 |
-| **Version** | 2.4.0 |
+| **Version** | 2.5.0 |
 | **Type** | Landing Page |
 | **Tagline** | Publish Your Website Instantly |
 
@@ -19,6 +19,7 @@
 | Page | File | Description | Status |
 |------|------|-------------|--------|
 | Landing | index.html | Website publishing platform | ✅ Active |
+| Help | help.html | FAQ, guides, question box | ✅ Active |
 
 ---
 
@@ -99,10 +100,21 @@
 | My Sites Dashboard | ✅ | Lists all deployed sites |
 | URL Preview | ✅ | Shows preview URL while typing |
 | Disconnect GitHub | ✅ | Clear saved credentials |
-| No Login Required | ✅ | Deploy button visible to everyone |
-| Instructions Panel | ✅ | Step-by-step how it works |
+| No Login Required | ❌ | Deprecated - login now required |
+| Instructions Panel | ❌ | Moved to Help page |
 | FAQ Accordion | ✅ | Common questions with expandable answers |
 | Token Setup Guide | ✅ | Checklist for creating GitHub PAT |
+| Login Required | ✅ | Must log in to access Deploy button |
+
+### ❓ Help Page
+| Feature | Status | Notes |
+|---------|--------|-------|
+| Help Page | ✅ | help.html with full documentation |
+| Getting Started Guide | ✅ | Step-by-step deployment instructions |
+| GitHub Token Guide | ✅ | How to create a PAT |
+| FAQ Section | ✅ | Common questions with expandable answers |
+| Ask a Question Box | ✅ | Form to submit support questions |
+| Quick Links Sidebar | ✅ | Links to GitHub, pricing, etc. |
 
 ### ☁️ Cloud Integration
 | Feature | Status | Notes |
@@ -174,6 +186,7 @@
 | 2.2.0 | Jan 26, 2026 | Auth system, Admin panel with Project Plans |
 | 2.3.0 | Jan 26, 2026 | GitHub Pages deployment MVP - connect, upload, deploy! |
 | 2.4.0 | Jan 26, 2026 | No login required, instructions panel, FAQ |
+| 2.5.0 | Jan 26, 2026 | Login required, Help page with question box |
 
 ---
 
