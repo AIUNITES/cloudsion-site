@@ -63,7 +63,7 @@
       padding: 0 24px; height: 56px;
       display: flex; align-items: center; justify-content: space-between;
     }
-    .page-nav .logo { display: flex; align-items: center; gap: 8px; text-decoration: none; font-size: 18px; font-weight: 700; color: #fff; }
+    .page-nav .logo { display: flex; align-items: center; gap: 8px; text-decoration: none; font-size: 18px; font-weight: 700; color: #fff; white-space: nowrap; }
     .page-nav .logo span { color: var(--sky); }
     .page-nav .nav-links { display: flex; align-items: center; gap: 24px; }
     .page-nav .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .2s; }
@@ -270,7 +270,7 @@
 
   <!-- AIUNITES Webring -->
   <style>.aiunites-bar{position:fixed;top:0;left:0;right:0;z-index:10000;background:linear-gradient(90deg,#0a0a0f,#1a1a2e);border-bottom:1px solid rgba(99,102,241,.3);padding:8px 0;font-size:12px}.aiunites-bar-content{max-width:1400px;margin:0 auto;padding:0 20px;display:flex;align-items:center;gap:12px;overflow-x:auto;scrollbar-width:none}.aiunites-bar-content::-webkit-scrollbar{display:none}.aiunites-bar a{color:rgba(255,255,255,.7);text-decoration:none;white-space:nowrap;transition:color .2s}.aiunites-bar a:hover{color:#fff}.aiunites-bar-brand{color:#6366f1!important;font-weight:600}.aiunites-bar-brand:hover{color:#818cf8!important}.aiunites-bar-divider{color:rgba(255,255,255,.2)}body{padding-top:36px!important}</style>
-  <style>.wb-arrow{display:none;position:fixed;top:0;width:36px;height:33px;align-items:center;justify-content:center;cursor:pointer;z-index:1102;border:none;padding:0;font-size:16px;line-height:1;color:rgba(255,255,255,.8);transition:color .2s,opacity .2s}.wb-arrow:hover{color:#fff}.wb-left{left:0;background:linear-gradient(90deg,#0d0d1a 55%,transparent)}.wb-right{right:0;background:linear-gradient(270deg,#0d0d1a 55%,transparent)}@media (hover:hover) and (pointer:fine){.wb-arrow{display:flex}}</style>
+  <style>.wb-arrow{display:none;position:fixed;top:0;width:36px;height:33px;align-items:center;justify-content:center;cursor:pointer;z-index:10001;border:none;padding:0;font-size:16px;line-height:1;color:rgba(255,255,255,.8);transition:color .2s,opacity .2s}.wb-arrow:hover{color:#fff}.wb-left{left:0;background:linear-gradient(90deg,#0d0d1a 55%,transparent)}.wb-right{right:0;background:linear-gradient(270deg,#0d0d1a 55%,transparent)}@media (hover:hover) and (pointer:fine){.wb-arrow{display:flex}}</style>
   <button class="wb-arrow wb-left" id="wb-left" aria-label="Scroll webring left">&#8249;</button>
   <div class="aiunites-bar">
     <div class="aiunites-bar-content" id="wb-content">
@@ -303,6 +303,7 @@
       <a href="#deployment">Deployment</a>
       <a href="#how-it-works">How It Works</a>
       <a href="#compare">Compare</a>
+      <a href="index.html">← Cloudsion</a>
       <a href="#waitlist" class="nav-cta">Get Early Access</a>
     </div>
   </nav>
@@ -399,7 +400,7 @@
           <div class="deploy-price">
             <div class="price-label">Estimated cost</div>
             <div>
-              <span class="price-val">$20</span>
+              <span class="price-val">$2,000</span>
               <span class="price-period">/mo (Claude Pro)</span>
             </div>
           </div>
@@ -438,7 +439,7 @@
           <div class="deploy-price">
             <div class="price-label">Starting at</div>
             <div>
-              <span class="price-val">$49</span>
+              <span class="price-val">$4,900</span>
               <span class="price-period">/mo per workspace</span>
             </div>
           </div>
@@ -664,7 +665,7 @@
             <tr><td>Data sovereignty</td><td class="yes">100% local</td><td>Tenant-isolated cloud</td></tr>
             <tr><td>OS requirement</td><td>Windows 10/11</td><td class="yes">Any browser</td></tr>
             <tr><td>White-label</td><td class="yes">Yes (your repos)</td><td class="yes">Agency tier available</td></tr>
-            <tr><td>Starting cost</td><td>~$20/mo (Claude Pro)</td><td>$49/mo/workspace</td></tr>
+            <tr><td>Starting cost</td><td>~$2,000/mo</td><td>$4,900/mo/workspace</td></tr>
             <tr><td>Number of sites</td><td class="yes">Unlimited</td><td>Per plan</td></tr>
             <tr><td>Works offline</td><td class="yes">Edits yes, publish no</td><td class="no">Requires internet</td></tr>
           </tbody>
@@ -683,7 +684,7 @@
           <a href="index.html#waitlist" class="btn-primary">☁️ Cloud Waitlist</a>
           <a href="https://docs.google.com/forms/d/e/1FAIpQLSeQUi49AdTBRjetz5MDFQgMIkm9-vOMb_ARKwYEz41j_Nfiwg/viewform?usp=pp_url&entry.2053726945=AI+Publishing+On-Prem" target="_blank" class="btn-outline">🏠 Get On-Prem Guide</a>
         </div>
-        <p style="color:var(--muted);font-size:.85rem;margin-top:20px;">No credit card required for early access. Cloud platform in development — on-prem setup available now.</p>
+        <p style="color:var(--muted);font-size:.85rem;margin-top:20px;">Enterprise pricing. Cloud platform in development — on-prem setup available now.</p>
       </div>
     </div>
   </section>
