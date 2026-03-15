@@ -3,7 +3,7 @@
  */
 
 const Auth = {
-  signup(displayName, username, email, password) {
+  async signup(displayName, username, email, password) {
     if (!displayName || displayName.length < 2) {
       throw new Error('Display name must be at least 2 characters');
     }
@@ -21,28 +21,33 @@ const Auth = {
       throw new Error('Username already taken');
     }
 
-    const user = Storage.createUser({ displayName, username, email, password });
+    const passwordHash = await PasswordUtils.hash(password);
+    const user = Storage.createUser({ displayName, username, email, passwordHash });
     Storage.setCurrentUser(user.username);
     return user;
   },
 
-  login(username, password) {
+  async login(username, password) {
     if (!username || !password) {
       throw new Error('Please enter username and password');
     }
 
     const user = Storage.getUserByUsername(username);
-    
-    if (!user) {
-      throw new Error('User not found');
+    if (!user) throw new Error('User not found');
+
+    let valid = false;
+    if (user.passwordHash) {
+      valid = await PasswordUtils.verify(password, user.passwordHash);
+    } else if (user.password) {
+      valid = (user.password === password);
+      if (valid) {
+        const migrated = await PasswordUtils.migrate(user, password);
+        Storage.updateUser(user.username, migrated);
+      }
     }
-    
-    if (user.password !== password) {
-      throw new Error('Incorrect password');
-    }
-    
+    if (!valid) throw new Error('Incorrect password');
     Storage.setCurrentUser(user.username);
-    return user;
+    return Storage.getUserByUsername(user.username);
   },
 
   logout() {
