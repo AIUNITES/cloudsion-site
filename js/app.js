@@ -26,6 +26,7 @@ const App = {
         document.querySelectorAll('.auth-form').forEach(f => f.classList.remove('active'));
         tab.classList.add('active');
         document.getElementById(`${tab.dataset.tab}-form`).classList.add('active');
+        if (tab.dataset.tab === 'signup') this.injectGeneratedPassword();
       });
     });
 
@@ -200,13 +201,29 @@ const App = {
   // AUTH METHODS
   // ============================================
 
-  handleLogin() {
+  injectGeneratedPassword() {
+    if (typeof PasswordUtils === 'undefined') return;
+    const pw = document.getElementById('signup-password');
+    const cf = document.getElementById('signup-confirm');
+    if (!pw || pw.value) return;
+    const v = PasswordUtils.generate();
+    pw.value = v; if (cf) cf.value = v;
+    pw.type = 'text'; if (cf) cf.type = 'text';
+    document.getElementById('pw-suggest-bar')?.remove();
+    const bar = document.createElement('div'); bar.id = 'pw-suggest-bar';
+    bar.style.cssText = 'margin-top:8px;background:rgba(99,102,241,0.1);border:1px solid rgba(99,102,241,0.3);border-radius:8px;padding:8px 12px;font-size:0.8rem;color:#a5b4fc;display:flex;align-items:center;gap:8px;flex-wrap:wrap';
+    bar.innerHTML = '<span>🔐 Secure password generated.</span><span style="flex:1"></span><button type="button" id="pw-copy-btn" style="background:rgba(99,102,241,0.2);border:1px solid rgba(99,102,241,0.4);color:#c7d2fe;border-radius:6px;padding:3px 10px;font-size:0.78rem;cursor:pointer;font-family:inherit;">📋 Copy</button><button type="button" id="pw-regen-btn" style="background:rgba(99,102,241,0.2);border:1px solid rgba(99,102,241,0.4);color:#c7d2fe;border-radius:6px;padding:3px 10px;font-size:0.78rem;cursor:pointer;font-family:inherit;">🔄 New</button>';
+    pw.parentElement.appendChild(bar);
+    document.getElementById('pw-copy-btn').addEventListener('click', () => { navigator.clipboard.writeText(pw.value).then(() => { const b = document.getElementById('pw-copy-btn'); if(b){b.textContent='✅ Copied!';setTimeout(()=>{b.textContent='📋 Copy';},2000);} }); });
+    document.getElementById('pw-regen-btn').addEventListener('click', () => { const n = PasswordUtils.generate(); pw.value = n; if(cf) cf.value = n; });
+  },
+
+  async handleLogin() {
     const username = document.getElementById('login-username').value;
     const password = document.getElementById('login-password').value;
     const errorEl = document.getElementById('login-error');
-
     try {
-      Auth.login(username, password);
+      await Auth.login(username, password);
       this.closeAllModals();
       this.updateUI();
       this.showToast('Welcome back!', 'success');
@@ -215,21 +232,16 @@ const App = {
     }
   },
 
-  handleSignup() {
+  async handleSignup() {
     const displayName = document.getElementById('signup-name').value;
-    const username = document.getElementById('signup-username').value;
-    const email = document.getElementById('signup-email').value;
-    const password = document.getElementById('signup-password').value;
-    const confirm = document.getElementById('signup-confirm').value;
-    const errorEl = document.getElementById('signup-error');
-
-    if (password !== confirm) {
-      errorEl.textContent = 'Passwords do not match';
-      return;
-    }
-
+    const username    = document.getElementById('signup-username').value;
+    const email       = document.getElementById('signup-email').value;
+    const password    = document.getElementById('signup-password').value;
+    const confirm     = document.getElementById('signup-confirm').value;
+    const errorEl     = document.getElementById('signup-error');
+    if (password !== confirm) { errorEl.textContent = 'Passwords do not match'; return; }
     try {
-      Auth.signup(displayName, username, email, password);
+      await Auth.signup(displayName, username, email, password);
       this.closeAllModals();
       this.updateUI();
       this.showToast('Account created!', 'success');
