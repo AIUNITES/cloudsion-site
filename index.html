@@ -94,10 +94,10 @@
         <span class="logo-icon">☁️</span>
         <span class="logo-text">Cloud<span class="logo-accent">sion</span></span>
       </a>
-      <div class="nav-links">
-        <a href="#features">Features</a>
-        <a href="#how-it-works">How It Works</a>
-        <a href="#pricing">Pricing</a>
+      <div class="nav-links" id="cs-nav">
+        <a href="#features" onclick="csClose()">Features</a>
+        <a href="#how-it-works" onclick="csClose()">How It Works</a>
+        <a href="#pricing" onclick="csClose()">Pricing</a>
         <a href="help.html">Help</a>
         <a href="turnkey-ai-web-publishing.html" style="color:#0ea5e9;font-weight:600">🤖 AI Publishing</a>
         <button class="nav-cta" id="nav-login-btn">Log In to Deploy</button>
@@ -114,8 +114,10 @@
           </div>
         </div>
       </div>
+      <button class="nav-hamburger" id="cs-hbg" aria-label="Menu" onclick="this.classList.toggle('open');document.getElementById('cs-nav').classList.toggle('open')"><span></span><span></span><span></span></button>
     </div>
   </nav>
+  <script>function csClose(){document.getElementById('cs-nav').classList.remove('open');document.getElementById('cs-hbg').classList.remove('open');}</script>
 
   <section class="hero">
     <div class="hero-bg"></div>
