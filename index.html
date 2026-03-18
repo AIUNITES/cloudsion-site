@@ -114,7 +114,7 @@
           </div>
         </div>
       </div>
-      <button class="nav-hamburger" id="cs-hbg" aria-label="Menu" onclick="this.classList.toggle('open');document.getElementById('cs-nav').classList.toggle('open')"><span></span><span></span><span></span></button>
+      <button class="nav-hamburger" id="cs-hbg" aria-label="Menu" onclick="var m=document.getElementById('cs-nav');m.style.top=this.closest('nav').getBoundingClientRect().bottom+'px';this.classList.toggle('open');m.classList.toggle('open')"><span></span><span></span><span></span></button>
     </div>
   </nav>
   <script>function csClose(){document.getElementById('cs-nav').classList.remove('open');document.getElementById('cs-hbg').classList.remove('open');}</script>
