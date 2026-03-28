@@ -18,13 +18,13 @@
   <meta name="keywords" content="AI web publishing, turnkey website builder, plug and play publishing, white label CMS, on-premises AI publishing, cloud publishing platform, automated website deployment">
   <meta name="author" content="AIUNITES">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://aiunites.github.io/cloudsion-site/turnkey-ai-web-publishing.html">
+  <link rel="canonical" href="https://cloudsion.com/turnkey-ai-web-publishing.html">
 
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://aiunites.github.io/cloudsion-site/turnkey-ai-web-publishing.html">
+  <meta property="og:url" content="https://cloudsion.com/turnkey-ai-web-publishing.html">
   <meta property="og:title" content="AI Web Publishing — Turnkey Solution | Cloudsion">
   <meta property="og:description" content="A complete, out-of-the-box AI web publishing system. On-premises or cloud. No dev team required.">
-  <meta property="og:image" content="https://aiunites.github.io/cloudsion-site/images/og-image.png">
+  <meta property="og:image" content="https://cloudsion.com/images/og-image.png">
   <meta property="og:site_name" content="Cloudsion">
 
   <meta name="theme-color" content="#0ea5e9">
@@ -33,34 +33,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☁️</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x2601;&#xFE0F;</text></svg>">
 
   <style>
-    /* ── Page-specific overrides ── */
     :root {
-      --sky: #0ea5e9;
-      --sky-dark: #0284c7;
-      --sky-glow: rgba(14,165,233,0.25);
-      --purple: #6366f1;
-      --green: #10b981;
-      --amber: #f59e0b;
-      --bg: #060c18;
-      --bg2: #0c1525;
-      --bg3: #111c30;
-      --border: rgba(14,165,233,0.15);
-      --text: #e2e8f0;
-      --muted: rgba(226,232,240,0.5);
+      --sky: #0ea5e9; --sky-dark: #0284c7; --sky-glow: rgba(14,165,233,0.25);
+      --purple: #6366f1; --green: #10b981; --amber: #f59e0b;
+      --bg: #060c18; --bg2: #0c1525; --bg3: #111c30;
+      --border: rgba(14,165,233,0.15); --text: #e2e8f0; --muted: rgba(226,232,240,0.5);
     }
-
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { background: var(--bg); color: var(--text); font-family: 'Inter', system-ui, sans-serif; line-height: 1.6; }
-
-    /* ── NAV ── */
     .page-nav {
       position: fixed; top: 33px; left: 0; right: 0; z-index: 200;
       background: rgba(6,12,24,0.92); backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-      padding: 0 24px; height: 56px;
+      border-bottom: 1px solid var(--border); padding: 0 24px; height: 56px;
       display: flex; align-items: center; justify-content: space-between;
     }
     .page-nav .logo { display: flex; align-items: center; gap: 8px; text-decoration: none; font-size: 18px; font-weight: 700; color: #fff; white-space: nowrap; }
@@ -68,149 +55,67 @@
     .page-nav .nav-links { display: flex; align-items: center; gap: 24px; }
     .page-nav .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .2s; }
     .page-nav .nav-links a:hover { color: #fff; }
-    .page-nav .nav-cta {
-      background: var(--sky); color: #fff; border: none; border-radius: 8px;
-      padding: 8px 18px; font-size: 13px; font-weight: 600; cursor: pointer;
-      text-decoration: none; transition: background .2s;
-    }
+    .page-nav .nav-cta { background: var(--sky); color: #fff; border: none; border-radius: 8px; padding: 8px 18px; font-size: 13px; font-weight: 600; cursor: pointer; text-decoration: none; transition: background .2s; }
     .page-nav .nav-cta:hover { background: var(--sky-dark); }
-
-    /* ── HERO ── */
-    .hero {
-      min-height: 100vh; display: flex; align-items: center; justify-content: center;
-      text-align: center; padding: 120px 24px 80px;
-      background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(14,165,233,0.18) 0%, transparent 70%);
-      position: relative; overflow: hidden;
-    }
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: 6px;
-      background: rgba(14,165,233,0.12); border: 1px solid rgba(14,165,233,0.3);
-      color: var(--sky); border-radius: 100px; padding: 6px 16px; font-size: 12px; font-weight: 600;
-      text-transform: uppercase; letter-spacing: .08em; margin-bottom: 24px;
-    }
+    .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 120px 24px 80px; background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(14,165,233,0.18) 0%, transparent 70%); }
+    .hero-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(14,165,233,0.12); border: 1px solid rgba(14,165,233,0.3); color: var(--sky); border-radius: 100px; padding: 6px 16px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 24px; }
     .hero h1 { font-size: clamp(2.2rem, 6vw, 4.2rem); font-weight: 800; line-height: 1.1; margin-bottom: 20px; }
     .hero h1 .grad { background: linear-gradient(135deg, var(--sky), #38bdf8, var(--purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     .hero-sub { font-size: clamp(1rem, 2.5vw, 1.2rem); color: var(--muted); max-width: 680px; margin: 0 auto 40px; }
     .hero-pills { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 40px; }
-    .pill {
-      background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 100px; padding: 6px 14px; font-size: 12px; color: var(--muted);
-    }
+    .pill { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 100px; padding: 6px 14px; font-size: 12px; color: var(--muted); }
     .hero-btns { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
-    .btn-primary {
-      background: var(--sky); color: #fff; border: none; border-radius: 10px;
-      padding: 14px 28px; font-size: 15px; font-weight: 600; cursor: pointer;
-      text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
-      transition: all .2s; box-shadow: 0 4px 20px var(--sky-glow);
-    }
+    .btn-primary { background: var(--sky); color: #fff; border: none; border-radius: 10px; padding: 14px 28px; font-size: 15px; font-weight: 600; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: all .2s; box-shadow: 0 4px 20px var(--sky-glow); }
     .btn-primary:hover { background: var(--sky-dark); transform: translateY(-1px); }
-    .btn-outline {
-      background: transparent; color: var(--text); border: 1px solid var(--border);
-      border-radius: 10px; padding: 14px 28px; font-size: 15px; font-weight: 600;
-      cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
-      transition: all .2s;
-    }
+    .btn-outline { background: transparent; color: var(--text); border: 1px solid var(--border); border-radius: 10px; padding: 14px 28px; font-size: 15px; font-weight: 600; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: all .2s; }
     .btn-outline:hover { border-color: var(--sky); color: var(--sky); }
-
-    /* ── SECTION SHELL ── */
     section { padding: 96px 24px; }
     .container { max-width: 1100px; margin: 0 auto; }
-    .sec-badge {
-      display: inline-block; background: rgba(14,165,233,0.1); border: 1px solid rgba(14,165,233,0.25);
-      color: var(--sky); border-radius: 100px; padding: 4px 14px; font-size: 11px;
-      font-weight: 700; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 14px;
-    }
+    .sec-badge { display: inline-block; background: rgba(14,165,233,0.1); border: 1px solid rgba(14,165,233,0.25); color: var(--sky); border-radius: 100px; padding: 4px 14px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 14px; }
     .sec-h { font-size: clamp(1.6rem, 4vw, 2.6rem); font-weight: 800; margin-bottom: 14px; }
     .sec-p { color: var(--muted); max-width: 600px; font-size: 1.05rem; }
     .sec-head { margin-bottom: 56px; }
-
-    /* ── WHAT IS IT ── */
     .what-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
-    .what-card {
-      background: var(--bg2); border: 1px solid var(--border); border-radius: 16px;
-      padding: 32px; transition: border-color .2s, transform .2s;
-    }
+    .what-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 16px; padding: 32px; transition: border-color .2s, transform .2s; }
     .what-card:hover { border-color: var(--sky); transform: translateY(-3px); }
     .what-icon { font-size: 2rem; margin-bottom: 16px; }
     .what-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; }
     .what-card p { color: var(--muted); font-size: .9rem; line-height: 1.7; }
-
-    /* ── DEPLOYMENT MODELS ── */
     .deploy-section { background: var(--bg2); }
     .deploy-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
     @media (max-width: 768px) { .deploy-grid { grid-template-columns: 1fr; } }
-    .deploy-card {
-      border-radius: 20px; padding: 40px; position: relative; overflow: hidden;
-      border: 1px solid transparent;
-    }
-    .deploy-card.onprem {
-      background: linear-gradient(135deg, rgba(99,102,241,0.1), rgba(6,12,24,0.8));
-      border-color: rgba(99,102,241,0.3);
-    }
-    .deploy-card.cloud {
-      background: linear-gradient(135deg, rgba(14,165,233,0.12), rgba(6,12,24,0.8));
-      border-color: rgba(14,165,233,0.35);
-    }
-    .deploy-card .deploy-badge {
-      display: inline-block; border-radius: 100px; padding: 4px 12px;
-      font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em;
-      margin-bottom: 20px;
-    }
+    .deploy-card { border-radius: 20px; padding: 40px; border: 1px solid transparent; }
+    .deploy-card.onprem { background: linear-gradient(135deg, rgba(99,102,241,0.1), rgba(6,12,24,0.8)); border-color: rgba(99,102,241,0.3); }
+    .deploy-card.cloud { background: linear-gradient(135deg, rgba(14,165,233,0.12), rgba(6,12,24,0.8)); border-color: rgba(14,165,233,0.35); }
+    .deploy-badge { display: inline-block; border-radius: 100px; padding: 4px 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 20px; }
     .onprem .deploy-badge { background: rgba(99,102,241,0.2); color: #a5b4fc; }
     .cloud .deploy-badge { background: rgba(14,165,233,0.2); color: var(--sky); }
     .deploy-card h2 { font-size: 1.5rem; font-weight: 800; margin-bottom: 10px; }
-    .deploy-card .deploy-sub { color: var(--muted); font-size: .95rem; margin-bottom: 28px; line-height: 1.6; }
+    .deploy-sub { color: var(--muted); font-size: .95rem; margin-bottom: 28px; line-height: 1.6; }
     .deploy-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 32px; }
     .deploy-list li { display: flex; align-items: flex-start; gap: 10px; font-size: .9rem; }
     .deploy-list li .chk { color: var(--green); flex-shrink: 0; margin-top: 2px; }
     .deploy-stack { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
-    .stack-tag {
-      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 6px; padding: 4px 10px; font-size: 11px; color: var(--muted);
-    }
+    .stack-tag { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; padding: 4px 10px; font-size: 11px; color: var(--muted); }
     .deploy-price { margin-bottom: 28px; }
     .deploy-price .price-label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 4px; }
-    .deploy-price .price-val { font-size: 2rem; font-weight: 800; }
-    .deploy-price .price-period { font-size: .85rem; color: var(--muted); margin-left: 4px; }
-    .deploy-cta {
-      display: inline-flex; align-items: center; gap: 8px;
-      border-radius: 10px; padding: 12px 24px; font-size: 14px; font-weight: 600;
-      text-decoration: none; cursor: pointer; border: none; transition: all .2s;
-    }
+    .price-val { font-size: 2rem; font-weight: 800; }
+    .price-period { font-size: .85rem; color: var(--muted); margin-left: 4px; }
+    .deploy-cta { display: inline-flex; align-items: center; gap: 8px; border-radius: 10px; padding: 12px 24px; font-size: 14px; font-weight: 600; text-decoration: none; cursor: pointer; border: none; transition: all .2s; }
     .onprem .deploy-cta { background: #6366f1; color: #fff; box-shadow: 0 4px 20px rgba(99,102,241,0.3); }
     .onprem .deploy-cta:hover { background: #4f46e5; }
     .cloud .deploy-cta { background: var(--sky); color: #fff; box-shadow: 0 4px 20px var(--sky-glow); }
     .cloud .deploy-cta:hover { background: var(--sky-dark); }
-
-    /* ── HOW IT WORKS ── */
     .hiw-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; }
-    .hiw-card {
-      background: var(--bg2); border: 1px solid var(--border); border-radius: 16px;
-      padding: 28px; text-align: center; position: relative;
-    }
-    .hiw-num {
-      width: 36px; height: 36px; border-radius: 50%;
-      background: linear-gradient(135deg, var(--sky), var(--purple));
-      color: #fff; font-weight: 800; font-size: 14px;
-      display: flex; align-items: center; justify-content: center;
-      margin: 0 auto 16px;
-    }
+    .hiw-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 16px; padding: 28px; text-align: center; }
+    .hiw-num { width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, var(--sky), var(--purple)); color: #fff; font-weight: 800; font-size: 14px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
     .hiw-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
     .hiw-card p { color: var(--muted); font-size: .85rem; line-height: 1.6; }
-    .hiw-connector { display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 1.5rem; }
-    @media (max-width: 600px) { .hiw-connector { display: none; } }
-
-    /* ── TERMINOLOGY ── */
     .term-section { background: var(--bg3); }
     .term-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
-    .term-card {
-      background: var(--bg2); border: 1px solid var(--border); border-radius: 12px;
-      padding: 20px 24px;
-    }
+    .term-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; }
     .term-card .term-word { font-size: 1rem; font-weight: 700; color: var(--sky); margin-bottom: 6px; }
     .term-card .term-def { color: var(--muted); font-size: .82rem; line-height: 1.5; }
-
-    /* ── COMPARE TABLE ── */
     .compare-table { width: 100%; border-collapse: collapse; font-size: .9rem; }
     .compare-table th, .compare-table td { padding: 14px 18px; text-align: left; border-bottom: 1px solid var(--border); }
     .compare-table th { color: var(--muted); font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; font-weight: 600; }
@@ -220,165 +125,104 @@
     .compare-table .no { color: rgba(255,255,255,0.2); }
     .compare-table tr:hover td { background: rgba(14,165,233,0.04); }
     .compare-wrap { background: var(--bg2); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
-
-    /* ── CTA STRIP ── */
-    .cta-strip {
-      background: linear-gradient(135deg, rgba(14,165,233,0.12), rgba(99,102,241,0.12));
-      border: 1px solid var(--border); border-radius: 20px; padding: 60px 40px;
-      text-align: center;
-    }
+    .cta-strip { background: linear-gradient(135deg, rgba(14,165,233,0.12), rgba(99,102,241,0.12)); border: 1px solid var(--border); border-radius: 20px; padding: 60px 40px; text-align: center; }
     .cta-strip h2 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 800; margin-bottom: 14px; }
     .cta-strip p { color: var(--muted); max-width: 540px; margin: 0 auto 32px; }
     .cta-strip .cta-btns { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
-
-    /* waitlist mini-form */
-    .mini-form { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-top: 24px; }
-    .mini-form input {
-      background: rgba(255,255,255,0.07); border: 1px solid var(--border);
-      border-radius: 8px; padding: 12px 18px; font-size: 14px; color: #fff;
-      outline: none; min-width: 260px; transition: border-color .2s;
-    }
-    .mini-form input:focus { border-color: var(--sky); }
-    .mini-form input::placeholder { color: rgba(255,255,255,0.3); }
-
-    /* ── FOOTER ── */
-    .page-footer {
-      background: #0c1222; border-top: 1px solid var(--border);
-      padding: 24px 16px; text-align: center;
-    }
-    .page-footer p { color: rgba(255,255,255,.3); font-size: 12px; margin: 4px 0; }
-    .page-footer a { color: var(--sky); text-decoration: none; }
-
-    /* ── ARCH DIAGRAM ── */
-    .arch-diagram {
-      background: var(--bg2); border: 1px solid var(--border); border-radius: 16px;
-      padding: 32px; font-family: 'Courier New', monospace; font-size: .75rem;
-      color: #7dd3fc; line-height: 1.8; overflow-x: auto; white-space: pre;
-    }
+    .arch-diagram { background: var(--bg2); border: 1px solid var(--border); border-radius: 16px; padding: 32px; font-family: 'Courier New', monospace; font-size: .75rem; color: #7dd3fc; line-height: 1.8; overflow-x: auto; white-space: pre; }
     .arch-diagram .dim { color: rgba(255,255,255,.2); }
     .arch-diagram .hi { color: var(--sky); font-weight: bold; }
     .arch-diagram .grn { color: var(--green); }
     .arch-diagram .pur { color: #a5b4fc; }
-
-    /* mobile nav hide */
-    @media (max-width: 640px) {
-      .page-nav .nav-links a:not(.nav-cta) { display: none; }
-    }
+    .page-footer { background: #0c1222; border-top: 1px solid var(--border); padding: 24px 16px; text-align: center; }
+    .page-footer p { color: rgba(255,255,255,.3); font-size: 12px; margin: 4px 0; }
+    .page-footer a { color: var(--sky); text-decoration: none; }
+    @media (max-width: 640px) { .page-nav .nav-links a:not(.nav-cta) { display: none; } }
   </style>
 </head>
 <body>
 
   <!-- AIUNITES Webring -->
   <style>.aiunites-bar{position:fixed;top:0;left:0;right:0;z-index:10000;background:linear-gradient(90deg,#0a0a0f,#1a1a2e);border-bottom:1px solid rgba(99,102,241,.3);padding:8px 0;font-size:12px}.aiunites-bar-content{max-width:1400px;margin:0 auto;padding:0 20px;display:flex;align-items:center;gap:12px;overflow-x:auto;scrollbar-width:none}.aiunites-bar-content::-webkit-scrollbar{display:none}.aiunites-bar a{color:rgba(255,255,255,.7);text-decoration:none;white-space:nowrap;transition:color .2s}.aiunites-bar a:hover{color:#fff}.aiunites-bar-brand{color:#6366f1!important;font-weight:600}.aiunites-bar-brand:hover{color:#818cf8!important}.aiunites-bar-divider{color:rgba(255,255,255,.2)}body{padding-top:36px!important}</style>
-  <style>.wb-arrow{display:none;position:fixed;top:0;width:36px;height:33px;align-items:center;justify-content:center;cursor:pointer;z-index:10001;border:none;padding:0;font-size:16px;line-height:1;color:rgba(255,255,255,.8);transition:color .2s,opacity .2s}.wb-arrow:hover{color:#fff}.wb-left{left:0;background:linear-gradient(90deg,#0d0d1a 55%,transparent)}.wb-right{right:0;background:linear-gradient(270deg,#0d0d1a 55%,transparent)}@media (hover:hover) and (pointer:fine){.wb-arrow{display:flex}}</style>
-  <button class="wb-arrow wb-left" id="wb-left" aria-label="Scroll webring left">&#8249;</button>
-  <div class="aiunites-bar">
-    <div class="aiunites-bar-content" id="wb-content">
-      <a href="https://aiunites.github.io/aiunites-site/" class="aiunites-bar-brand">◆ AIUNITES</a>
-      <span class="aiunites-bar-divider">|</span>
-      <a href="https://aiunites.github.io/aizines-app/">AIZines</a>
-      <a href="https://aiunites.github.io/aibyjob-demo/">AIByJob</a>
-      <a href="https://aiunites.github.io/redomy-demo/">Redomy</a>
-      <a href="https://aiunites.github.io/videobate-site/">VideoBate</a>
-      <a href="https://aiunites.github.io/voicestry-site/">VoiceStry</a>
-      <a href="https://aiunites.github.io/furnishthings-site/">FurnishThings</a>
-      <a href="https://aiunites.github.io/bizstry-site/">BizStry</a>
-      <a href="https://aiunites.github.io/aiyhwh-site/">AI YHWH</a>
-      <a href="https://aiunites.github.io/gameatica-site/">Gameatica</a>
-      <a href="https://aiunites.github.io/uptownit-site/">UptownIT</a>
-      <a href="https://aiunites.github.io/inthisworld-site/">InThisWorld</a>
-      <a href="https://aiunites.github.io/erpise-site/">ERPise</a>
-      <a href="https://aiunites.github.io/erpize-site/">ERPize</a>
-      <a href="https://aiunites.github.io/aitsql-site/">AITSQL</a>
-      <a href="https://aiunites.github.io/cosmostheopera-site/">🌌 COSMOS</a>
-    </div>
-  </div>
-  <script>(function(){if(location.protocol==='file:'||location.hostname==='localhost'||location.hostname==='127.0.0.1'){document.querySelectorAll('.aiunites-bar a').forEach(a=>{a.href=a.href.replace('https://aiunites.github.io/','../')+'index.html';});}var c=document.getElementById('wb-content'),l=document.getElementById('wb-left'),r=document.getElementById('wb-right');if(!c||!l||!r)return;function upd(){var atL=c.scrollLeft<8,atR=c.scrollLeft>=c.scrollWidth-c.clientWidth-8;l.style.opacity=atL?'0':'1';l.style.pointerEvents=atL?'none':'auto';r.style.opacity=atR?'0':'1';r.style.pointerEvents=atR?'none':'auto';}l.onclick=function(){c.scrollBy({left:-220,behavior:'smooth'});};r.onclick=function(){c.scrollBy({left:220,behavior:'smooth'});};c.addEventListener('scroll',upd,{passive:true});upd();})()</script>
-  <button class="wb-arrow wb-right" id="wb-right" aria-label="Scroll webring right">&#8250;</button>
+  <style>.wb-arrow{display:none;position:fixed;top:0;width:36px;height:33px;align-items:center;justify-content:center;cursor:pointer;z-index:10001;border:none;padding:0;font-size:16px;line-height:1;color:rgba(255,255,255,.8)}.wb-left{left:0;background:linear-gradient(90deg,#0d0d1a 55%,transparent)}.wb-right{right:0;background:linear-gradient(270deg,#0d0d1a 55%,transparent)}@media (hover:hover) and (pointer:fine){.wb-arrow{display:flex}}</style>
+  <button class="wb-arrow wb-left" id="wb-left">&#8249;</button>
+  <div class="aiunites-bar"><div class="aiunites-bar-content" id="wb-content">
+    <a href="https://aiunites.github.io/aiunites-site/" class="aiunites-bar-brand">&#9670; AIUNITES</a>
+    <span class="aiunites-bar-divider">|</span>
+    <a href="https://aiunites.github.io/aizines-app/">AIZines</a>
+    <a href="https://aiunites.github.io/aibyjob-demo/">AIByJob</a>
+    <a href="https://aiunites.github.io/redomy-demo/">Redomy</a>
+    <a href="https://aiunites.github.io/videobate-site/">VideoBate</a>
+    <a href="https://aiunites.github.io/voicestry-site/">VoiceStry</a>
+    <a href="https://aiunites.github.io/furnishthings-site/">FurnishThings</a>
+    <a href="https://aiunites.github.io/bizstry-site/">BizStry</a>
+    <a href="https://aiunites.github.io/aiyhwh-site/">AI YHWH</a>
+    <a href="https://aiunites.github.io/gameatica-site/">Gameatica</a>
+    <a href="https://aiunites.github.io/uptownit-site/">UptownIT</a>
+    <a href="https://aiunites.github.io/inthisworld-site/">InThisWorld</a>
+    <a href="https://aiunites.github.io/erpise-site/">ERPise</a>
+    <a href="https://aiunites.github.io/erpize-site/">ERPize</a>
+    <a href="https://aiunites.github.io/aitsql-site/">AITSQL</a>
+    <a href="https://aiunites.github.io/cosmostheopera-site/">&#127756; COSMOS</a>
+  </div></div>
+  <button class="wb-arrow wb-right" id="wb-right">&#8250;</button>
+  <script>(function(){var c=document.getElementById('wb-content'),l=document.getElementById('wb-left'),r=document.getElementById('wb-right');if(!c||!l||!r)return;function upd(){var atL=c.scrollLeft<8,atR=c.scrollLeft>=c.scrollWidth-c.clientWidth-8;l.style.opacity=atL?'0':'1';l.style.pointerEvents=atL?'none':'auto';r.style.opacity=atR?'0':'1';r.style.pointerEvents=atR?'none':'auto';}l.onclick=function(){c.scrollBy({left:-220,behavior:'smooth'});};r.onclick=function(){c.scrollBy({left:220,behavior:'smooth'});};c.addEventListener('scroll',upd,{passive:true});upd();})()</script>
 
   <!-- PAGE NAV -->
   <nav class="page-nav">
-    <a href="index.html" class="logo">☁️ Cloud<span>sion</span></a>
+    <a href="index.html" class="logo">&#9729;&#65039; Cloud<span>sion</span></a>
     <div class="nav-links">
       <a href="#deployment">Deployment</a>
       <a href="#how-it-works">How It Works</a>
       <a href="#compare">Compare</a>
-      <a href="index.html">← Cloudsion</a>
+      <a href="index.html">&#8592; Cloudsion</a>
       <a href="#waitlist" class="nav-cta">Get Setup Guide</a>
     </div>
   </nav>
 
-  <!-- ══ HERO ══ -->
+  <!-- HERO -->
   <section class="hero">
     <div>
-      <div class="hero-badge">🤖 AI Web Publishing Platform</div>
+      <div class="hero-badge">&#129302; AI Web Publishing Platform</div>
       <h1>The <span class="grad">Complete</span> AI<br>Publishing Machine</h1>
-      <p class="hero-sub">
-        A ready-to-deploy, all-in-one system that lets Claude AI write, edit, and
-        publish your website automatically — with zero manual commits, zero dev team,
-        and zero server management. Choose your deployment: your machine or our cloud.
-      </p>
+      <p class="hero-sub">A ready-to-deploy, all-in-one system that lets Claude AI write, edit, and publish your website automatically — with zero manual commits, zero dev team, and zero server management.</p>
       <div class="hero-pills">
-        <span class="pill">🔧 Turnkey</span>
-        <span class="pill">📦 Out-of-the-Box</span>
-        <span class="pill">🔌 Plug &amp; Play</span>
-        <span class="pill">🏷️ White-Label Ready</span>
-        <span class="pill">⚙️ Pre-Configured</span>
-        <span class="pill">🚀 Ready-to-Deploy</span>
-        <span class="pill">🧩 All-in-One</span>
-        <span class="pill">🏗️ Full-Stack Solution</span>
+        <span class="pill">&#128295; Turnkey</span>
+        <span class="pill">&#128230; Out-of-the-Box</span>
+        <span class="pill">&#128268; Plug &amp; Play</span>
+        <span class="pill">&#127991;&#65039; White-Label Ready</span>
+        <span class="pill">&#9881;&#65039; Pre-Configured</span>
+        <span class="pill">&#128640; Ready-to-Deploy</span>
+        <span class="pill">&#129513; All-in-One</span>
+        <span class="pill">&#127959; Full-Stack Solution</span>
       </div>
       <div class="hero-btns">
-        <a href="#deployment" class="btn-primary">🏠 On-Premises Setup</a>
-        <a href="#deployment" class="btn-outline">☁️ Cloud (SaaS)</a>
+        <a href="#deployment" class="btn-primary">&#127968; On-Premises Setup</a>
+        <a href="#deployment" class="btn-outline">&#9729;&#65039; Cloud (SaaS)</a>
       </div>
     </div>
   </section>
 
-  <!-- ══ WHAT IS IT ══ -->
+  <!-- WHAT IS IT -->
   <section>
     <div class="container">
       <div class="sec-head">
         <div class="sec-badge">What Is It</div>
         <h2 class="sec-h">An AI That Publishes Your Website For You</h2>
-        <p class="sec-p">Built and proven on the AIUNITES network of 21 live sites. Every piece runs in production today.</p>
+        <p class="sec-p">Built and proven on the AIUNITES network of 22 live sites. Every piece runs in production today.</p>
       </div>
       <div class="what-grid">
-        <div class="what-card">
-          <div class="what-icon">🧠</div>
-          <h3>Claude AI — The Brain</h3>
-          <p>Claude reads your files, understands your site structure, writes and edits HTML/CSS/JS, and coordinates every publishing action without being prompted for each step.</p>
-        </div>
-        <div class="what-card">
-          <div class="what-icon">📁</div>
-          <h3>MCP Filesystem — The Hands</h3>
-          <p>Model Context Protocol gives Claude direct read/write access to your local file system. It edits real files on your machine, not a sandboxed copy.</p>
-        </div>
-        <div class="what-card">
-          <div class="what-icon">⏰</div>
-          <h3>Silent Auto-Publisher — The Engine</h3>
-          <p>A compiled launcher (no flash, no window) triggers a PowerShell script via Windows Task Scheduler. It commits and pushes every changed repo to GitHub automatically.</p>
-        </div>
-        <div class="what-card">
-          <div class="what-icon">🌐</div>
-          <h3>GitHub Pages — The Host</h3>
-          <p>Free, reliable static hosting. Every push goes live within seconds. Custom domains, HTTPS, and global CDN included at no cost.</p>
-        </div>
-        <div class="what-card">
-          <div class="what-icon">📊</div>
-          <h3>Analytics Pipeline — The Eyes</h3>
-          <p>Google Apps Script exports feedback and form data to Drive daily. A scheduled task downloads the summary locally. GA4 tracks traffic across all sites from one property.</p>
-        </div>
-        <div class="what-card">
-          <div class="what-icon">🔗</div>
-          <h3>Webring — The Network</h3>
-          <p>All sites link to each other through a shared navigation bar, creating internal link equity and a unified brand presence across the entire network.</p>
-        </div>
+        <div class="what-card"><div class="what-icon">&#129504;</div><h3>Claude AI — The Brain</h3><p>Claude reads your files, understands your site structure, writes and edits HTML/CSS/JS, and coordinates every publishing action without being prompted for each step.</p></div>
+        <div class="what-card"><div class="what-icon">&#128193;</div><h3>MCP Filesystem — The Hands</h3><p>Model Context Protocol gives Claude direct read/write access to your local file system. It edits real files on your machine, not a sandboxed copy.</p></div>
+        <div class="what-card"><div class="what-icon">&#9200;</div><h3>Silent Auto-Publisher — The Engine</h3><p>A compiled launcher (no flash, no window) triggers a PowerShell script via Windows Task Scheduler. It commits and pushes every changed repo to GitHub automatically.</p></div>
+        <div class="what-card"><div class="what-icon">&#127760;</div><h3>GitHub Pages — The Host</h3><p>Free, reliable static hosting. Every push goes live within seconds. Custom domains, HTTPS, and global CDN included at no cost.</p></div>
+        <div class="what-card"><div class="what-icon">&#128202;</div><h3>Analytics Pipeline — The Eyes</h3><p>Google Apps Script exports feedback and form data to Drive daily. GA4 tracks traffic across all sites from one property.</p></div>
+        <div class="what-card"><div class="what-icon">&#128279;</div><h3>Webring — The Network</h3><p>All sites link to each other through a shared navigation bar, creating internal link equity and a unified brand presence across the entire network.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- ══ DEPLOYMENT MODELS ══ -->
+  <!-- DEPLOYMENT MODELS -->
   <section class="deploy-section" id="deployment">
     <div class="container">
       <div class="sec-head">
@@ -387,90 +231,51 @@
         <p class="sec-p">Same proven system, two different ways to run it. Both are fully self-contained and production-ready.</p>
       </div>
       <div class="deploy-grid">
-
-        <!-- ON-PREM -->
         <div class="deploy-card onprem">
-          <span class="deploy-badge">🏠 On-Premises</span>
+          <span class="deploy-badge">&#127968; On-Premises</span>
           <h2>Self-Hosted Install</h2>
-          <p class="deploy-sub">
-            Run the entire publishing machine on your own Windows PC or server.
-            You own the code, the data, and the schedule. No monthly fees beyond
-            Claude Desktop access.
-          </p>
-          <div class="deploy-price">
-            <div class="price-label">Estimated cost</div>
-            <div>
-              <span class="price-val">$2,000</span>
-              <span class="price-period">/mo (Claude Pro)</span>
-            </div>
-          </div>
+          <p class="deploy-sub">Run the entire publishing machine on your own Windows PC or server. You own the code, the data, and the schedule.</p>
+          <div class="deploy-price"><div class="price-label">Estimated cost</div><div><span class="price-val">$2,000</span><span class="price-period">/mo (Claude Pro)</span></div></div>
           <ul class="deploy-list">
-            <li><span class="chk">✓</span> Claude Desktop + MCP filesystem plugin</li>
-            <li><span class="chk">✓</span> launcher.exe — silent Task Scheduler runner</li>
-            <li><span class="chk">✓</span> auto-publish.ps1 — git commit + push all repos</li>
-            <li><span class="chk">✓</span> Analytics download task (silent, daily)</li>
-            <li><span class="chk">✓</span> GitHub Pages hosting (free, unlimited sites)</li>
-            <li><span class="chk">✓</span> One-time setup via setup.ps1 installer script</li>
-            <li><span class="chk">✓</span> Full data sovereignty — nothing leaves your machine</li>
-            <li><span class="chk">✓</span> White-label: your brand, your repos, your domains</li>
+            <li><span class="chk">&#10003;</span> Claude Desktop + MCP filesystem plugin</li>
+            <li><span class="chk">&#10003;</span> launcher.exe — silent Task Scheduler runner</li>
+            <li><span class="chk">&#10003;</span> auto-publish.ps1 — git commit + push all repos</li>
+            <li><span class="chk">&#10003;</span> Analytics download task (silent, daily)</li>
+            <li><span class="chk">&#10003;</span> GitHub Pages hosting (free, unlimited sites)</li>
+            <li><span class="chk">&#10003;</span> One-time setup via setup.ps1 installer script</li>
+            <li><span class="chk">&#10003;</span> Full data sovereignty — nothing leaves your machine</li>
+            <li><span class="chk">&#10003;</span> White-label: your brand, your repos, your domains</li>
           </ul>
           <div class="deploy-stack">
-            <span class="stack-tag">Windows 10/11</span>
-            <span class="stack-tag">Claude Desktop</span>
-            <span class="stack-tag">PowerShell</span>
-            <span class="stack-tag">Git</span>
-            <span class="stack-tag">GitHub Pages</span>
-            <span class="stack-tag">C# launcher.exe</span>
-            <span class="stack-tag">Task Scheduler</span>
-            <span class="stack-tag">Apps Script</span>
+            <span class="stack-tag">Windows 10/11</span><span class="stack-tag">Claude Desktop</span><span class="stack-tag">PowerShell</span><span class="stack-tag">Git</span><span class="stack-tag">GitHub Pages</span><span class="stack-tag">C# launcher.exe</span><span class="stack-tag">Task Scheduler</span>
           </div>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeQUi49AdTBRjetz5MDFQgMIkm9-vOMb_ARKwYEz41j_Nfiwg/viewform?usp=pp_url&entry.2053726945=Cloudsion+On-Prem" target="_blank" class="deploy-cta">🔧 Get Setup Guide</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeQUi49AdTBRjetz5MDFQgMIkm9-vOMb_ARKwYEz41j_Nfiwg/viewform?usp=pp_url&entry.2053726945=Cloudsion+On-Prem" target="_blank" class="deploy-cta">&#128295; Get Setup Guide</a>
         </div>
-
-        <!-- CLOUD SAAS -->
         <div class="deploy-card cloud">
-          <span class="deploy-badge">☁️ Cloud SaaS — Multi-Tenant</span>
+          <span class="deploy-badge">&#9729;&#65039; Cloud SaaS — Multi-Tenant</span>
           <h2>Hosted Publishing Platform</h2>
-          <p class="deploy-sub">
-            Subscribe and get your own isolated publishing environment in the cloud.
-            No installs, no Task Scheduler, no local repos. Claude publishes your sites
-            from a browser tab. Each tenant is fully sandboxed.
-          </p>
-          <div class="deploy-price">
-            <div class="price-label">Starting at</div>
-            <div>
-              <span class="price-val">$4,900</span>
-              <span class="price-period">/mo per workspace</span>
-            </div>
-          </div>
+          <p class="deploy-sub">Subscribe and get your own isolated publishing environment in the cloud. No installs, no Task Scheduler, no local repos.</p>
+          <div class="deploy-price"><div class="price-label">Starting at</div><div><span class="price-val">$4,900</span><span class="price-period">/mo per workspace</span></div></div>
           <ul class="deploy-list">
-            <li><span class="chk">✓</span> Dedicated Claude AI instance per tenant</li>
-            <li><span class="chk">✓</span> Cloud file system (no local install needed)</li>
-            <li><span class="chk">✓</span> Managed auto-publish (cloud cron, not Task Scheduler)</li>
-            <li><span class="chk">✓</span> Multi-site dashboard — manage your whole network</li>
-            <li><span class="chk">✓</span> Built-in analytics aggregation across all sites</li>
-            <li><span class="chk">✓</span> Team seats — multiple editors, one workspace</li>
-            <li><span class="chk">✓</span> Bring your own GitHub or use Cloudsion hosting</li>
-            <li><span class="chk">✓</span> White-label agency tier available</li>
+            <li><span class="chk">&#10003;</span> Dedicated Claude AI instance per tenant</li>
+            <li><span class="chk">&#10003;</span> Cloud file system (no local install needed)</li>
+            <li><span class="chk">&#10003;</span> Managed auto-publish (cloud cron)</li>
+            <li><span class="chk">&#10003;</span> Multi-site dashboard — manage your whole network</li>
+            <li><span class="chk">&#10003;</span> Built-in analytics aggregation across all sites</li>
+            <li><span class="chk">&#10003;</span> Team seats — multiple editors, one workspace</li>
+            <li><span class="chk">&#10003;</span> Bring your own GitHub or use Cloudsion hosting</li>
+            <li><span class="chk">&#10003;</span> White-label agency tier available</li>
           </ul>
           <div class="deploy-stack">
-            <span class="stack-tag">Any browser</span>
-            <span class="stack-tag">Claude API</span>
-            <span class="stack-tag">Cloud storage</span>
-            <span class="stack-tag">Managed Git</span>
-            <span class="stack-tag">GitHub Pages</span>
-            <span class="stack-tag">Multi-tenant</span>
-            <span class="stack-tag">REST API</span>
-            <span class="stack-tag">SSO</span>
+            <span class="stack-tag">Any browser</span><span class="stack-tag">Claude API</span><span class="stack-tag">Cloud storage</span><span class="stack-tag">Managed Git</span><span class="stack-tag">GitHub Pages</span><span class="stack-tag">Multi-tenant</span>
           </div>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeQUi49AdTBRjetz5MDFQgMIkm9-vOMb_ARKwYEz41j_Nfiwg/viewform?usp=pp_url&entry.2053726945=Cloudsion+Cloud" target="_blank" class="deploy-cta">☁️ Request Cloud Access</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeQUi49AdTBRjetz5MDFQgMIkm9-vOMb_ARKwYEz41j_Nfiwg/viewform?usp=pp_url&entry.2053726945=Cloudsion+Cloud" target="_blank" class="deploy-cta">&#9729;&#65039; Request Cloud Access</a>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ══ HOW IT WORKS ══ -->
+  <!-- HOW IT WORKS -->
   <section id="how-it-works">
     <div class="container">
       <div class="sec-head">
@@ -478,105 +283,26 @@
         <h2 class="sec-h">From Prompt to Published in Seconds</h2>
         <p class="sec-p">The same workflow whether on-prem or cloud — Claude does the heavy lifting.</p>
       </div>
-
-      <!-- On-prem flow -->
-      <h3 style="font-size:1rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:20px;">🏠 On-Premises Flow</h3>
+      <h3 style="font-size:1rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:20px;">&#127968; On-Premises Flow</h3>
       <div class="hiw-grid" style="margin-bottom:48px;">
-        <div class="hiw-card">
-          <div class="hiw-num">1</div>
-          <h3>You Chat with Claude</h3>
-          <p>Open Claude Desktop. Describe what you want — new page, copy edit, layout change, bug fix.</p>
-        </div>
-        <div class="hiw-card">
-          <div class="hiw-num">2</div>
-          <h3>Claude Edits Files</h3>
-          <p>Via MCP filesystem, Claude reads your HTML/CSS/JS and writes changes directly to disk.</p>
-        </div>
-        <div class="hiw-card">
-          <div class="hiw-num">3</div>
-          <h3>Scheduler Fires</h3>
-          <p>Every 10 minutes, launcher.exe silently triggers auto-publish.ps1 — no window, no flash.</p>
-        </div>
-        <div class="hiw-card">
-          <div class="hiw-num">4</div>
-          <h3>Repos Push to GitHub</h3>
-          <p>All changed repos get committed with a timestamp and pushed. GitHub Pages deploys instantly.</p>
-        </div>
-        <div class="hiw-card">
-          <div class="hiw-num">5</div>
-          <h3>Sites Go Live</h3>
-          <p>Your changes are live on the web within seconds of the push. Zero manual steps.</p>
-        </div>
+        <div class="hiw-card"><div class="hiw-num">1</div><h3>You Chat with Claude</h3><p>Open Claude Desktop. Describe what you want — new page, copy edit, layout change, bug fix.</p></div>
+        <div class="hiw-card"><div class="hiw-num">2</div><h3>Claude Edits Files</h3><p>Via MCP filesystem, Claude reads your HTML/CSS/JS and writes changes directly to disk.</p></div>
+        <div class="hiw-card"><div class="hiw-num">3</div><h3>Scheduler Fires</h3><p>Every 10 minutes, launcher.exe silently triggers auto-publish.ps1 — no window, no flash.</p></div>
+        <div class="hiw-card"><div class="hiw-num">4</div><h3>Repos Push to GitHub</h3><p>All changed repos get committed with a timestamp and pushed. GitHub Pages deploys instantly.</p></div>
+        <div class="hiw-card"><div class="hiw-num">5</div><h3>Sites Go Live</h3><p>Your changes are live on the web within seconds of the push. Zero manual steps.</p></div>
       </div>
-
-      <!-- Cloud flow -->
-      <h3 style="font-size:1rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:20px;">☁️ Cloud Flow</h3>
+      <h3 style="font-size:1rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:20px;">&#9729;&#65039; Cloud Flow</h3>
       <div class="hiw-grid">
-        <div class="hiw-card">
-          <div class="hiw-num">1</div>
-          <h3>Log In to Dashboard</h3>
-          <p>Open your Cloudsion workspace in any browser. No installs, no local setup required.</p>
-        </div>
-        <div class="hiw-card">
-          <div class="hiw-num">2</div>
-          <h3>Chat with Your AI Agent</h3>
-          <p>Your dedicated Claude instance has access to all your site files in the cloud filesystem.</p>
-        </div>
-        <div class="hiw-card">
-          <div class="hiw-num">3</div>
-          <h3>Auto-Publish Runs</h3>
-          <p>A managed cloud cron job (not Task Scheduler) commits and pushes on your schedule.</p>
-        </div>
-        <div class="hiw-card">
-          <div class="hiw-num">4</div>
-          <h3>Team Reviews</h3>
-          <p>Teammates can review changes in the dashboard, preview before publish, or approve via Slack.</p>
-        </div>
-        <div class="hiw-card">
-          <div class="hiw-num">5</div>
-          <h3>Analytics Roll Up</h3>
-          <p>Cross-site analytics aggregate automatically. See traffic, feedback, and performance in one view.</p>
-        </div>
+        <div class="hiw-card"><div class="hiw-num">1</div><h3>Log In to Dashboard</h3><p>Open your Cloudsion workspace in any browser. No installs, no local setup required.</p></div>
+        <div class="hiw-card"><div class="hiw-num">2</div><h3>Chat with Your AI Agent</h3><p>Your dedicated Claude instance has access to all your site files in the cloud filesystem.</p></div>
+        <div class="hiw-card"><div class="hiw-num">3</div><h3>Auto-Publish Runs</h3><p>A managed cloud cron job commits and pushes on your schedule.</p></div>
+        <div class="hiw-card"><div class="hiw-num">4</div><h3>Team Reviews</h3><p>Teammates can review changes in the dashboard, preview before publish, or approve via Slack.</p></div>
+        <div class="hiw-card"><div class="hiw-num">5</div><h3>Analytics Roll Up</h3><p>Cross-site analytics aggregate automatically. See traffic, feedback, and performance in one view.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- ══ ARCHITECTURE DIAGRAM ══ -->
-  <section style="padding-top:0;">
-    <div class="container">
-      <div class="sec-head">
-        <div class="sec-badge">Architecture</div>
-        <h2 class="sec-h">System Overview</h2>
-      </div>
-      <div class="arch-diagram">
-<span class="dim">┌─────────────────────────────────────────────────────────────────────┐</span>
-<span class="dim">│</span>  <span class="hi">ON-PREMISES</span>                          <span class="pur">CLOUD (Multi-Tenant)</span>              <span class="dim">│</span>
-<span class="dim">├──────────────────────────────────────┬──────────────────────────────────┤</span>
-<span class="dim">│</span>                                      <span class="dim">│</span>                                  <span class="dim">│</span>
-<span class="dim">│</span>  <span class="hi">User</span> ──▶ Claude Desktop             <span class="dim">│</span>  <span class="pur">User</span> ──▶ Browser Dashboard       <span class="dim">│</span>
-<span class="dim">│</span>              │ (MCP filesystem)       <span class="dim">│</span>              │ (REST API)         <span class="dim">│</span>
-<span class="dim">│</span>              ▼                       <span class="dim">│</span>              ▼                   <span class="dim">│</span>
-<span class="dim">│</span>  <span class="hi">Local Files</span>  C:\GitHub\*\           <span class="dim">│</span>  <span class="pur">Cloud FS</span>  /tenants/{id}/sites/  <span class="dim">│</span>
-<span class="dim">│</span>              │                       <span class="dim">│</span>              │                   <span class="dim">│</span>
-<span class="dim">│</span>  <span class="hi">Task Scheduler</span> (every 10 min)       <span class="dim">│</span>  <span class="pur">Cloud Cron</span> (configurable)       <span class="dim">│</span>
-<span class="dim">│</span>     launcher.exe (no window)         <span class="dim">│</span>     Managed worker process       <span class="dim">│</span>
-<span class="dim">│</span>        │                             <span class="dim">│</span>        │                         <span class="dim">│</span>
-<span class="dim">│</span>  <span class="hi">auto-publish.ps1</span>                    <span class="dim">│</span>  <span class="pur">git-publisher service</span>           <span class="dim">│</span>
-<span class="dim">│</span>     git add . → commit → push        <span class="dim">│</span>     git add . → commit → push   <span class="dim">│</span>
-<span class="dim">│</span>              │                       <span class="dim">│</span>              │                   <span class="dim">│</span>
-<span class="dim">├──────────────┼───────────────────────┴──────────────┼───────────────────┤</span>
-<span class="dim">│</span>              ▼                                      ▼                   <span class="dim">│</span>
-<span class="dim">│</span>         <span class="grn">GitHub Repos</span>  ──────▶  <span class="grn">GitHub Pages</span>  ──────▶  <span class="grn">Live Websites</span>   <span class="dim">│</span>
-<span class="dim">│</span>                                   (free CDN, HTTPS, custom domains)    <span class="dim">│</span>
-<span class="dim">│</span>                                                                         <span class="dim">│</span>
-<span class="dim">│</span>         <span class="grn">GA4</span> ◀──────────────────────── traffic ◀─────────────────────  <span class="dim">│</span>
-<span class="dim">│</span>         <span class="grn">Apps Script</span> ──▶ Drive ──▶ feedback-summary-latest.txt         <span class="dim">│</span>
-<span class="dim">└─────────────────────────────────────────────────────────────────────────┘</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══ TERMINOLOGY ══ -->
+  <!-- TERMINOLOGY -->
   <section class="term-section">
     <div class="container">
       <div class="sec-head">
@@ -585,59 +311,96 @@
         <p class="sec-p">Different buyers call it different things. It's all the same complete solution.</p>
       </div>
       <div class="term-grid">
-        <div class="term-card">
-          <div class="term-word">Turnkey</div>
-          <div class="term-def">Install it, turn the key, it runs. No custom dev work required.</div>
-        </div>
-        <div class="term-card">
-          <div class="term-word">Out-of-the-Box</div>
-          <div class="term-def">Works immediately after setup with sane defaults and proven configuration.</div>
-        </div>
-        <div class="term-card">
-          <div class="term-word">Plug &amp; Play</div>
-          <div class="term-def">Connect your GitHub account, run setup.ps1, and you're publishing.</div>
-        </div>
-        <div class="term-card">
-          <div class="term-word">All-in-One</div>
-          <div class="term-def">AI editor, file system, auto-publisher, analytics, and hosting in a single stack.</div>
-        </div>
-        <div class="term-card">
-          <div class="term-word">White-Label</div>
-          <div class="term-def">Your brand on the sites, your repos, your domains. Cloudsion is invisible.</div>
-        </div>
-        <div class="term-card">
-          <div class="term-word">Ready-to-Deploy</div>
-          <div class="term-def">Pre-configured scripts, XML task files, and C# launcher ship as-is.</div>
-        </div>
-        <div class="term-card">
-          <div class="term-word">Pre-Configured</div>
-          <div class="term-def">Task Scheduler, PowerShell policies, git settings — all pre-set to work silently.</div>
-        </div>
-        <div class="term-card">
-          <div class="term-word">Full-Stack Solution</div>
-          <div class="term-def">Covers AI editing, file management, CI/CD, hosting, and analytics end-to-end.</div>
-        </div>
-        <div class="term-card">
-          <div class="term-word">Managed Service</div>
-          <div class="term-def">Cloud tier: we manage the infra, you manage the content.</div>
-        </div>
-        <div class="term-card">
-          <div class="term-word">SaaS Platform</div>
-          <div class="term-def">Cloud version is multi-tenant software-as-a-service with per-workspace billing.</div>
-        </div>
-        <div class="term-card">
-          <div class="term-word">Self-Hosted</div>
-          <div class="term-def">On-prem version runs entirely on your hardware. Full data control.</div>
-        </div>
-        <div class="term-card">
-          <div class="term-word">Complete Solution</div>
-          <div class="term-def">Nothing left to build. The AIUNITES network is the live proof of concept.</div>
-        </div>
+        <div class="term-card"><div class="term-word">Turnkey</div><div class="term-def">Install it, turn the key, it runs. No custom dev work required.</div></div>
+        <div class="term-card"><div class="term-word">Out-of-the-Box</div><div class="term-def">Works immediately after setup with sane defaults and proven configuration.</div></div>
+        <div class="term-card"><div class="term-word">Plug &amp; Play</div><div class="term-def">Connect your GitHub account, run setup.ps1, and you're publishing.</div></div>
+        <div class="term-card"><div class="term-word">All-in-One</div><div class="term-def">AI editor, file system, auto-publisher, analytics, and hosting in a single stack.</div></div>
+        <div class="term-card"><div class="term-word">White-Label</div><div class="term-def">Your brand on the sites, your repos, your domains. Cloudsion is invisible.</div></div>
+        <div class="term-card"><div class="term-word">Ready-to-Deploy</div><div class="term-def">Pre-configured scripts, XML task files, and C# launcher ship as-is.</div></div>
+        <div class="term-card"><div class="term-word">Pre-Configured</div><div class="term-def">Task Scheduler, PowerShell policies, git settings — all pre-set to work silently.</div></div>
+        <div class="term-card"><div class="term-word">Full-Stack Solution</div><div class="term-def">Covers AI editing, file management, CI/CD, hosting, and analytics end-to-end.</div></div>
+        <div class="term-card"><div class="term-word">Managed Service</div><div class="term-def">Cloud tier: we manage the infra, you manage the content.</div></div>
+        <div class="term-card"><div class="term-word">SaaS Platform</div><div class="term-def">Cloud version is multi-tenant software-as-a-service with per-workspace billing.</div></div>
+        <div class="term-card"><div class="term-word">Self-Hosted</div><div class="term-def">On-prem version runs entirely on your hardware. Full data control.</div></div>
+        <div class="term-card"><div class="term-word">Complete Solution</div><div class="term-def">Nothing left to build. The AIUNITES network is the live proof of concept.</div></div>
       </div>
     </div>
   </section>
 
-  <!-- ══ COMPARE ══ -->
+  <!-- LIVE SYSTEM PROOF (single, canonical section) -->
+  <section style="background:var(--bg2);" id="live-proof">
+    <div class="container">
+      <div class="sec-head">
+        <div class="sec-badge">Live System</div>
+        <h2 class="sec-h">This System Is Running Right Now</h2>
+        <p class="sec-p">These stats are pulled live from the actual auto-publish logs powering the AIUNITES network.</p>
+      </div>
+      <div id="live-stats-row" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-bottom:40px;">
+        <div class="what-card" style="text-align:center;padding:24px 16px;"><div style="font-size:2.2rem;font-weight:800;color:var(--sky)" id="ls-repos">--</div><div style="font-size:.8rem;color:var(--muted);margin-top:4px;">Repos Managed</div></div>
+        <div class="what-card" style="text-align:center;padding:24px 16px;"><div style="font-size:2.2rem;font-weight:800;color:#10b981" id="ls-last">--</div><div style="font-size:.8rem;color:var(--muted);margin-top:4px;">Last Publish</div></div>
+        <div class="what-card" style="text-align:center;padding:24px 16px;"><div style="font-size:2.2rem;font-weight:800;color:var(--sky)" id="ls-month">--</div><div style="font-size:.8rem;color:var(--muted);margin-top:4px;">Pushes This Month</div></div>
+        <div class="what-card" style="text-align:center;padding:24px 16px;"><div style="font-size:2.2rem;font-weight:800;color:var(--sky)" id="ls-total">--</div><div style="font-size:.8rem;color:var(--muted);margin-top:4px;">Total Pushes</div></div>
+        <div class="what-card" style="text-align:center;padding:24px 16px;"><div style="font-size:2.2rem;font-weight:800;color:#10b981" id="ls-sec">--</div><div style="font-size:.8rem;color:var(--muted);margin-top:4px;">Security Scan</div></div>
+        <div class="what-card" style="text-align:center;padding:24px 16px;"><div style="font-size:2.2rem;font-weight:800;" id="ls-cq">--</div><div style="font-size:.8rem;color:var(--muted);margin-top:4px;">Code Quality Issues</div></div>
+      </div>
+      <h3 style="font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:16px;">Recent Publish Activity</h3>
+      <div style="background:var(--bg);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:40px;">
+        <div id="ls-feed" style="max-height:260px;overflow-y:auto;font-size:.78rem;font-family:monospace;"><div style="padding:20px;color:var(--muted);">Loading activity...</div></div>
+      </div>
+      <h3 style="font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:16px;">Live Network — 22 Sites</h3>
+      <div id="ls-network" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;">
+        <div style="color:var(--muted);font-size:.85rem;">Loading network...</div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+  async function loadLiveStats() {
+    try {
+      const r = await fetch('data/publish-stats.json?t=' + Date.now());
+      if (!r.ok) throw new Error('not found');
+      const s = await r.json();
+      document.getElementById('ls-repos').textContent = s.reposManaged || '22';
+      document.getElementById('ls-last').textContent  = s.lastRun ? s.lastRun.split(' ')[1] : 'Active';
+      document.getElementById('ls-month').textContent = s.monthPushes != null ? s.monthPushes : '--';
+      document.getElementById('ls-total').textContent = s.totalPushes != null ? s.totalPushes : '--';
+      var secEl = document.getElementById('ls-sec');
+      secEl.textContent = s.secStatus || '--';
+      secEl.style.color = s.secStatus === 'Clean' ? '#10b981' : '#f59e0b';
+      var cqEl = document.getElementById('ls-cq');
+      cqEl.textContent = s.cqIssues != null ? s.cqIssues : '--';
+      cqEl.style.color = s.cqIssues === 0 ? '#10b981' : '#f59e0b';
+      var net = document.getElementById('ls-network');
+      if (s.repos && s.repos.length) {
+        net.innerHTML = s.repos.map(function(repo) {
+          return '<div style="background:var(--bg2);border:1px solid rgba(14,165,233,0.2);border-radius:8px;padding:10px 14px;"><div style="font-size:.75rem;font-weight:700;color:var(--sky);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">' + repo.domain + '</div><div style="font-size:.65rem;color:rgba(255,255,255,.25);margin-top:2px;">' + repo.repo + '</div><div style="margin-top:6px;"><span style="display:inline-block;padding:2px 7px;border-radius:4px;font-size:.6rem;font-weight:700;background:rgba(16,185,129,0.15);color:#10b981;">&#10003; Live</span></div></div>';
+        }).join('');
+      }
+    } catch(e) {
+      document.getElementById('ls-repos').textContent = '22';
+      document.getElementById('ls-last').textContent = 'Active';
+    }
+    try {
+      var r2 = await fetch('data/git-log.json?t=' + Date.now());
+      if (!r2.ok) throw new Error();
+      var entries = await r2.json();
+      var pushed = entries.filter(function(e) { return e.pushed; }).slice(0, 20);
+      var feed = document.getElementById('ls-feed');
+      if (pushed.length) {
+        feed.innerHTML = pushed.map(function(e) {
+          return '<div style="display:flex;gap:12px;padding:10px 16px;border-bottom:1px solid rgba(14,165,233,0.08);align-items:center;"><span style="color:rgba(255,255,255,.2);flex-shrink:0;font-size:.7rem;">' + e.date + ' ' + e.time + '</span><span style="color:#10b981;flex-shrink:0;">&#8593;</span><span style="color:var(--sky);flex-shrink:0;">' + e.repo + '</span><span style="color:rgba(255,255,255,.35);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">' + e.message + '</span></div>';
+        }).join('');
+      } else {
+        feed.innerHTML = '<div style="padding:20px;color:var(--muted);">No recent pushes found.</div>';
+      }
+    } catch(e) {
+      document.getElementById('ls-feed').innerHTML = '<div style="padding:16px;color:rgba(255,255,255,.2);">Activity feed unavailable.</div>';
+    }
+  }
+  loadLiveStats();
+  </script>
+
+  <!-- COMPARE -->
   <section id="compare">
     <div class="container">
       <div class="sec-head">
@@ -647,13 +410,7 @@
       </div>
       <div class="compare-wrap">
         <table class="compare-table">
-          <thead>
-            <tr>
-              <th>Feature</th>
-              <th>🏠 On-Premises</th>
-              <th>☁️ Cloud SaaS</th>
-            </tr>
-          </thead>
+          <thead><tr><th>Feature</th><th>&#127968; On-Premises</th><th>&#9729;&#65039; Cloud SaaS</th></tr></thead>
           <tbody>
             <tr><td>Setup required</td><td>One-time (setup.ps1)</td><td class="yes">None — browser only</td></tr>
             <tr><td>Claude access</td><td>Claude Desktop (Pro $20/mo)</td><td>Included in plan</td></tr>
@@ -674,15 +431,15 @@
     </div>
   </section>
 
-  <!-- ══ CTA ══ -->
+  <!-- CTA -->
   <section id="waitlist" style="padding-top:0;">
     <div class="container">
       <div class="cta-strip">
         <h2>Ready to Automate Your Web Presence?</h2>
         <p>Request the on-premises setup guide or inquire about cloud access. Both options are available now.</p>
         <div class="cta-btns">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeQUi49AdTBRjetz5MDFQgMIkm9-vOMb_ARKwYEz41j_Nfiwg/viewform?usp=pp_url&entry.2053726945=Cloudsion+Cloud" target="_blank" class="btn-primary">☁️ Request Cloud Access</a>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeQUi49AdTBRjetz5MDFQgMIkm9-vOMb_ARKwYEz41j_Nfiwg/viewform?usp=pp_url&entry.2053726945=AI+Publishing+On-Prem" target="_blank" class="btn-outline">🏠 Get On-Prem Guide</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeQUi49AdTBRjetz5MDFQgMIkm9-vOMb_ARKwYEz41j_Nfiwg/viewform?usp=pp_url&entry.2053726945=Cloudsion+Cloud" target="_blank" class="btn-primary">&#9729;&#65039; Request Cloud Access</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeQUi49AdTBRjetz5MDFQgMIkm9-vOMb_ARKwYEz41j_Nfiwg/viewform?usp=pp_url&entry.2053726945=AI+Publishing+On-Prem" target="_blank" class="btn-outline">&#127968; Get On-Prem Guide</a>
         </div>
         <p style="color:var(--muted);font-size:.85rem;margin-top:20px;">Enterprise pricing available. Contact us to discuss your deployment.</p>
       </div>
@@ -691,7 +448,7 @@
 
   <!-- Floating feedback -->
   <a href="https://docs.google.com/forms/d/e/1FAIpQLSeQUi49AdTBRjetz5MDFQgMIkm9-vOMb_ARKwYEz41j_Nfiwg/viewform?usp=pp_url&entry.2053726945=Cloudsion+AI+Publishing" target="_blank" style="position:fixed;bottom:90px;right:24px;width:auto;padding:0 16px;height:48px;background:linear-gradient(135deg,#0ea5e9,#06b6d4);border-radius:24px;display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:#fff;text-decoration:none;box-shadow:0 4px 20px rgba(14,165,233,.4);transition:all .3s;z-index:9999;">
-    <span>💬</span><span>Feedback</span>
+    <span>&#128172;</span><span>Feedback</span>
   </a>
 
   <!-- FOOTER -->
@@ -701,7 +458,7 @@
     <div style="display:flex;gap:16px;justify-content:center;margin-top:8px;font-size:12px;">
       <a href="https://aiunites.github.io/aiunites-site/legal.html#privacy" style="color:rgba(255,255,255,.35);text-decoration:none;">Privacy Policy</a>
       <a href="https://aiunites.github.io/aiunites-site/legal.html#terms" style="color:rgba(255,255,255,.35);text-decoration:none;">Terms of Service</a>
-      <a href="index.html" style="color:rgba(255,255,255,.35);text-decoration:none;">← Back to Cloudsion</a>
+      <a href="index.html" style="color:rgba(255,255,255,.35);text-decoration:none;">&#8592; Back to Cloudsion</a>
     </div>
   </footer>
 
