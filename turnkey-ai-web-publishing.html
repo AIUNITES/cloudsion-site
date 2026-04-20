@@ -351,6 +351,24 @@
       <div id="ls-network" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;">
         <div style="color:var(--muted);font-size:.85rem;">Loading network...</div>
       </div>
+
+      <!-- LIVE REPORTS -->
+      <div style="margin-top:48px;">
+        <h3 style="font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:6px;">Live SEO &amp; Page Rank</h3>
+        <p style="color:var(--muted);font-size:.85rem;margin-bottom:20px;">The publishing pipeline also runs weekly SEO audits and per-page Google Search Console rank checks across all 22 sites.</p>
+        <div id="ls-rank-cards" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:24px;">
+          <div class="what-card" style="text-align:center;padding:20px 12px;"><div style="font-size:1.8rem;font-weight:800;color:var(--green)" id="ls-top3">--</div><div style="font-size:.75rem;color:var(--muted);margin-top:4px;">Pages in Top 3</div></div>
+          <div class="what-card" style="text-align:center;padding:20px 12px;"><div style="font-size:1.8rem;font-weight:800;color:var(--sky)" id="ls-top10">--</div><div style="font-size:.75rem;color:var(--muted);margin-top:4px;">Pages in Top 10</div></div>
+          <div class="what-card" style="text-align:center;padding:20px 12px;"><div style="font-size:1.8rem;font-weight:800;color:var(--amber)" id="ls-ranked">--</div><div style="font-size:.75rem;color:var(--muted);margin-top:4px;">Total Ranked Pages</div></div>
+          <div class="what-card" style="text-align:center;padding:20px 12px;"><div style="font-size:1.8rem;font-weight:800;color:var(--green)" id="ls-buried">0</div><div style="font-size:.75rem;color:var(--muted);margin-top:4px;">Buried (&gt;pos 50)</div></div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;">
+          <a href="https://aiunites.com/network-overview.html" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:rgba(14,165,233,0.1);border:1px solid rgba(14,165,233,0.3);border-radius:10px;padding:10px 18px;color:var(--sky);font-size:.85rem;font-weight:600;text-decoration:none;transition:all .2s;" onmouseover="this.style.background='rgba(14,165,233,0.2)'" onmouseout="this.style.background='rgba(14,165,233,0.1)'">&#128202; Network Overview &rarr;</a>
+          <a href="https://aiunites.com/network-stats.html" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:rgba(14,165,233,0.1);border:1px solid rgba(14,165,233,0.3);border-radius:10px;padding:10px 18px;color:var(--sky);font-size:.85rem;font-weight:600;text-decoration:none;transition:all .2s;" onmouseover="this.style.background='rgba(14,165,233,0.2)'" onmouseout="this.style.background='rgba(14,165,233,0.1)'">&#128269; SEO Audit &amp; Stats &rarr;</a>
+          <a href="https://aiunites.com/network-stats.html#page-rank" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:rgba(14,165,233,0.1);border:1px solid rgba(14,165,233,0.3);border-radius:10px;padding:10px 18px;color:var(--sky);font-size:.85rem;font-weight:600;text-decoration:none;transition:all .2s;" onmouseover="this.style.background='rgba(14,165,233,0.2)'" onmouseout="this.style.background='rgba(14,165,233,0.1)'">&#127942; Page Rank Report &rarr;</a>
+        </div>
+        <p style="color:rgba(255,255,255,.2);font-size:.72rem;margin-top:10px;">Reports are admin-gated. Use the footer &#9670; Admin link on aiunites.com to log in.</p>
+      </div>
     </div>
   </section>
 
@@ -398,6 +416,20 @@
     }
   }
   loadLiveStats();
+
+  // Load page rank data
+  (async function() {
+    try {
+      const r = await fetch('data/page-rank.json?t=' + Date.now());
+      if (!r.ok) throw new Error();
+      const d = await r.json();
+      const pages = d.pages || [];
+      document.getElementById('ls-top3').textContent   = pages.filter(p => p.position <= 3).length;
+      document.getElementById('ls-top10').textContent  = d.rankedTop10 || 0;
+      document.getElementById('ls-ranked').textContent = d.totalPages || 0;
+      document.getElementById('ls-buried').textContent = pages.filter(p => p.position > 50).length;
+    } catch(e) {}
+  })();
   </script>
 
   <!-- COMPARE -->
