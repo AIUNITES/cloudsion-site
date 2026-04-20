@@ -1,6 +1,6 @@
 ﻿{
-    "updated":  "2026-04-20T11:50:17",
-    "updatedFmt":  "Apr 20, 2026 11:50AM",
+    "updated":  "2026-04-20T18:30:19",
+    "updatedFmt":  "Apr 20, 2026 6:30PM",
     "dateRange":  "2026-03-23 to 2026-04-20",
     "totalPages":  22,
     "rankedTop10":  22,
@@ -94,7 +94,7 @@
                                      "visible":  7,
                                      "buried":  0,
                                      "topPage":  "https://erpise.com/",
-                                     "topPos":  5.6
+                                     "topPos":  4.4
                                  },
                   "aiyhwh.com":  {
                                      "name":  "AI YHWH",
@@ -211,9 +211,9 @@
                       "domain":  "erpise.com",
                       "url":  "https://erpise.com/",
                       "clicks":  0,
-                      "impressions":  5,
+                      "impressions":  7,
                       "ctr":  0,
-                      "position":  5.6
+                      "position":  4.4
                   },
                   {
                       "site":  "InThisWorld",
@@ -292,9 +292,9 @@
                       "domain":  "aiunites.com",
                       "url":  "https://aiunites.com/identity.html",
                       "clicks":  0,
-                      "impressions":  6,
+                      "impressions":  7,
                       "ctr":  0,
-                      "position":  4.7
+                      "position":  4.9
                   },
                   {
                       "site":  "AIUNITES",
@@ -364,8 +364,8 @@
                       "domain":  "aizines.com",
                       "url":  "http://www.aizines.com/",
                       "clicks":  4,
-                      "impressions":  41,
-                      "ctr":  9.8,
+                      "impressions":  42,
+                      "ctr":  9.5,
                       "position":  4.5
                   }
               ],
