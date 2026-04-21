@@ -432,6 +432,116 @@
   })();
   </script>
 
+  <!-- AUTOMATION PIPELINE LIVE CHART -->
+  <section style="background:var(--bg3);">
+    <div class="container">
+      <div class="sec-head">
+        <div class="sec-badge">Live Proof</div>
+        <h2 class="sec-h">Automation Pipeline &mdash; Live View</h2>
+        <p class="sec-p">Real-time breakdown of issues detected, auto-fixed, and queued for review across all 22 AIUNITES sites. Updated weekly by the pipeline itself.</p>
+      </div>
+      <div id="autopipe-widget" style="background:var(--bg2);border:1px solid var(--border);border-radius:16px;overflow:hidden;">
+        <div style="padding:32px;text-align:center;color:var(--muted);font-size:.85rem;">Loading pipeline data&hellip;</div>
+      </div>
+      <p style="color:rgba(255,255,255,.2);font-size:.72rem;margin-top:10px;text-align:right;">Source: aiunites.com/data/action-list.json &middot; Updated by prioritize-fixes.ps1 weekly</p>
+    </div>
+  </section>
+
+  <script>
+  (function() {
+    var CDN = [
+      'https://aiunites.com/data/action-list.json?_=' + Date.now(),
+      'https://aiunites.github.io/cloudsion-site/data/action-list.json?_=' + Date.now()
+    ];
+    var CATS = [
+      { key:'SEO',             label:'SEO',      color:'#818cf8' },
+      { key:'CodeQuality',     label:'Code',     color:'#9ca3af' },
+      { key:'AdSense',         label:'AdSense',  color:'#f87171' },
+      { key:'RankOpportunity', label:'Rank+',    color:'#fcd34d' },
+      { key:'Security',        label:'Security', color:'#ef4444' }
+    ];
+    var LANES = [
+      { freq:'Every 10 min', color:'rgba(99,102,241,.7)',  steps:['auto-publish','git push','code scan','fix-queue','IndexNow'] },
+      { freq:'Daily',        color:'rgba(6,182,212,.7)',   steps:['fetch-gsc-stats','gsc-stats.json CDN'] },
+      { freq:'Weekly',       color:'rgba(16,185,129,.7)',  steps:['seo-audit','seo-fix','check-page-rank','prioritize-fixes','auto-improve','session-brief'] },
+      { freq:'On demand',    color:'rgba(245,158,11,.7)',  steps:['Claude session','Publish Now'] }
+    ];
+    function pct(n,d){ return d>0?Math.round(n/d*100):0; }
+    function render(data) {
+      var total  = data?(data.totalActions||0):0;
+      var autoN  = data?(data.autoFixable||0):0;
+      var cldN   = data?(data.needsClaude||0):0;
+      var autoP  = pct(autoN,total);
+      var cldP   = pct(cldN,total);
+      var cats   = {}; CATS.forEach(function(c){cats[c.key]=0;});
+      if(data&&data.actions) data.actions.forEach(function(a){ if(cats.hasOwnProperty(a.Category)) cats[a.Category]++; });
+      var catMax = Math.max.apply(null,CATS.map(function(c){return cats[c.key];})) || 1;
+      var statsH = [
+        { n: autoP+'%', lbl:'Automated',    sub:autoN+' of '+total+' fixes', c:'#00e5a0' },
+        { n: autoN,     lbl:'Auto-fixed',   sub:'no human needed',           c:'#6ee7b7' },
+        { n: cldN,      lbl:'Needs review', sub:'top items this cycle',      c:'#fcd34d' },
+        { n: '22',      lbl:'Sites live',   sub:'across network',            c:'#a5b4fc' }
+      ].map(function(s) {
+        return '<div style="flex:1;min-width:120px;border-right:1px solid rgba(14,165,233,.1);padding:18px 14px;text-align:center;">'+
+          '<div style="font-family:monospace;font-size:1.8rem;font-weight:700;color:'+s.c+'">'+s.n+'</div>'+
+          '<div style="font-size:.65rem;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.35);margin-top:4px;">'+s.lbl+'</div>'+
+          '<div style="font-size:.65rem;color:rgba(255,255,255,.22);margin-top:2px;">'+s.sub+'</div>'+
+        '</div>';
+      }).join('');
+      var catBarsH = CATS.map(function(c) {
+        var w = Math.round((cats[c.key]/catMax)*100);
+        return '<div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">'+
+          '<span style="font-family:monospace;font-size:.65rem;color:rgba(255,255,255,.3);width:58px;text-align:right;">'+c.label+'</span>'+
+          '<div style="flex:1;height:10px;background:rgba(255,255,255,.05);border-radius:3px;overflow:hidden;">'+
+            '<div style="height:100%;width:'+w+'%;background:'+c.color+';border-radius:3px;transition:width 1s ease;"></div>'+
+          '</div>'+
+          '<span style="font-family:monospace;font-size:.65rem;color:rgba(255,255,255,.3);width:28px;text-align:right;">'+cats[c.key]+'</span>'+
+        '</div>';
+      }).join('');
+      var lanesH = LANES.map(function(lane) {
+        var stepsH = lane.steps.map(function(s,i) {
+          return (i>0?'<span style="color:rgba(255,255,255,.2);margin:0 3px;">&#8594;</span>':'')+
+            '<span style="display:inline-block;padding:4px 9px;border:1px solid '+lane.color.replace('.7','.3')+';border-radius:4px;font-size:.68rem;font-family:monospace;color:'+lane.color.replace('.7','1')+';background:'+lane.color.replace('.7','.08')+';white-space:nowrap;">'+s+'</span>';
+        }).join('');
+        return '<div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:10px;">'+
+          '<span style="font-family:monospace;font-size:.6rem;color:rgba(255,255,255,.25);text-transform:uppercase;letter-spacing:.05em;width:72px;flex-shrink:0;text-align:right;padding-top:6px;">'+lane.freq+'</span>'+
+          '<div style="display:flex;flex-wrap:wrap;align-items:center;gap:4px;row-gap:4px;">'+stepsH+'</div>'+
+        '</div>';
+      }).join('');
+      var genFmt = data?(data.generatedFmt||''):'weekly';
+      document.getElementById('autopipe-widget').innerHTML =
+        '<div style="display:flex;flex-wrap:wrap;border-bottom:1px solid rgba(14,165,233,.1);">'+statsH+'</div>'+
+        '<div style="padding:18px 24px;border-bottom:1px solid rgba(14,165,233,.08);">'+
+          '<div style="display:flex;justify-content:space-between;font-family:monospace;font-size:.65rem;color:rgba(255,255,255,.3);margin-bottom:7px;"><span>Automation coverage</span><span style="color:#fff;font-weight:700;">'+autoP+'% runs automatically</span></div>'+
+          '<div style="height:24px;background:rgba(255,255,255,.05);border-radius:4px;overflow:hidden;display:flex;">'+
+            '<div style="width:'+autoP+'%;background:linear-gradient(90deg,#00c47a,#00e5a0);display:flex;align-items:center;padding-left:8px;"><span style="font-family:monospace;font-size:.65rem;font-weight:700;color:#032a1e;white-space:nowrap;">'+autoN+' auto</span></div>'+
+            (cldP>3?'<div style="width:'+cldP+'%;background:rgba(249,115,22,.45);display:flex;align-items:center;justify-content:center;"><span style="font-family:monospace;font-size:.62rem;color:rgba(255,255,255,.7);white-space:nowrap;">'+cldN+' review</span></div>':'')+
+          '</div>'+
+        '</div>'+
+        '<div style="display:grid;grid-template-columns:1fr 1fr;gap:0;border-bottom:1px solid rgba(14,165,233,.08);">'+
+          '<div style="padding:16px 24px;border-right:1px solid rgba(14,165,233,.08);">'+
+            '<div style="font-family:monospace;font-size:.6rem;text-transform:uppercase;letter-spacing:.07em;color:rgba(255,255,255,.2);margin-bottom:10px;">By category</div>'+
+            catBarsH+
+          '</div>'+
+          '<div style="padding:16px 24px;">'+
+            '<div style="font-family:monospace;font-size:.6rem;text-transform:uppercase;letter-spacing:.07em;color:rgba(255,255,255,.2);margin-bottom:10px;">Pipeline stages</div>'+
+            lanesH+
+          '</div>'+
+        '</div>'+
+        '<div style="padding:8px 24px;display:flex;justify-content:space-between;font-family:monospace;font-size:.62rem;color:rgba(255,255,255,.18);">'+
+          '<span>Updated: '+genFmt+'</span>'+
+          '<a href="https://aiunites.com/automation-live.html" target="_blank" style="color:var(--sky);text-decoration:none;">Full view &#8599;</a>'+
+        '</div>';
+    }
+    var idx=0;
+    function tryFetch(){
+      if(idx>=CDN.length){render(null);return;}
+      fetch(CDN[idx++]).then(function(r){if(!r.ok)throw 0;return r.json();}).then(render).catch(tryFetch);
+    }
+    tryFetch();
+  })();
+  </script>
+
   <!-- COMPARE -->
   <section id="compare">
     <div class="container">
