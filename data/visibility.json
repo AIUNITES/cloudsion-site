@@ -1,0 +1,62 @@
+{
+  "updated": "2026-04-20",
+  "updatedFmt": "Apr 20, 2026",
+  "note": "Managed by update-visibility.ps1 - edit thresholds here, public flags auto-update",
+  "widgets": {
+    "pipeline_chart": {
+      "label": "Pipeline Chart",
+      "desc": "Automation rate bar and issue category breakdown",
+      "pages": "cloudsion turnkey page, uptownit publishing page",
+      "public": false,
+      "autoPromote": true,
+      "meetsThreshold": false,
+      "thresholds": { "autoRate": 70 },
+      "metrics": { "autoRate": 0 },
+      "thresholdStatus": "NO autoRate: 0 / 70"
+    },
+    "uptime": {
+      "label": "Network Uptime",
+      "desc": "22 sites online with avg response time",
+      "pages": "cloudsion turnkey page, uptownit publishing page",
+      "public": false,
+      "autoPromote": true,
+      "meetsThreshold": false,
+      "thresholds": { "uptimePercent": 100, "avgRespMs": 500 },
+      "metrics": { "uptimePercent": 0, "avgRespMs": 0 },
+      "thresholdStatus": "NO uptimePercent: 0 / 100 | NO avgRespMs: 0 / 500"
+    },
+    "pagespeed": {
+      "label": "PageSpeed Scores",
+      "desc": "Mobile and desktop Lighthouse performance scores",
+      "pages": "cloudsion turnkey page, uptownit publishing page",
+      "public": false,
+      "autoPromote": true,
+      "meetsThreshold": false,
+      "thresholds": { "avgMobile": 75, "avgDesktop": 85 },
+      "metrics": { "avgMobile": 0, "avgDesktop": 0 },
+      "thresholdStatus": "NO avgMobile: 0 / 75 | NO avgDesktop: 0 / 85"
+    },
+    "trends": {
+      "label": "Trend Chart",
+      "desc": "Network improvement over time - needs 4 weeks of data to show a useful trend",
+      "pages": "cloudsion turnkey page, automation-live.html",
+      "public": false,
+      "autoPromote": true,
+      "meetsThreshold": false,
+      "thresholds": { "weeks": 4 },
+      "metrics": { "weeks": 0 },
+      "thresholdStatus": "NO weeks: 0 / 4"
+    },
+    "traffic": {
+      "label": "Traffic Growth",
+      "desc": "GSC impressions trend from daily stats",
+      "pages": "cloudsion turnkey page, uptownit publishing page",
+      "public": false,
+      "autoPromote": true,
+      "meetsThreshold": false,
+      "thresholds": { "totalImpressions": 500 },
+      "metrics": { "totalImpressions": 0 },
+      "thresholdStatus": "NO totalImpressions: 0 / 500"
+    }
+  }
+}
