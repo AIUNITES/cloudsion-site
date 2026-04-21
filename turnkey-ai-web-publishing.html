@@ -440,12 +440,38 @@
         <h2 class="sec-h">Automation Pipeline &mdash; Live View</h2>
         <p class="sec-p">Real-time breakdown of issues detected, auto-fixed, and queued for review across all 22 AIUNITES sites. Updated weekly by the pipeline itself.</p>
       </div>
-      <div id="autopipe-widget" style="background:var(--bg2);border:1px solid var(--border);border-radius:16px;overflow:hidden;">
+      <div id="autopipe-widget" style="background:var(--bg2);border:1px solid var(--border);border-radius:16px;overflow:hidden;" data-widget="pipeline_chart">
         <div style="padding:32px;text-align:center;color:var(--muted);font-size:.85rem;">Loading pipeline data&hellip;</div>
       </div>
       <p style="color:rgba(255,255,255,.2);font-size:.72rem;margin-top:10px;text-align:right;">Source: aiunites.com/data/action-list.json &middot; Updated by prioritize-fixes.ps1 weekly</p>
     </div>
   </section>
+
+  <!-- Visibility gate: hides widgets marked admin-only in visibility.json -->
+  <script>
+  (function() {
+    var VIS_CDN = [
+      'https://aiunites.com/data/visibility.json?_=' + Date.now(),
+      'https://aiunites.github.io/cloudsion-site/data/visibility.json?_=' + Date.now()
+    ];
+    function tryFetch(i) {
+      if (i >= VIS_CDN.length) { applyGate(null); return; }
+      fetch(VIS_CDN[i]).then(function(r) { if (!r.ok) throw 0; return r.json(); }).then(applyGate).catch(function() { tryFetch(i + 1); });
+    }
+    function applyGate(vis) {
+      document.querySelectorAll('[data-widget]').forEach(function(el) {
+        var id = el.getAttribute('data-widget');
+        var pub = vis && vis.widgets && vis.widgets[id] && vis.widgets[id].public === true;
+        if (!pub) {
+          el.style.display = 'none';
+          var parent = el.closest('section');
+          if (parent) parent.style.display = 'none';
+        }
+      });
+    }
+    tryFetch(0);
+  })();
+  </script>
 
   <script>
   (function() {
