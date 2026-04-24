@@ -499,7 +499,8 @@
     var LANES = [
       { freq:'Every 10 min', color:'rgba(99,102,241,.7)',  steps:['auto-publish','git push','code scan','fix-queue','IndexNow'] },
       { freq:'Daily',        color:'rgba(6,182,212,.7)',   steps:['fetch-gsc-stats','gsc-stats.json CDN'] },
-      { freq:'Weekly',       color:'rgba(16,185,129,.7)',  steps:['seo-audit','seo-fix','check-page-rank','prioritize-fixes','auto-improve','session-brief'] },
+      { freq:'Weekly',       color:'rgba(16,185,129,.7)',  steps:['seo-audit','seo-fix','check-page-rank','prioritize-fixes','auto-improve','pagespeed','trend-tracker','update-visibility','SEO Digest (Cowork)'] },
+      { freq:'Monthly',      color:'rgba(168,85,247,.7)',  steps:['Security Audit (Cowork)','Client Report (Cowork)'] },
       { freq:'On demand',    color:'rgba(245,158,11,.7)',  steps:['Claude session','Publish Now'] }
     ];
     function pct(n,d){ return d>0?Math.round(n/d*100):0; }
@@ -622,7 +623,7 @@
             <thead><tr><th>Component</th><th>Azure Stack (22 sites)</th><th>Cloudsion On-Prem (22 sites)</th></tr></thead>
             <tbody>
               <tr><td>Hosting</td><td>Azure Static Web Apps Standard &mdash; $9/app/mo &times; 22 = <strong style="color:#f87171;">$198/mo</strong></td><td class="yes">GitHub Pages &mdash; <strong>$0</strong></td></tr>
-              <tr><td>CI/CD pipeline</td><td>Azure DevOps &mdash; $40/parallel job + $6/user/mo per dev</td><td class="yes">auto-publish.ps1 &mdash; <strong>$0</strong></td></tr>
+              <tr><td>CI/CD pipeline</td><td>Azure DevOps &mdash; $40/parallel job + $6/user/mo per dev<br><small style="color:rgba(255,255,255,.3)">1,800 free min/mo &bull; $40/extra parallel job</small></td><td class="yes">auto-publish.ps1 &mdash; <strong>$0</strong></td></tr>
               <tr><td>DevOps engineer</td><td><strong style="color:#f87171;">$8,000&ndash;$15,000/mo</strong> to build &amp; maintain pipelines</td><td class="yes">One PowerShell script &mdash; <strong>$0 labour</strong></td></tr>
               <tr><td>SEO auditing</td><td>Separate tool (Screaming Frog, Ahrefs) &mdash; $200&ndash;$500/mo</td><td class="yes">Built-in seo-audit.ps1 &mdash; <strong>$0</strong></td></tr>
               <tr><td>Auto-fixing SEO issues</td><td class="no">Not available &mdash; manual developer time</td><td class="yes">auto-improve.ps1 &mdash; weekly, autonomous</td></tr>
