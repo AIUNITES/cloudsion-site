@@ -1,16 +1,16 @@
 ﻿{
-    "checked":  "2026-04-28T09:54:35",
-    "checkedFmt":  "Apr 28, 2026 9:54AM",
+    "checked":  "2026-04-29T06:01:36",
+    "checkedFmt":  "Apr 29, 2026 6:01AM",
     "totalSites":  22,
-    "online":  11,
-    "offline":  11,
-    "uptimePercent":  50,
-    "avgResponseMs":  613,
+    "online":  10,
+    "offline":  12,
+    "uptimePercent":  45,
+    "avgResponseMs":  873,
     "sites":  [
                   {
                       "domain":  "aiunites.com",
                       "status":  200,
-                      "responseMs":  358,
+                      "responseMs":  813,
                       "online":  true
                   },
                   {
@@ -58,19 +58,19 @@
                   {
                       "domain":  "cosmostheopera.com",
                       "status":  200,
-                      "responseMs":  588,
+                      "responseMs":  690,
                       "online":  true
                   },
                   {
                       "domain":  "erpise.com",
                       "status":  200,
-                      "responseMs":  725,
+                      "responseMs":  1479,
                       "online":  true
                   },
                   {
                       "domain":  "erpize.com",
                       "status":  200,
-                      "responseMs":  533,
+                      "responseMs":  700,
                       "online":  true
                   },
                   {
@@ -82,13 +82,13 @@
                   {
                       "domain":  "gameatica.com",
                       "status":  200,
-                      "responseMs":  1202,
+                      "responseMs":  1376,
                       "online":  true
                   },
                   {
                       "domain":  "inthisworld.com",
                       "status":  200,
-                      "responseMs":  515,
+                      "responseMs":  879,
                       "online":  true
                   },
                   {
@@ -106,31 +106,31 @@
                   {
                       "domain":  "videobate.com",
                       "status":  200,
-                      "responseMs":  490,
+                      "responseMs":  802,
                       "online":  true
                   },
                   {
                       "domain":  "voicestry.com",
                       "status":  200,
-                      "responseMs":  593,
+                      "responseMs":  834,
                       "online":  true
                   },
                   {
                       "domain":  "agenthub.ai",
                       "status":  200,
-                      "responseMs":  1108,
+                      "responseMs":  964,
                       "online":  true
                   },
                   {
                       "domain":  "aiagentshub.com",
-                      "status":  200,
-                      "responseMs":  481,
-                      "online":  true
+                      "status":  0,
+                      "responseMs":  0,
+                      "online":  false
                   },
                   {
                       "domain":  "aiunites.github.io",
                       "status":  200,
-                      "responseMs":  148,
+                      "responseMs":  191,
                       "online":  true
                   },
                   {
