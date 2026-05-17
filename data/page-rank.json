@@ -1,10 +1,10 @@
 ﻿{
-    "updated":  "2026-05-09T19:41:55",
-    "updatedFmt":  "May 9, 2026 7:41PM",
-    "dateRange":  "2026-04-11 to 2026-05-09",
+    "updated":  "2026-05-16T19:52:13",
+    "updatedFmt":  "May 16, 2026 7:52PM",
+    "dateRange":  "2026-04-18 to 2026-05-16",
     "totalPages":  43,
-    "rankedTop10":  37,
-    "rankedTop50":  42,
+    "rankedTop10":  38,
+    "rankedTop50":  43,
     "sites":  {
                   "uptownit.com":  {
                                        "name":  "UptownIT",
@@ -22,7 +22,7 @@
                                         "visible":  3,
                                         "buried":  0,
                                         "topPage":  "https://voicestry.com/vrn-method.html",
-                                        "topPos":  12.9
+                                        "topPos":  12.8
                                     },
                   "gameatica.com":  {
                                         "name":  "Gameatica",
@@ -31,7 +31,7 @@
                                         "visible":  7,
                                         "buried":  0,
                                         "topPage":  "https://gameatica.com/",
-                                        "topPos":  3.4
+                                        "topPos":  7.7
                                     },
                   "videobate.com":  {
                                         "name":  "VideoBate",
@@ -40,7 +40,7 @@
                                         "visible":  7,
                                         "buried":  0,
                                         "topPage":  "https://videobate.com/",
-                                        "topPos":  5.1
+                                        "topPos":  4.2
                                     },
                   "aizines.com":  {
                                       "name":  "AIZines",
@@ -49,7 +49,7 @@
                                       "visible":  3,
                                       "buried":  0,
                                       "topPage":  "https://www.aizines.com/compare.html",
-                                      "topPos":  4
+                                      "topPos":  4.1
                                   },
                   "inthisworld.com":  {
                                           "name":  "InThisWorld",
@@ -58,7 +58,7 @@
                                           "visible":  7,
                                           "buried":  0,
                                           "topPage":  "https://inthisworld.com/",
-                                          "topPos":  6.1
+                                          "topPos":  9.2
                                       },
                   "cloudsion.com":  {
                                         "name":  "Cloudsion",
@@ -80,12 +80,12 @@
                                   },
                   "bodspas.com":  {
                                       "name":  "BodSpas",
-                                      "pageCount":  2,
-                                      "ranked":  2,
-                                      "visible":  2,
+                                      "pageCount":  1,
+                                      "ranked":  7,
+                                      "visible":  7,
                                       "buried":  0,
-                                      "topPage":  "http://www.bodspas.com/bodwave.html",
-                                      "topPos":  2
+                                      "topPage":  "http://bodspas.com/",
+                                      "topPos":  5.5
                                   },
                   "erpise.com":  {
                                      "name":  "ERPise",
@@ -94,16 +94,16 @@
                                      "visible":  7,
                                      "buried":  0,
                                      "topPage":  "https://erpise.com/",
-                                     "topPos":  5.6
+                                     "topPos":  6.8
                                  },
                   "aiyhwh.com":  {
                                      "name":  "AI YHWH",
-                                     "pageCount":  1,
-                                     "ranked":  7,
-                                     "visible":  7,
+                                     "pageCount":  2,
+                                     "ranked":  2,
+                                     "visible":  2,
                                      "buried":  0,
-                                     "topPage":  "http://www.aiyhwh.com/",
-                                     "topPos":  4.9
+                                     "topPage":  "https://aiyhwh.com/",
+                                     "topPos":  4
                                  },
                   "bizstry.com":  {
                                       "name":  "BizStry",
@@ -116,12 +116,12 @@
                                   },
                   "furnishthings.com":  {
                                             "name":  "FurnishThings",
-                                            "pageCount":  2,
-                                            "ranked":  7,
-                                            "visible":  2,
+                                            "pageCount":  3,
+                                            "ranked":  2,
+                                            "visible":  3,
                                             "buried":  0,
                                             "topPage":  "https://www.furnishthings.com/home.html",
-                                            "topPos":  3.9
+                                            "topPos":  4.2
                                         },
                   "cosmostheopera.com":  {
                                              "name":  "COSMOS the OPERA",
@@ -130,16 +130,16 @@
                                              "visible":  7,
                                              "buried":  0,
                                              "topPage":  "https://cosmostheopera.com/",
-                                             "topPos":  5.5
+                                             "topPos":  5.7
                                          },
                   "aitsql.com":  {
                                      "name":  "AITSQL",
                                      "pageCount":  1,
                                      "ranked":  0,
-                                     "visible":  0,
-                                     "buried":  7,
+                                     "visible":  7,
+                                     "buried":  0,
                                      "topPage":  "https://aitsql.com/",
-                                     "topPos":  56
+                                     "topPos":  44.8
                                  },
                   "redomy.com":  {
                                      "name":  "Redomy",
@@ -153,20 +153,20 @@
                   "aiunites.com":  {
                                        "name":  "AIUNITES",
                                        "pageCount":  6,
-                                       "ranked":  5,
+                                       "ranked":  6,
                                        "visible":  6,
                                        "buried":  0,
                                        "topPage":  "https://aiunites.com/legal.html",
-                                       "topPos":  2.8
+                                       "topPos":  3.6
                                    },
                   "erpize.com":  {
                                      "name":  "ERPize",
-                                     "pageCount":  2,
-                                     "ranked":  2,
-                                     "visible":  2,
+                                     "pageCount":  1,
+                                     "ranked":  7,
+                                     "visible":  7,
                                      "buried":  0,
                                      "topPage":  "https://erpize.com/",
-                                     "topPos":  6.1
+                                     "topPos":  6.2
                                  }
               },
     "pages":  [
@@ -184,25 +184,25 @@
                       "domain":  "redomy.com",
                       "url":  "https://redomy.com/",
                       "clicks":  0,
-                      "impressions":  12,
+                      "impressions":  17,
                       "ctr":  0,
-                      "position":  3.7
+                      "position":  5.6
                   },
                   {
                       "site":  "Redomy",
                       "domain":  "redomy.com",
                       "url":  "https://redomy.com/rooms/bedroom.html",
                       "clicks":  0,
-                      "impressions":  2,
+                      "impressions":  3,
                       "ctr":  0,
-                      "position":  3.5
+                      "position":  3.3
                   },
                   {
                       "site":  "Redomy",
                       "domain":  "redomy.com",
                       "url":  "https://redomy.com/rooms/frontyard.html",
                       "clicks":  0,
-                      "impressions":  1,
+                      "impressions":  2,
                       "ctr":  0,
                       "position":  4
                   },
@@ -211,7 +211,7 @@
                       "domain":  "redomy.com",
                       "url":  "https://redomy.com/rooms/dining-room.html",
                       "clicks":  0,
-                      "impressions":  1,
+                      "impressions":  2,
                       "ctr":  0,
                       "position":  6
                   },
@@ -220,43 +220,43 @@
                       "domain":  "gameatica.com",
                       "url":  "https://gameatica.com/",
                       "clicks":  1,
-                      "impressions":  23,
-                      "ctr":  4.3,
-                      "position":  3.4
+                      "impressions":  18,
+                      "ctr":  5.6,
+                      "position":  7.7
                   },
                   {
                       "site":  "FurnishThings",
                       "domain":  "furnishthings.com",
                       "url":  "https://www.furnishthings.com/home.html",
                       "clicks":  0,
-                      "impressions":  18,
+                      "impressions":  16,
                       "ctr":  0,
-                      "position":  3.9
+                      "position":  4.2
                   },
                   {
                       "site":  "InThisWorld",
                       "domain":  "inthisworld.com",
                       "url":  "https://inthisworld.com/",
-                      "clicks":  0,
-                      "impressions":  33,
-                      "ctr":  0,
-                      "position":  6.1
+                      "clicks":  2,
+                      "impressions":  62,
+                      "ctr":  3.2,
+                      "position":  9.2
                   },
                   {
                       "site":  "Redomy",
                       "domain":  "redomy.com",
                       "url":  "http://www.redomy.com/ai-room-builder.html",
                       "clicks":  0,
-                      "impressions":  4,
+                      "impressions":  3,
                       "ctr":  0,
-                      "position":  6.2
+                      "position":  8
                   },
                   {
                       "site":  "Redomy",
                       "domain":  "redomy.com",
                       "url":  "http://www.redomy.com/",
                       "clicks":  0,
-                      "impressions":  17,
+                      "impressions":  10,
                       "ctr":  0,
                       "position":  3.6
                   },
@@ -265,54 +265,54 @@
                       "domain":  "redomy.com",
                       "url":  "https://redomy.com/rooms/kitchen.html",
                       "clicks":  0,
-                      "impressions":  2,
+                      "impressions":  3,
                       "ctr":  0,
-                      "position":  2.5
+                      "position":  2.3
                   },
                   {
                       "site":  "VideoBate",
                       "domain":  "videobate.com",
                       "url":  "https://videobate.com/",
                       "clicks":  0,
-                      "impressions":  16,
+                      "impressions":  24,
                       "ctr":  0,
-                      "position":  5.1
+                      "position":  4.2
                   },
                   {
                       "site":  "UptownIT",
                       "domain":  "uptownit.com",
                       "url":  "https://ftp.uptownit.com/",
-                      "clicks":  0,
-                      "impressions":  1,
-                      "ctr":  0,
+                      "clicks":  1,
+                      "impressions":  3,
+                      "ctr":  33.3,
                       "position":  9
                   },
                   {
                       "site":  "VoiceStry",
                       "domain":  "voicestry.com",
                       "url":  "https://voicestry.com/",
-                      "clicks":  7,
-                      "impressions":  27,
-                      "ctr":  25.9,
-                      "position":  2.3
+                      "clicks":  10,
+                      "impressions":  35,
+                      "ctr":  28.6,
+                      "position":  3.9
                   },
                   {
                       "site":  "VoiceStry",
                       "domain":  "voicestry.com",
                       "url":  "https://voicestry.com/vrn-method.html",
                       "clicks":  0,
-                      "impressions":  57,
+                      "impressions":  75,
                       "ctr":  0,
-                      "position":  12.9
+                      "position":  12.8
                   },
                   {
                       "site":  "VoiceStry",
                       "domain":  "voicestry.com",
                       "url":  "https://voicestry.com/karaoke.html",
                       "clicks":  0,
-                      "impressions":  15,
+                      "impressions":  21,
                       "ctr":  0,
-                      "position":  2.9
+                      "position":  2.7
                   },
                   {
                       "site":  "Redomy",
@@ -328,16 +328,16 @@
                       "domain":  "redomy.com",
                       "url":  "https://www.redomy.com/ai-room-builder.html",
                       "clicks":  0,
-                      "impressions":  3,
+                      "impressions":  4,
                       "ctr":  0,
-                      "position":  7.3
+                      "position":  7.2
                   },
                   {
                       "site":  "Redomy",
                       "domain":  "redomy.com",
                       "url":  "https://www.redomy.com/rooms/basement.html",
                       "clicks":  0,
-                      "impressions":  1,
+                      "impressions":  2,
                       "ctr":  0,
                       "position":  5
                   },
@@ -362,29 +362,29 @@
                   {
                       "site":  "FurnishThings",
                       "domain":  "furnishthings.com",
-                      "url":  "https://furnishthings.com/",
+                      "url":  "https://furnishthings.com/home.html",
                       "clicks":  0,
-                      "impressions":  5,
+                      "impressions":  1,
                       "ctr":  0,
-                      "position":  29.4
+                      "position":  2
                   },
                   {
                       "site":  "AIByJob",
                       "domain":  "aibyjob.com",
                       "url":  "http://www.aibyjob.com/",
                       "clicks":  0,
-                      "impressions":  18,
+                      "impressions":  24,
                       "ctr":  0,
-                      "position":  9.9
+                      "position":  9.5
                   },
                   {
                       "site":  "AIUNITES",
                       "domain":  "aiunites.com",
                       "url":  "https://aiunites.com/spec.html",
                       "clicks":  0,
-                      "impressions":  6,
+                      "impressions":  5,
                       "ctr":  0,
-                      "position":  3.5
+                      "position":  3.8
                   },
                   {
                       "site":  "AIByJob",
@@ -400,9 +400,9 @@
                       "domain":  "aitsql.com",
                       "url":  "https://aitsql.com/",
                       "clicks":  0,
-                      "impressions":  11,
+                      "impressions":  14,
                       "ctr":  0,
-                      "position":  56
+                      "position":  44.8
                   },
                   {
                       "site":  "AIByJob",
@@ -418,135 +418,126 @@
                       "domain":  "aiunites.com",
                       "url":  "https://aiunites.com/data.html",
                       "clicks":  0,
-                      "impressions":  10,
+                      "impressions":  13,
                       "ctr":  0,
-                      "position":  4.2
+                      "position":  4.1
                   },
                   {
                       "site":  "AIUNITES",
                       "domain":  "aiunites.com",
                       "url":  "https://aiunites.com/",
                       "clicks":  1,
-                      "impressions":  32,
-                      "ctr":  3.1,
-                      "position":  10.2
+                      "impressions":  27,
+                      "ctr":  3.7,
+                      "position":  8.2
                   },
                   {
                       "site":  "AIUNITES",
                       "domain":  "aiunites.com",
                       "url":  "https://aiunites.com/identity.html",
                       "clicks":  0,
-                      "impressions":  12,
+                      "impressions":  13,
                       "ctr":  0,
-                      "position":  5.8
+                      "position":  5.5
                   },
                   {
                       "site":  "AIUNITES",
                       "domain":  "aiunites.com",
                       "url":  "https://aiunites.com/movement.html",
                       "clicks":  0,
-                      "impressions":  15,
+                      "impressions":  11,
                       "ctr":  0,
-                      "position":  5.5
+                      "position":  5.2
                   },
                   {
                       "site":  "AIUNITES",
                       "domain":  "aiunites.com",
                       "url":  "https://aiunites.com/legal.html",
                       "clicks":  0,
-                      "impressions":  6,
+                      "impressions":  8,
                       "ctr":  0,
-                      "position":  2.8
+                      "position":  3.6
                   },
                   {
                       "site":  "AI YHWH",
                       "domain":  "aiyhwh.com",
                       "url":  "http://www.aiyhwh.com/",
                       "clicks":  0,
-                      "impressions":  17,
+                      "impressions":  19,
                       "ctr":  0,
-                      "position":  4.9
+                      "position":  4.8
                   },
                   {
                       "site":  "COSMOS the OPERA",
                       "domain":  "cosmostheopera.com",
                       "url":  "https://cosmostheopera.com/",
                       "clicks":  0,
-                      "impressions":  15,
+                      "impressions":  23,
                       "ctr":  0,
-                      "position":  5.5
-                  },
-                  {
-                      "site":  "BodSpas",
-                      "domain":  "bodspas.com",
-                      "url":  "http://www.bodspas.com/bodwave.html",
-                      "clicks":  0,
-                      "impressions":  1,
-                      "ctr":  0,
-                      "position":  2
-                  },
-                  {
-                      "site":  "ERPise",
-                      "domain":  "erpise.com",
-                      "url":  "https://erpise.com/",
-                      "clicks":  0,
-                      "impressions":  29,
-                      "ctr":  0,
-                      "position":  5.6
-                  },
-                  {
-                      "site":  "ERPize",
-                      "domain":  "erpize.com",
-                      "url":  "https://erpize.com/",
-                      "clicks":  0,
-                      "impressions":  8,
-                      "ctr":  0,
-                      "position":  6.1
-                  },
-                  {
-                      "site":  "ERPize",
-                      "domain":  "erpize.com",
-                      "url":  "http://erpize.com/",
-                      "clicks":  0,
-                      "impressions":  2,
-                      "ctr":  0,
-                      "position":  1
-                  },
-                  {
-                      "site":  "AIZines",
-                      "domain":  "aizines.com",
-                      "url":  "https://www.aizines.com/",
-                      "clicks":  1,
-                      "impressions":  5,
-                      "ctr":  20.0,
-                      "position":  5.4
-                  },
-                  {
-                      "site":  "AIZines",
-                      "domain":  "aizines.com",
-                      "url":  "http://www.aizines.com/",
-                      "clicks":  3,
-                      "impressions":  31,
-                      "ctr":  9.7,
-                      "position":  4.6
-                  },
-                  {
-                      "site":  "AIZines",
-                      "domain":  "aizines.com",
-                      "url":  "https://www.aizines.com/compare.html",
-                      "clicks":  0,
-                      "impressions":  7,
-                      "ctr":  0,
-                      "position":  4
+                      "position":  5.7
                   },
                   {
                       "site":  "BodSpas",
                       "domain":  "bodspas.com",
                       "url":  "http://bodspas.com/",
                       "clicks":  0,
-                      "impressions":  5,
+                      "impressions":  2,
                       "ctr":  0,
-                      "position":  5.2
+                      "position":  5.5
+                  },
+                  {
+                      "site":  "ERPise",
+                      "domain":  "erpise.com",
+                      "url":  "https://erpise.com/",
+                      "clicks":  0,
+                      "impressions":  33,
+                      "ctr":  0,
+                      "position":  6.8
+                  },
+                  {
+                      "site":  "FurnishThings",
+                      "domain":  "furnishthings.com",
+                      "url":  "https://furnishthings.com/",
+                      "clicks":  0,
+                      "impressions":  10,
+                      "ctr":  0,
+                      "position":  28.9
+                  },
+                  {
+                      "site":  "ERPize",
+                      "domain":  "erpize.com",
+                      "url":  "https://erpize.com/",
+                      "clicks":  0,
+                      "impressions":  11,
+                      "ctr":  0,
+                      "position":  6.2
+                  },
+                  {
+                      "site":  "AIZines",
+                      "domain":  "aizines.com",
+                      "url":  "http://www.aizines.com/",
+                      "clicks":  1,
+                      "impressions":  13,
+                      "ctr":  7.7,
+                      "position":  3.5
+                  },
+                  {
+                      "site":  "AI YHWH",
+                      "domain":  "aiyhwh.com",
+                      "url":  "https://aiyhwh.com/",
+                      "clicks":  0,
+                      "impressions":  4,
+                      "ctr":  0,
+                      "position":  4
+                  },
+                  {
+                      "site":  "AIZines",
+                      "domain":  "aizines.com",
+                      "url":  "https://www.aizines.com/",
+                      "clicks":  1,
+                      "impressions":  16,
+                      "ctr":  6.2,
+                      "position":  5.1
                   },
                   {
                       "site":  "BizStry",
@@ -556,6 +547,15 @@
                       "impressions":  3,
                       "ctr":  0,
                       "position":  21.7
+                  },
+                  {
+                      "site":  "AIZines",
+                      "domain":  "aizines.com",
+                      "url":  "https://www.aizines.com/compare.html",
+                      "clicks":  0,
+                      "impressions":  9,
+                      "ctr":  0,
+                      "position":  4.1
                   }
               ],
     "noImpressions":  {
