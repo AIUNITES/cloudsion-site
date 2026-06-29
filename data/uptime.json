@@ -1,142 +1,142 @@
 ﻿{
-    "checked":  "2026-06-28T20:23:33",
-    "checkedFmt":  "Jun 28, 2026 8:23PM",
+    "checked":  "2026-06-29T16:33:15",
+    "checkedFmt":  "Jun 29, 2026 4:33PM",
     "totalSites":  22,
     "online":  22,
     "offline":  0,
     "uptimePercent":  100,
-    "avgResponseMs":  1060,
+    "avgResponseMs":  1173,
     "sites":  [
                   {
                       "domain":  "aiunites.com",
                       "status":  200,
-                      "responseMs":  1232,
+                      "responseMs":  1922,
                       "online":  true
                   },
                   {
                       "domain":  "aibyjob.com",
                       "status":  200,
-                      "responseMs":  922,
+                      "responseMs":  913,
                       "online":  true
                   },
                   {
                       "domain":  "aitsql.com",
                       "status":  200,
-                      "responseMs":  1327,
+                      "responseMs":  1121,
                       "online":  true
                   },
                   {
                       "domain":  "aiyhwh.com",
                       "status":  200,
-                      "responseMs":  746,
+                      "responseMs":  774,
                       "online":  true
                   },
                   {
                       "domain":  "aizines.com",
                       "status":  200,
-                      "responseMs":  1983,
+                      "responseMs":  1963,
                       "online":  true
                   },
                   {
                       "domain":  "bizstry.com",
                       "status":  200,
-                      "responseMs":  1013,
+                      "responseMs":  1308,
                       "online":  true
                   },
                   {
                       "domain":  "bodspas.com",
                       "status":  200,
-                      "responseMs":  931,
+                      "responseMs":  1111,
                       "online":  true
                   },
                   {
                       "domain":  "cloudsion.com",
                       "status":  200,
-                      "responseMs":  1206,
+                      "responseMs":  1279,
                       "online":  true
                   },
                   {
                       "domain":  "cosmostheopera.com",
                       "status":  200,
-                      "responseMs":  1190,
+                      "responseMs":  1423,
                       "online":  true
                   },
                   {
                       "domain":  "erpise.com",
                       "status":  200,
-                      "responseMs":  918,
+                      "responseMs":  1182,
                       "online":  true
                   },
                   {
                       "domain":  "erpize.com",
                       "status":  200,
-                      "responseMs":  976,
+                      "responseMs":  1569,
                       "online":  true
                   },
                   {
                       "domain":  "furnishthings.com",
                       "status":  200,
-                      "responseMs":  1318,
+                      "responseMs":  823,
                       "online":  true
                   },
                   {
                       "domain":  "gameatica.com",
                       "status":  200,
-                      "responseMs":  1656,
+                      "responseMs":  1991,
                       "online":  true
                   },
                   {
                       "domain":  "inthisworld.com",
                       "status":  200,
-                      "responseMs":  804,
+                      "responseMs":  790,
                       "online":  true
                   },
                   {
                       "domain":  "redomy.com",
                       "status":  200,
-                      "responseMs":  1311,
+                      "responseMs":  1149,
                       "online":  true
                   },
                   {
                       "domain":  "uptownit.com",
                       "status":  200,
-                      "responseMs":  604,
+                      "responseMs":  614,
                       "online":  true
                   },
                   {
                       "domain":  "videobate.com",
                       "status":  200,
-                      "responseMs":  971,
+                      "responseMs":  1455,
                       "online":  true
                   },
                   {
                       "domain":  "voicestry.com",
                       "status":  200,
-                      "responseMs":  1156,
+                      "responseMs":  1190,
                       "online":  true
                   },
                   {
                       "domain":  "agenthub.ai",
                       "status":  200,
-                      "responseMs":  1079,
+                      "responseMs":  1145,
                       "online":  true
                   },
                   {
                       "domain":  "aiagentshub.com",
                       "status":  200,
-                      "responseMs":  426,
+                      "responseMs":  439,
                       "online":  true
                   },
                   {
                       "domain":  "aiunites.github.io",
                       "status":  200,
-                      "responseMs":  156,
+                      "responseMs":  184,
                       "online":  true
                   },
                   {
                       "domain":  "bodwave.com",
                       "status":  200,
-                      "responseMs":  1405,
+                      "responseMs":  1466,
                       "online":  true
                   }
               ]
