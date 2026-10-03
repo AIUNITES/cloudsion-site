@@ -1,0 +1,69 @@
+﻿{
+    "checked":  "2026-10-03T08:01:37",
+    "checkedFmt":  "Oct 3, 2026 8:01AM",
+    "sitesChecked":  0,
+    "avgMobile":  0,
+    "avgDesktop":  0,
+    "sites":  [
+                  {
+                      "domain":  "aiunites.com",
+                      "mobile":  0,
+                      "desktop":  0
+                  },
+                  {
+                      "domain":  "aibyjob.com",
+                      "mobile":  0,
+                      "desktop":  0
+                  },
+                  {
+                      "domain":  "cloudsion.com",
+                      "mobile":  0,
+                      "desktop":  0
+                  },
+                  {
+                      "domain":  "redomy.com",
+                      "mobile":  0,
+                      "desktop":  0
+                  },
+                  {
+                      "domain":  "videobate.com",
+                      "mobile":  0,
+                      "desktop":  0
+                  },
+                  {
+                      "domain":  "gameatica.com",
+                      "mobile":  0,
+                      "desktop":  0
+                  },
+                  {
+                      "domain":  "voicestry.com",
+                      "mobile":  0,
+                      "desktop":  0
+                  },
+                  {
+                      "domain":  "uptownit.com",
+                      "mobile":  0,
+                      "desktop":  0
+                  },
+                  {
+                      "domain":  "erpise.com",
+                      "mobile":  0,
+                      "desktop":  0
+                  },
+                  {
+                      "domain":  "furnishthings.com",
+                      "mobile":  0,
+                      "desktop":  0
+                  },
+                  {
+                      "domain":  "aizines.com",
+                      "mobile":  0,
+                      "desktop":  0
+                  },
+                  {
+                      "domain":  "bizstry.com",
+                      "mobile":  0,
+                      "desktop":  0
+                  }
+              ]
+}
