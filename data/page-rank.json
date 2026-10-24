@@ -1,10 +1,10 @@
 ﻿{
-    "updated":  "2026-10-17T07:01:16",
-    "updatedFmt":  "Oct 17, 2026 7:01AM",
-    "dateRange":  "2026-09-19 to 2026-10-17",
-    "totalPages":  84,
-    "rankedTop10":  51,
-    "rankedTop50":  77,
+    "updated":  "2026-10-24T07:01:18",
+    "updatedFmt":  "Oct 24, 2026 7:01AM",
+    "dateRange":  "2026-09-26 to 2026-10-24",
+    "totalPages":  83,
+    "rankedTop10":  54,
+    "rankedTop50":  79,
     "sites":  {
                   "uptownit.com":  {
                                        "name":  "UptownIT",
@@ -13,34 +13,34 @@
                                        "visible":  2,
                                        "buried":  0,
                                        "topPage":  "https://uptownit.com/managed-ai-publishing-service.html",
-                                       "topPos":  5.2
+                                       "topPos":  5.1
                                    },
                   "voicestry.com":  {
                                         "name":  "VoiceStry",
                                         "pageCount":  16,
-                                        "ranked":  12,
+                                        "ranked":  14,
                                         "visible":  16,
                                         "buried":  0,
-                                        "topPage":  "https://voicestry.com/pitch-trainer.html",
-                                        "topPos":  12.8
+                                        "topPage":  "https://voicestry.com/learn.html",
+                                        "topPos":  3.1
                                     },
                   "gameatica.com":  {
                                         "name":  "Gameatica",
                                         "pageCount":  18,
-                                        "ranked":  6,
-                                        "visible":  14,
-                                        "buried":  4,
-                                        "topPage":  "https://gameatica.com/games/literature.html",
-                                        "topPos":  56.3
+                                        "ranked":  7,
+                                        "visible":  16,
+                                        "buried":  2,
+                                        "topPage":  "https://gameatica.com/games/punctuation.html",
+                                        "topPos":  18.7
                                     },
                   "videobate.com":  {
                                         "name":  "VideoBate",
                                         "pageCount":  5,
-                                        "ranked":  4,
+                                        "ranked":  3,
                                         "visible":  5,
                                         "buried":  0,
                                         "topPage":  "https://videobate.com/leaderboard.html",
-                                        "topPos":  3.5
+                                        "topPos":  3.2
                                     },
                   "aizines.com":  {
                                       "name":  "AIZines",
@@ -49,16 +49,16 @@
                                       "visible":  3,
                                       "buried":  0,
                                       "topPage":  "https://aizines.com/write-for-us.html",
-                                      "topPos":  32
+                                      "topPos":  19.6
                                   },
                   "inthisworld.com":  {
                                           "name":  "InThisWorld",
                                           "pageCount":  5,
-                                          "ranked":  4,
+                                          "ranked":  3,
                                           "visible":  5,
                                           "buried":  0,
                                           "topPage":  "https://inthisworld.com/rooms/gym.html",
-                                          "topPos":  3.5
+                                          "topPos":  3.7
                                       },
                   "cloudsion.com":  {
                                         "name":  "Cloudsion",
@@ -67,23 +67,23 @@
                                         "visible":  2,
                                         "buried":  0,
                                         "topPage":  "https://cloudsion.com/turnkey-ai-web-publishing.html",
-                                        "topPos":  4.5
+                                        "topPos":  5.1
                                     },
                   "aibyjob.com":  {
                                       "name":  "AIByJob",
-                                      "pageCount":  7,
+                                      "pageCount":  6,
                                       "ranked":  4,
-                                      "visible":  7,
+                                      "visible":  6,
                                       "buried":  0,
-                                      "topPage":  "https://aibyjob.com/agents/templates/index.html",
-                                      "topPos":  5
+                                      "topPage":  "https://aibyjob.com/agents/templates/",
+                                      "topPos":  6.5
                                   },
                   "bodspas.com":  {
                                       "name":  "BodSpas",
                                       "pageCount":  2,
                                       "ranked":  7,
-                                      "visible":  7,
-                                      "buried":  7,
+                                      "visible":  2,
+                                      "buried":  0,
                                       "topPage":  "https://bodspas.com/bodwave.html",
                                       "topPos":  2
                                   },
@@ -94,7 +94,7 @@
                                      "visible":  7,
                                      "buried":  0,
                                      "topPage":  "https://erpise.com/",
-                                     "topPos":  14.2
+                                     "topPos":  13.9
                                  },
                   "aiyhwh.com":  {
                                      "name":  "AI YHWH",
@@ -103,7 +103,7 @@
                                      "visible":  7,
                                      "buried":  0,
                                      "topPage":  "https://aiyhwh.com/",
-                                     "topPos":  5.0
+                                     "topPos":  4.9
                                  },
                   "bizstry.com":  {
                                       "name":  "BizStry",
@@ -112,7 +112,7 @@
                                       "visible":  7,
                                       "buried":  0,
                                       "topPage":  "https://bizstry.com/",
-                                      "topPos":  3.3
+                                      "topPos":  2.2
                                   },
                   "furnishthings.com":  {
                                             "name":  "FurnishThings",
@@ -121,7 +121,7 @@
                                             "visible":  2,
                                             "buried":  0,
                                             "topPage":  "https://furnishthings.com/home.html",
-                                            "topPos":  8.2
+                                            "topPos":  8.8
                                         },
                   "cosmostheopera.com":  {
                                              "name":  "COSMOS the OPERA",
@@ -130,7 +130,7 @@
                                              "visible":  7,
                                              "buried":  0,
                                              "topPage":  "https://cosmostheopera.com/",
-                                             "topPos":  4.9
+                                             "topPos":  5.1
                                          },
                   "aitsql.com":  {
                                      "name":  "AITSQL",
@@ -139,12 +139,12 @@
                                      "visible":  7,
                                      "buried":  0,
                                      "topPage":  "https://aitsql.com/",
-                                     "topPos":  40.9
+                                     "topPos":  45.6
                                  },
                   "redomy.com":  {
                                      "name":  "Redomy",
                                      "pageCount":  4,
-                                     "ranked":  2,
+                                     "ranked":  3,
                                      "visible":  4,
                                      "buried":  0,
                                      "topPage":  "https://redomy.com/ai-room-builder.html",
@@ -153,7 +153,7 @@
                   "aiunites.com":  {
                                        "name":  "AIUNITES",
                                        "pageCount":  9,
-                                       "ranked":  6,
+                                       "ranked":  7,
                                        "visible":  8,
                                        "buried":  7,
                                        "topPage":  "https://aiunites.com/movement.html",
@@ -166,7 +166,7 @@
                                      "visible":  3,
                                      "buried":  7,
                                      "topPage":  "https://erpize.com/audit-series.html",
-                                     "topPos":  4
+                                     "topPos":  4.3
                                  }
               },
     "pages":  [
@@ -175,36 +175,36 @@
                       "domain":  "inthisworld.com",
                       "url":  "https://inthisworld.com/rooms/space-station.html",
                       "clicks":  0,
-                      "impressions":  13,
+                      "impressions":  18,
                       "ctr":  0,
-                      "position":  8.2
+                      "position":  10.5
                   },
                   {
                       "site":  "Redomy",
                       "domain":  "redomy.com",
                       "url":  "https://redomy.com/",
                       "clicks":  1,
-                      "impressions":  20,
-                      "ctr":  5.0,
-                      "position":  10.2
+                      "impressions":  26,
+                      "ctr":  3.8,
+                      "position":  10
                   },
                   {
                       "site":  "InThisWorld",
                       "domain":  "inthisworld.com",
                       "url":  "https://inthisworld.com/rooms/gym.html",
                       "clicks":  0,
-                      "impressions":  6,
+                      "impressions":  7,
                       "ctr":  0,
-                      "position":  3.5
+                      "position":  3.7
                   },
                   {
                       "site":  "InThisWorld",
                       "domain":  "inthisworld.com",
                       "url":  "https://inthisworld.com/rooms/index.html",
-                      "clicks":  3,
-                      "impressions":  47,
-                      "ctr":  6.4,
-                      "position":  7.4
+                      "clicks":  8,
+                      "impressions":  59,
+                      "ctr":  13.6,
+                      "position":  6.3
                   },
                   {
                       "site":  "InThisWorld",
@@ -213,34 +213,34 @@
                       "clicks":  0,
                       "impressions":  11,
                       "ctr":  0,
-                      "position":  4.3
+                      "position":  4.2
                   },
                   {
                       "site":  "UptownIT",
                       "domain":  "uptownit.com",
                       "url":  "https://uptownit.com/",
-                      "clicks":  1,
-                      "impressions":  16,
-                      "ctr":  6.2,
-                      "position":  9.6
+                      "clicks":  0,
+                      "impressions":  14,
+                      "ctr":  0,
+                      "position":  8.8
                   },
                   {
                       "site":  "UptownIT",
                       "domain":  "uptownit.com",
                       "url":  "https://uptownit.com/managed-ai-publishing-service.html",
                       "clicks":  0,
-                      "impressions":  8,
+                      "impressions":  9,
                       "ctr":  0,
-                      "position":  5.2
+                      "position":  5.1
                   },
                   {
                       "site":  "Redomy",
                       "domain":  "redomy.com",
-                      "url":  "https://redomy.com/rooms/kitchen.html",
+                      "url":  "https://redomy.com/rooms/bedroom.html",
                       "clicks":  0,
                       "impressions":  1,
                       "ctr":  0,
-                      "position":  10
+                      "position":  8
                   },
                   {
                       "site":  "Redomy",
@@ -261,22 +261,22 @@
                       "position":  22.2
                   },
                   {
-                      "site":  "InThisWorld",
-                      "domain":  "inthisworld.com",
-                      "url":  "https://inthisworld.com/",
-                      "clicks":  40,
-                      "impressions":  930,
-                      "ctr":  4.3,
-                      "position":  20.4
+                      "site":  "Gameatica",
+                      "domain":  "gameatica.com",
+                      "url":  "https://gameatica.com/games/startrader.html",
+                      "clicks":  0,
+                      "impressions":  9,
+                      "ctr":  0,
+                      "position":  17
                   },
                   {
                       "site":  "Gameatica",
                       "domain":  "gameatica.com",
-                      "url":  "https://gameatica.com/games/literature.html",
+                      "url":  "https://gameatica.com/games/statistics.html",
                       "clicks":  0,
                       "impressions":  11,
                       "ctr":  0,
-                      "position":  56.3
+                      "position":  11.3
                   },
                   {
                       "site":  "Gameatica",
@@ -292,27 +292,36 @@
                       "domain":  "gameatica.com",
                       "url":  "https://gameatica.com/games/grammar.html",
                       "clicks":  0,
-                      "impressions":  6,
+                      "impressions":  7,
                       "ctr":  0,
-                      "position":  5.3
+                      "position":  5.9
                   },
                   {
                       "site":  "Gameatica",
                       "domain":  "gameatica.com",
-                      "url":  "https://gameatica.com/games/etymology.html",
+                      "url":  "https://gameatica.com/games/literature.html",
                       "clicks":  0,
-                      "impressions":  8,
+                      "impressions":  16,
                       "ctr":  0,
-                      "position":  20.8
+                      "position":  49.8
                   },
                   {
                       "site":  "Gameatica",
                       "domain":  "gameatica.com",
-                      "url":  "https://gameatica.com/games/fractions.html",
+                      "url":  "https://gameatica.com/games/wordroots.html",
                       "clicks":  0,
-                      "impressions":  10,
+                      "impressions":  16,
                       "ctr":  0,
-                      "position":  70.2
+                      "position":  53.8
+                  },
+                  {
+                      "site":  "InThisWorld",
+                      "domain":  "inthisworld.com",
+                      "url":  "https://inthisworld.com/",
+                      "clicks":  59,
+                      "impressions":  1150,
+                      "ctr":  5.1,
+                      "position":  17.8
                   },
                   {
                       "site":  "Gameatica",
@@ -326,33 +335,6 @@
                   {
                       "site":  "Gameatica",
                       "domain":  "gameatica.com",
-                      "url":  "https://gameatica.com/games/wordroots.html",
-                      "clicks":  0,
-                      "impressions":  10,
-                      "ctr":  0,
-                      "position":  50.2
-                  },
-                  {
-                      "site":  "Gameatica",
-                      "domain":  "gameatica.com",
-                      "url":  "https://gameatica.com/games/trivia.html",
-                      "clicks":  0,
-                      "impressions":  5,
-                      "ctr":  0,
-                      "position":  15.4
-                  },
-                  {
-                      "site":  "Gameatica",
-                      "domain":  "gameatica.com",
-                      "url":  "https://gameatica.com/games/startrader.html",
-                      "clicks":  0,
-                      "impressions":  7,
-                      "ctr":  0,
-                      "position":  14.7
-                  },
-                  {
-                      "site":  "Gameatica",
-                      "domain":  "gameatica.com",
                       "url":  "https://gameatica.com/games/sudoku.html",
                       "clicks":  0,
                       "impressions":  3,
@@ -360,58 +342,76 @@
                       "position":  5
                   },
                   {
-                      "site":  "VoiceStry",
-                      "domain":  "voicestry.com",
-                      "url":  "https://voicestry.com/learn.html",
+                      "site":  "Gameatica",
+                      "domain":  "gameatica.com",
+                      "url":  "https://gameatica.com/games/trivia.html",
                       "clicks":  0,
-                      "impressions":  19,
+                      "impressions":  7,
                       "ctr":  0,
-                      "position":  3.2
+                      "position":  13.3
                   },
                   {
-                      "site":  "VoiceStry",
-                      "domain":  "voicestry.com",
-                      "url":  "https://voicestry.com/pitch-trainer.html",
+                      "site":  "VideoBate",
+                      "domain":  "videobate.com",
+                      "url":  "https://videobate.com/",
                       "clicks":  0,
-                      "impressions":  67,
+                      "impressions":  14,
                       "ctr":  0,
-                      "position":  12.8
+                      "position":  8.1
                   },
                   {
                       "site":  "VoiceStry",
                       "domain":  "voicestry.com",
                       "url":  "https://voicestry.com/ai-vrn.html",
                       "clicks":  0,
-                      "impressions":  16,
+                      "impressions":  15,
                       "ctr":  0,
-                      "position":  5.4
+                      "position":  4.9
                   },
                   {
                       "site":  "VoiceStry",
                       "domain":  "voicestry.com",
-                      "url":  "https://voicestry.com/5-gears.html",
+                      "url":  "https://voicestry.com/learn.html",
                       "clicks":  0,
-                      "impressions":  36,
+                      "impressions":  18,
                       "ctr":  0,
-                      "position":  11
+                      "position":  3.1
                   },
                   {
                       "site":  "VoiceStry",
                       "domain":  "voicestry.com",
                       "url":  "https://voicestry.com/ai-neuro.html",
                       "clicks":  0,
-                      "impressions":  4,
+                      "impressions":  5,
                       "ctr":  0,
-                      "position":  6.5
+                      "position":  6
+                  },
+                  {
+                      "site":  "VoiceStry",
+                      "domain":  "voicestry.com",
+                      "url":  "https://voicestry.com/sonic-portrait.html",
+                      "clicks":  1,
+                      "impressions":  15,
+                      "ctr":  6.7,
+                      "position":  5.1
+                  },
+                  {
+                      "site":  "VoiceStry",
+                      "domain":  "voicestry.com",
+                      "url":  "https://voicestry.com/5-gears.html",
+                      "clicks":  0,
+                      "impressions":  32,
+                      "ctr":  0,
+                      "position":  9.8
                   },
                   {
                       "site":  "VoiceStry",
                       "domain":  "voicestry.com",
                       "url":  "https://voicestry.com/voice-lab.html",
                       "clicks":  0,
-                      "impressions":  22,
+                      "impressions":  23,
                       "ctr":  0,
-                      "position":  6.9
+                      "position":  4.8
                   },
                   {
                       "site":  "VoiceStry",
@@ -420,30 +420,75 @@
                       "clicks":  0,
                       "impressions":  18,
                       "ctr":  0,
-                      "position":  6.4
+                      "position":  6.3
                   },
                   {
                       "site":  "VoiceStry",
                       "domain":  "voicestry.com",
-                      "url":  "https://voicestry.com/sonic-portrait.html",
+                      "url":  "https://voicestry.com/sight-reading.html",
                       "clicks":  0,
-                      "impressions":  15,
+                      "impressions":  12,
                       "ctr":  0,
-                      "position":  6.4
+                      "position":  9.2
+                  },
+                  {
+                      "site":  "VoiceStry",
+                      "domain":  "voicestry.com",
+                      "url":  "https://voicestry.com/pitch-trainer.html",
+                      "clicks":  0,
+                      "impressions":  73,
+                      "ctr":  0,
+                      "position":  13.2
                   },
                   {
                       "site":  "VoiceStry",
                       "domain":  "voicestry.com",
                       "url":  "https://voicestry.com/press.html",
                       "clicks":  0,
-                      "impressions":  10,
+                      "impressions":  7,
                       "ctr":  0,
-                      "position":  4.2
+                      "position":  3.1
+                  },
+                  {
+                      "site":  "VideoBate",
+                      "domain":  "videobate.com",
+                      "url":  "https://videobate.com/quiz.html",
+                      "clicks":  0,
+                      "impressions":  14,
+                      "ctr":  0,
+                      "position":  44.9
                   },
                   {
                       "site":  "VoiceStry",
                       "domain":  "voicestry.com",
-                      "url":  "https://voicestry.com/sight-reading.html",
+                      "url":  "https://voicestry.com/",
+                      "clicks":  13,
+                      "impressions":  308,
+                      "ctr":  4.2,
+                      "position":  42.2
+                  },
+                  {
+                      "site":  "VideoBate",
+                      "domain":  "videobate.com",
+                      "url":  "https://videobate.com/leaderboard.html",
+                      "clicks":  0,
+                      "impressions":  8,
+                      "ctr":  0,
+                      "position":  3.2
+                  },
+                  {
+                      "site":  "VideoBate",
+                      "domain":  "videobate.com",
+                      "url":  "https://videobate.com/compare.html",
+                      "clicks":  0,
+                      "impressions":  10,
+                      "ctr":  0,
+                      "position":  2.9
+                  },
+                  {
+                      "site":  "VideoBate",
+                      "domain":  "videobate.com",
+                      "url":  "https://videobate.com/fallacies.html",
                       "clicks":  0,
                       "impressions":  13,
                       "ctr":  0,
@@ -453,136 +498,73 @@
                       "site":  "VoiceStry",
                       "domain":  "voicestry.com",
                       "url":  "https://voicestry.com/karaoke.html",
-                      "clicks":  1,
-                      "impressions":  8,
-                      "ctr":  12.5,
-                      "position":  2.4
-                  },
-                  {
-                      "site":  "VideoBate",
-                      "domain":  "videobate.com",
-                      "url":  "https://videobate.com/leaderboard.html",
-                      "clicks":  0,
-                      "impressions":  14,
-                      "ctr":  0,
-                      "position":  3.5
-                  },
-                  {
-                      "site":  "VideoBate",
-                      "domain":  "videobate.com",
-                      "url":  "https://videobate.com/quiz.html",
-                      "clicks":  0,
-                      "impressions":  14,
-                      "ctr":  0,
-                      "position":  34.2
-                  },
-                  {
-                      "site":  "VideoBate",
-                      "domain":  "videobate.com",
-                      "url":  "https://videobate.com/fallacies.html",
-                      "clicks":  0,
-                      "impressions":  18,
-                      "ctr":  0,
-                      "position":  9.3
-                  },
-                  {
-                      "site":  "VideoBate",
-                      "domain":  "videobate.com",
-                      "url":  "https://videobate.com/",
-                      "clicks":  1,
-                      "impressions":  23,
-                      "ctr":  4.3,
-                      "position":  7.1
-                  },
-                  {
-                      "site":  "VideoBate",
-                      "domain":  "videobate.com",
-                      "url":  "https://videobate.com/compare.html",
-                      "clicks":  0,
-                      "impressions":  16,
-                      "ctr":  0,
-                      "position":  2.9
-                  },
-                  {
-                      "site":  "VoiceStry",
-                      "domain":  "voicestry.com",
-                      "url":  "https://voicestry.com/resonance-live.html",
-                      "clicks":  3,
-                      "impressions":  34,
-                      "ctr":  8.8,
-                      "position":  8.2
+                      "clicks":  2,
+                      "impressions":  9,
+                      "ctr":  22.2,
+                      "position":  3.7
                   },
                   {
                       "site":  "VoiceStry",
                       "domain":  "voicestry.com",
                       "url":  "https://voicestry.com/vocal-gym.html",
                       "clicks":  2,
-                      "impressions":  33,
-                      "ctr":  6.1,
-                      "position":  7.5
+                      "impressions":  36,
+                      "ctr":  5.6,
+                      "position":  6.8
+                  },
+                  {
+                      "site":  "VoiceStry",
+                      "domain":  "voicestry.com",
+                      "url":  "https://voicestry.com/resonance-live.html",
+                      "clicks":  3,
+                      "impressions":  46,
+                      "ctr":  6.5,
+                      "position":  9.5
+                  },
+                  {
+                      "site":  "VoiceStry",
+                      "domain":  "voicestry.com",
+                      "url":  "https://voicestry.com/vocalist-match.html",
+                      "clicks":  5,
+                      "impressions":  93,
+                      "ctr":  5.4,
+                      "position":  8.0
                   },
                   {
                       "site":  "VoiceStry",
                       "domain":  "voicestry.com",
                       "url":  "https://voicestry.com/voice-analyzer.html",
                       "clicks":  4,
-                      "impressions":  55,
-                      "ctr":  7.3,
-                      "position":  6.6
+                      "impressions":  69,
+                      "ctr":  5.8,
+                      "position":  7.8
                   },
                   {
-                      "site":  "VoiceStry",
-                      "domain":  "voicestry.com",
-                      "url":  "https://voicestry.com/",
-                      "clicks":  13,
-                      "impressions":  236,
-                      "ctr":  5.5,
-                      "position":  43.8
-                  },
-                  {
-                      "site":  "VoiceStry",
-                      "domain":  "voicestry.com",
-                      "url":  "https://voicestry.com/vocalist-match.html",
-                      "clicks":  4,
-                      "impressions":  94,
-                      "ctr":  4.3,
-                      "position":  7.7
+                      "site":  "Gameatica",
+                      "domain":  "gameatica.com",
+                      "url":  "https://gameatica.com/games/fractions.html",
+                      "clicks":  0,
+                      "impressions":  11,
+                      "ctr":  0,
+                      "position":  64.2
                   },
                   {
                       "site":  "AIByJob",
                       "domain":  "aibyjob.com",
                       "url":  "https://aibyjob.com/agents/webbuilder.html",
                       "clicks":  0,
-                      "impressions":  2,
+                      "impressions":  1,
                       "ctr":  0,
-                      "position":  3.5
+                      "position":  4
                   },
                   {
                       "site":  "AIByJob",
                       "domain":  "aibyjob.com",
                       "url":  "https://aibyjob.com/help.html",
                       "clicks":  0,
-                      "impressions":  6,
+                      "impressions":  3,
                       "ctr":  0,
-                      "position":  35
-                  },
-                  {
-                      "site":  "AIByJob",
-                      "domain":  "aibyjob.com",
-                      "url":  "https://aibyjob.com/agents/templates/index.html",
-                      "clicks":  0,
-                      "impressions":  1,
-                      "ctr":  0,
-                      "position":  5
-                  },
-                  {
-                      "site":  "AIByJob",
-                      "domain":  "aibyjob.com",
-                      "url":  "https://aibyjob.com/agents/leadfinder.html",
-                      "clicks":  0,
-                      "impressions":  2,
-                      "ctr":  0,
-                      "position":  4.5
+                      "position":  23.3
                   },
                   {
                       "site":  "AIByJob",
@@ -594,103 +576,112 @@
                       "position":  6.5
                   },
                   {
+                      "site":  "AIByJob",
+                      "domain":  "aibyjob.com",
+                      "url":  "https://aibyjob.com/agents/ecomscout.html",
+                      "clicks":  0,
+                      "impressions":  1,
+                      "ctr":  0,
+                      "position":  6
+                  },
+                  {
+                      "site":  "AIByJob",
+                      "domain":  "aibyjob.com",
+                      "url":  "https://aibyjob.com/agents/leadfinder.html",
+                      "clicks":  0,
+                      "impressions":  1,
+                      "ctr":  0,
+                      "position":  5
+                  },
+                  {
                       "site":  "AIZines",
                       "domain":  "aizines.com",
                       "url":  "https://aizines.com/compare.html",
-                      "clicks":  0,
-                      "impressions":  10,
-                      "ctr":  0,
-                      "position":  22.7
+                      "clicks":  1,
+                      "impressions":  14,
+                      "ctr":  7.1,
+                      "position":  23.5
                   },
                   {
                       "site":  "AIZines",
                       "domain":  "aizines.com",
                       "url":  "https://aizines.com/write-for-us.html",
                       "clicks":  0,
-                      "impressions":  8,
+                      "impressions":  14,
                       "ctr":  0,
-                      "position":  32
+                      "position":  19.6
                   },
                   {
                       "site":  "AIZines",
                       "domain":  "aizines.com",
                       "url":  "https://aizines.com/",
-                      "clicks":  40,
-                      "impressions":  268,
-                      "ctr":  14.9,
-                      "position":  5.4
+                      "clicks":  43,
+                      "impressions":  273,
+                      "ctr":  15.8,
+                      "position":  4.3
                   },
                   {
                       "site":  "AITSQL",
                       "domain":  "aitsql.com",
                       "url":  "https://aitsql.com/",
-                      "clicks":  1,
-                      "impressions":  79,
-                      "ctr":  1.3,
-                      "position":  40.9
+                      "clicks":  0,
+                      "impressions":  93,
+                      "ctr":  0,
+                      "position":  45.6
                   },
                   {
                       "site":  "AI YHWH",
                       "domain":  "aiyhwh.com",
                       "url":  "https://aiyhwh.com/",
                       "clicks":  1,
-                      "impressions":  40,
-                      "ctr":  2.5,
-                      "position":  5.0
-                  },
-                  {
-                      "site":  "AIByJob",
-                      "domain":  "aibyjob.com",
-                      "url":  "https://aibyjob.com/agents/ecomscout.html",
-                      "clicks":  0,
-                      "impressions":  2,
-                      "ctr":  0,
-                      "position":  12
+                      "impressions":  39,
+                      "ctr":  2.6,
+                      "position":  4.9
                   },
                   {
                       "site":  "AIUNITES",
                       "domain":  "aiunites.com",
                       "url":  "https://aiunites.com/hmn-spec.html",
                       "clicks":  0,
-                      "impressions":  2,
+                      "impressions":  3,
                       "ctr":  0,
-                      "position":  7.5
+                      "position":  8.3
                   },
                   {
                       "site":  "AIUNITES",
                       "domain":  "aiunites.com",
                       "url":  "https://aiunites.com/identity.html",
                       "clicks":  0,
-                      "impressions":  4,
+                      "impressions":  6,
                       "ctr":  0,
-                      "position":  16
+                      "position":  11.5
                   },
                   {
                       "site":  "AIUNITES",
                       "domain":  "aiunites.com",
                       "url":  "https://aiunites.com/data.html",
                       "clicks":  0,
-                      "impressions":  2,
+                      "impressions":  1,
                       "ctr":  0,
-                      "position":  2.5
+                      "position":  2
                   },
                   {
                       "site":  "AIUNITES",
                       "domain":  "aiunites.com",
                       "url":  "https://aiunites.com/",
                       "clicks":  0,
-                      "impressions":  12,
+                      "impressions":  13,
                       "ctr":  0,
-                      "position":  107.2
+                      "position":  115.2
                   },
                   {
                       "site":  "AIUNITES",
                       "domain":  "aiunites.com",
                       "url":  "https://aiunites.com/consulting.html",
                       "clicks":  0,
-                      "impressions":  2,
+                      "impressions":  4,
                       "ctr":  0,
-                      "position":  3
+                      "position":  2.2
                   },
                   {
                       "site":  "AIUNITES",
@@ -706,9 +697,9 @@
                       "domain":  "aibyjob.com",
                       "url":  "https://aibyjob.com/",
                       "clicks":  0,
-                      "impressions":  20,
+                      "impressions":  27,
                       "ctr":  0,
-                      "position":  15.4
+                      "position":  13.1
                   },
                   {
                       "site":  "AIUNITES",
@@ -717,7 +708,7 @@
                       "clicks":  0,
                       "impressions":  5,
                       "ctr":  0,
-                      "position":  11.4
+                      "position":  6.8
                   },
                   {
                       "site":  "AIUNITES",
@@ -738,49 +729,67 @@
                       "position":  6
                   },
                   {
+                      "site":  "BizStry",
+                      "domain":  "bizstry.com",
+                      "url":  "https://bizstry.com/",
+                      "clicks":  0,
+                      "impressions":  6,
+                      "ctr":  0,
+                      "position":  2.2
+                  },
+                  {
                       "site":  "Gameatica",
                       "domain":  "gameatica.com",
                       "url":  "https://gameatica.com/games/affixes.html",
                       "clicks":  4,
                       "impressions":  33,
                       "ctr":  12.1,
-                      "position":  6.5
+                      "position":  8.7
                   },
                   {
                       "site":  "Gameatica",
                       "domain":  "gameatica.com",
                       "url":  "https://gameatica.com/games/simon.html",
                       "clicks":  3,
-                      "impressions":  92,
-                      "ctr":  3.3,
-                      "position":  40.0
+                      "impressions":  107,
+                      "ctr":  2.8,
+                      "position":  38.1
                   },
                   {
                       "site":  "Gameatica",
                       "domain":  "gameatica.com",
                       "url":  "https://gameatica.com/",
                       "clicks":  4,
-                      "impressions":  36,
-                      "ctr":  11.1,
-                      "position":  10.7
+                      "impressions":  41,
+                      "ctr":  9.8,
+                      "position":  15.9
                   },
                   {
                       "site":  "FurnishThings",
                       "domain":  "furnishthings.com",
                       "url":  "https://furnishthings.com/",
                       "clicks":  0,
-                      "impressions":  29,
+                      "impressions":  32,
                       "ctr":  0,
-                      "position":  7.8
+                      "position":  5.8
                   },
                   {
                       "site":  "FurnishThings",
                       "domain":  "furnishthings.com",
                       "url":  "https://furnishthings.com/home.html",
                       "clicks":  0,
-                      "impressions":  13,
+                      "impressions":  11,
                       "ctr":  0,
-                      "position":  8.2
+                      "position":  8.8
+                  },
+                  {
+                      "site":  "Gameatica",
+                      "domain":  "gameatica.com",
+                      "url":  "https://gameatica.com/games/etymology.html",
+                      "clicks":  1,
+                      "impressions":  15,
+                      "ctr":  6.7,
+                      "position":  24.7
                   },
                   {
                       "site":  "Gameatica",
@@ -789,61 +798,34 @@
                       "clicks":  0,
                       "impressions":  1,
                       "ctr":  0,
-                      "position":  61
+                      "position":  9
                   },
                   {
                       "site":  "Gameatica",
                       "domain":  "gameatica.com",
                       "url":  "https://gameatica.com/games/essay.html",
-                      "clicks":  0,
-                      "impressions":  7,
-                      "ctr":  0,
-                      "position":  8
-                  },
-                  {
-                      "site":  "Gameatica",
-                      "domain":  "gameatica.com",
-                      "url":  "https://gameatica.com/games/statistics.html",
                       "clicks":  1,
                       "impressions":  12,
                       "ctr":  8.3,
-                      "position":  17.8
+                      "position":  7.1
                   },
                   {
                       "site":  "Gameatica",
                       "domain":  "gameatica.com",
                       "url":  "https://gameatica.com/compare.html",
                       "clicks":  2,
-                      "impressions":  22,
-                      "ctr":  9.1,
-                      "position":  5.3
+                      "impressions":  19,
+                      "ctr":  10.5,
+                      "position":  5.1
                   },
                   {
                       "site":  "Gameatica",
                       "domain":  "gameatica.com",
                       "url":  "https://gameatica.com/games/2048.html",
                       "clicks":  1,
-                      "impressions":  57,
-                      "ctr":  1.8,
-                      "position":  42.4
-                  },
-                  {
-                      "site":  "ERPize",
-                      "domain":  "erpize.com",
-                      "url":  "https://erpize.com/compare.html",
-                      "clicks":  0,
-                      "impressions":  31,
-                      "ctr":  0,
-                      "position":  53
-                  },
-                  {
-                      "site":  "Cloudsion",
-                      "domain":  "cloudsion.com",
-                      "url":  "https://cloudsion.com/",
-                      "clicks":  2,
-                      "impressions":  31,
-                      "ctr":  6.5,
-                      "position":  3
+                      "impressions":  77,
+                      "ctr":  1.3,
+                      "position":  37.2
                   },
                   {
                       "site":  "Cloudsion",
@@ -852,7 +834,34 @@
                       "clicks":  0,
                       "impressions":  19,
                       "ctr":  0,
-                      "position":  4.5
+                      "position":  5.1
+                  },
+                  {
+                      "site":  "COSMOS the OPERA",
+                      "domain":  "cosmostheopera.com",
+                      "url":  "https://cosmostheopera.com/",
+                      "clicks":  0,
+                      "impressions":  55,
+                      "ctr":  0,
+                      "position":  5.1
+                  },
+                  {
+                      "site":  "Cloudsion",
+                      "domain":  "cloudsion.com",
+                      "url":  "https://cloudsion.com/",
+                      "clicks":  1,
+                      "impressions":  31,
+                      "ctr":  3.2,
+                      "position":  6.0
+                  },
+                  {
+                      "site":  "BodSpas",
+                      "domain":  "bodspas.com",
+                      "url":  "https://bodspas.com/",
+                      "clicks":  0,
+                      "impressions":  7,
+                      "ctr":  0,
+                      "position":  42.6
                   },
                   {
                       "site":  "BodSpas",
@@ -864,67 +873,49 @@
                       "position":  2
                   },
                   {
-                      "site":  "BizStry",
-                      "domain":  "bizstry.com",
-                      "url":  "https://bizstry.com/",
+                      "site":  "ERPize",
+                      "domain":  "erpize.com",
+                      "url":  "https://erpize.com/audit-series.html",
                       "clicks":  0,
-                      "impressions":  3,
+                      "impressions":  6,
                       "ctr":  0,
-                      "position":  3.3
+                      "position":  4.3
                   },
                   {
-                      "site":  "BodSpas",
-                      "domain":  "bodspas.com",
-                      "url":  "https://bodspas.com/",
+                      "site":  "ERPize",
+                      "domain":  "erpize.com",
+                      "url":  "https://erpize.com/compare.html",
                       "clicks":  0,
-                      "impressions":  9,
+                      "impressions":  42,
                       "ctr":  0,
-                      "position":  55.2
+                      "position":  52.1
                   },
                   {
                       "site":  "ERPize",
                       "domain":  "erpize.com",
                       "url":  "https://erpize.com/audit-entity-mapping.html",
                       "clicks":  0,
-                      "impressions":  1,
+                      "impressions":  3,
                       "ctr":  0,
-                      "position":  10
-                  },
-                  {
-                      "site":  "ERPize",
-                      "domain":  "erpize.com",
-                      "url":  "https://erpize.com/audit-series.html",
-                      "clicks":  0,
-                      "impressions":  2,
-                      "ctr":  0,
-                      "position":  4
-                  },
-                  {
-                      "site":  "ERPize",
-                      "domain":  "erpize.com",
-                      "url":  "https://erpize.com/",
-                      "clicks":  0,
-                      "impressions":  14,
-                      "ctr":  0,
-                      "position":  38.2
-                  },
-                  {
-                      "site":  "COSMOS the OPERA",
-                      "domain":  "cosmostheopera.com",
-                      "url":  "https://cosmostheopera.com/",
-                      "clicks":  0,
-                      "impressions":  55,
-                      "ctr":  0,
-                      "position":  4.9
+                      "position":  6
                   },
                   {
                       "site":  "ERPise",
                       "domain":  "erpise.com",
                       "url":  "https://erpise.com/",
                       "clicks":  0,
-                      "impressions":  24,
+                      "impressions":  25,
                       "ctr":  0,
-                      "position":  14.2
+                      "position":  13.9
+                  },
+                  {
+                      "site":  "ERPize",
+                      "domain":  "erpize.com",
+                      "url":  "https://erpize.com/",
+                      "clicks":  0,
+                      "impressions":  16,
+                      "ctr":  0,
+                      "position":  26.1
                   }
               ],
     "noImpressions":  {
